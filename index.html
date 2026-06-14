@@ -9,25 +9,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
         .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
-
-        /* Header */
         .header { text-align: center; margin-bottom: 24px; }
         .header h1 { color: #818cf8; font-size: 24px; margin-bottom: 8px; }
         .header .update-time { color: #94a3b8; font-size: 14px; }
-
-        /* Strategy Tabs */
         .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
         .tab { padding: 8px 20px; border-radius: 20px; cursor: pointer; background: #1e293b; border: 1px solid #334155; color: #94a3b8; font-size: 14px; transition: all 0.2s; }
         .tab:hover { border-color: #818cf8; color: #e2e8f0; }
         .tab.active { background: #4f46e5; color: white; border-color: #4f46e5; }
-
-        /* Stats Bar */
         .stats-bar { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; padding: 12px 20px; background: #1e293b; border-radius: 10px; border: 1px solid #334155; }
         .stat-item { text-align: center; }
         .stat-value { font-size: 20px; font-weight: 700; color: #818cf8; }
         .stat-label { font-size: 12px; color: #94a3b8; margin-top: 2px; }
-
-        /* Strategy Group */
         .strategy-group { margin-bottom: 32px; }
         .strategy-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e293b; }
         .strategy-group-title { font-size: 18px; font-weight: 600; color: #e2e8f0; }
@@ -38,38 +30,47 @@
         .stat-dot.green { background: #4ade80; }
         .stat-dot.yellow { background: #fbbf24; }
         .stat-dot.red { background: #f87171; }
-
-        /* Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
-
-        /* Card */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
         .card { background: #1e293b; border-radius: 12px; padding: 16px; border: 1px solid #334155; cursor: pointer; transition: all 0.2s; }
         .card:hover { border-color: #818cf8; transform: translateY(-2px); }
-
-        /* Card Header - Level 1: Most Important */
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
         .stock-info { flex: 1; }
         .stock-name { font-size: 18px; font-weight: 700; margin-bottom: 2px; color: #f1f5f9; }
         .stock-code { color: #64748b; font-size: 12px; }
         .stock-time { color: #64748b; font-size: 11px; margin-top: 4px; }
-
-        /* Score Section - Level 1 */
         .score-section { text-align: right; }
+        .score-row { display: flex; align-items: baseline; gap: 6px; justify-content: flex-end; }
         .score { font-size: 36px; font-weight: 800; line-height: 1; }
         .score-high { color: #4ade80; }
         .score-mid { color: #fbbf24; }
         .score-low { color: #f87171; }
+        .score-change { font-size: 14px; font-weight: 600; }
+        .score-change.up { color: #4ade80; }
+        .score-change.down { color: #f87171; }
+        .score-change.same { color: #64748b; }
         .score-label { font-size: 11px; color: #64748b; margin-top: 2px; }
-
-        /* Level 2: Advice */
-        .advice-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .advice-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
         .advice { display: inline-block; padding: 4px 12px; border-radius: 16px; font-size: 13px; font-weight: 500; }
         .advice-buy { background: #166534; color: #4ade80; }
         .advice-hold { background: #854d0e; color: #fbbf24; }
         .advice-sell { background: #991b1b; color: #f87171; }
         .strategy-tag { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; background: #334155; color: #94a3b8; }
+        .advice-change { font-size: 11px; color: #f59e0b; background: #78350f; padding: 2px 8px; border-radius: 10px; }
 
-        /* Level 3: Radar & Details (Collapsible) */
+        /* Sparkline */
+        .sparkline-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 8px 10px; background: #0f172a; border-radius: 8px; }
+        .sparkline-canvas { width: 120px; height: 32px; }
+        .sparkline-stats { display: flex; gap: 12px; font-size: 11px; color: #94a3b8; }
+        .sparkline-stats strong { color: #e2e8f0; }
+
+        /* Anomaly layers */
+        .anomaly-layers { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+        .anomaly-chip { display: flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 6px; font-size: 11px; background: #1e1b4b; border: 1px solid #312e81; }
+        .anomaly-chip.hot { background: #450a0a; border-color: #7f1d1d; }
+        .anomaly-chip .label { color: #94a3b8; }
+        .anomaly-chip .value { font-weight: 600; }
+
+        /* Card details */
         .card-details { overflow: hidden; transition: max-height 0.3s ease; }
         .card-details.collapsed { max-height: 0; }
         .card-details.expanded { max-height: 600px; }
@@ -84,7 +85,7 @@
         /* Modal */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 100; overflow-y: auto; }
         .modal-overlay.active { display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; }
-        .modal { background: #1e293b; border-radius: 16px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 24px; }
+        .modal { background: #1e293b; border-radius: 16px; max-width: 960px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 24px; }
         .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #334155; }
         .modal-title { font-size: 20px; font-weight: 600; }
         .modal-close { background: none; border: none; color: #94a3b8; font-size: 24px; cursor: pointer; padding: 4px 8px; }
@@ -100,16 +101,69 @@
         .report-content ul, .report-content ol { margin: 12px 0; padding-left: 24px; }
         .report-content li { margin-bottom: 8px; }
         .report-content blockquote { border-left: 3px solid #818cf8; padding-left: 16px; color: #94a3b8; margin: 16px 0; }
+
+        /* History Section */
+        .history-section { margin-top: 28px; padding-top: 24px; border-top: 2px solid #334155; }
+        .history-section h3 { color: #818cf8; margin-bottom: 20px; font-size: 18px; }
+        .history-summary { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .history-summary-card { flex: 1; min-width: 100px; padding: 12px; background: #0f172a; border-radius: 8px; text-align: center; }
+        .history-summary-card .val { font-size: 20px; font-weight: 700; color: #e2e8f0; }
+        .history-summary-card .lbl { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+        .history-chart-container { width: 100%; margin: 0 auto 24px; position: relative; }
+        .history-chart-tabs { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+        .history-chart-tab { padding: 4px 12px; border-radius: 12px; font-size: 12px; cursor: pointer; background: #0f172a; border: 1px solid #334155; color: #94a3b8; transition: all 0.15s; }
+        .history-chart-tab:hover { border-color: #818cf8; }
+        .history-chart-tab.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+
+        /* Compare Section */
+        .compare-section { margin-top: 20px; padding: 16px; background: #0f172a; border-radius: 10px; border: 1px solid #312e81; }
+        .compare-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .compare-header h4 { color: #a5b4fc; font-size: 14px; }
+        .compare-select { background: #1e293b; border: 1px solid #334155; color: #e2e8f0; padding: 6px 10px; border-radius: 6px; font-size: 13px; }
+        .compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; }
+        .compare-col { text-align: center; }
+        .compare-col .date { font-size: 12px; color: #94a3b8; }
+        .compare-col .score { font-size: 28px; font-weight: 700; }
+        .compare-vs { color: #64748b; font-size: 14px; }
+        .compare-diff { margin-top: 12px; }
+        .compare-diff-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #1e293b; font-size: 13px; }
+        .compare-diff-row:last-child { border-bottom: none; }
+        .compare-diff-label { width: 80px; color: #94a3b8; text-align: right; }
+        .compare-diff-bar { flex: 1; height: 16px; border-radius: 3px; position: relative; }
+        .compare-diff-val { width: 50px; font-weight: 600; text-align: right; }
+
+        /* Timeline */
+        .history-timeline { display: flex; flex-direction: column; gap: 8px; }
+        .history-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #0f172a; border-radius: 8px; border: 1px solid #1e293b; transition: all 0.15s; }
+        .history-item:hover { border-color: #334155; }
+        .history-item.current { border-color: #818cf8; background: #1e1b4b; }
+        .history-item .h-date { min-width: 90px; font-size: 12px; color: #94a3b8; }
+        .history-item .h-date .time { font-size: 11px; color: #64748b; }
+        .history-item .h-score { font-size: 22px; font-weight: 700; min-width: 45px; text-align: center; }
+        .history-item .h-advice { flex: 1; font-size: 12px; color: #cbd5e1; }
+        .history-item .h-layers { display: flex; gap: 3px; }
+        .history-item .h-layer-dot { width: 22px; height: 22px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #fff; }
+        .history-item .h-change { font-size: 12px; min-width: 50px; text-align: right; font-weight: 600; }
+        .history-item .h-change.up { color: #4ade80; }
+        .history-item .h-change.down { color: #f87171; }
+        .history-item .h-change.same { color: #64748b; }
+        .history-item .h-cmp { padding: 3px 8px; border-radius: 4px; font-size: 11px; cursor: pointer; background: #334155; color: #94a3b8; border: none; transition: all 0.15s; }
+        .history-item .h-cmp:hover { background: #4f46e5; color: #fff; }
+        .history-item .h-cmp.selected { background: #4f46e5; color: #fff; }
+
         .loading { text-align: center; padding: 40px; color: #94a3b8; }
         .error { text-align: center; padding: 40px; color: #f87171; }
         .empty { text-align: center; padding: 40px; color: #94a3b8; }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
             .stats-bar { flex-wrap: wrap; gap: 12px; }
             .strategy-group-header { flex-wrap: wrap; }
             .strategy-group-stats { margin-left: 0; width: 100%; }
+            .compare-grid { grid-template-columns: 1fr; }
+            .history-summary { flex-direction: column; }
+            .history-item { flex-wrap: wrap; }
+            .history-item .h-layers { display: none; }
         }
     </style>
 </head>
@@ -121,12 +175,9 @@
         </div>
         <div class="tabs" id="strategyTabs"></div>
         <div class="stats-bar" id="statsBar"></div>
-        <div id="contentArea">
-            <div class="loading">正在加载数据...</div>
-        </div>
+        <div id="contentArea"><div class="loading">正在加载数据...</div></div>
     </div>
 
-    <!-- Report Modal -->
     <div class="modal-overlay" id="reportModal">
         <div class="modal">
             <div class="modal-header">
@@ -140,142 +191,144 @@
     <script>
         let allData = null;
         let currentStrategy = 'all';
+        let historyChart = null;
+        let compareSelection = [];
 
         function timeAgo(dateStr) {
             if (!dateStr) return '';
             const diff = Date.now() - new Date(dateStr).getTime();
-            const minutes = Math.floor(diff / 60000);
-            if (minutes < 1) return '刚刚';
-            if (minutes < 60) return `${minutes}分钟前`;
-            const hours = Math.floor(minutes / 60);
-            if (hours < 24) return `${hours}小时前`;
-            const days = Math.floor(hours / 24);
-            return `${days}天前`;
+            const m = Math.floor(diff / 60000);
+            if (m < 1) return '刚刚';
+            if (m < 60) return `${m}分钟前`;
+            const h = Math.floor(m / 60);
+            if (h < 24) return `${h}小时前`;
+            return `${Math.floor(h / 24)}天前`;
         }
 
         async function loadData() {
             try {
-                const response = await fetch('data/latest.json');
-                if (!response.ok) throw new Error('数据加载失败');
-                allData = await response.json();
-
-                const updateTime = new Date(allData.update_time);
-                document.getElementById('updateTime').textContent = `数据更新: ${updateTime.toLocaleString('zh-CN')} (${timeAgo(allData.update_time)})`;
-
-                renderTabs();
-                renderStats();
-                renderContent();
-            } catch (error) {
-                document.getElementById('contentArea').innerHTML = `<div class="error">加载失败: ${error.message}</div>`;
+                const resp = await fetch('data/latest.json');
+                if (!resp.ok) throw new Error('数据加载失败');
+                allData = await resp.json();
+                const t = new Date(allData.update_time);
+                document.getElementById('updateTime').textContent = `数据更新: ${t.toLocaleString('zh-CN')} (${timeAgo(allData.update_time)})`;
+                renderTabs(); renderStats(); renderContent();
+            } catch (e) {
+                document.getElementById('contentArea').innerHTML = `<div class="error">加载失败: ${e.message}</div>`;
             }
         }
 
         function renderTabs() {
-            const strategies = [...new Set(allData.stocks.map(s => s.strategy))];
+            const strats = [...new Set(allData.stocks.map(s => s.strategy))];
             const tabs = document.getElementById('strategyTabs');
             tabs.innerHTML = `<div class="tab ${currentStrategy === 'all' ? 'active' : ''}" onclick="filterStrategy('all')">全部</div>`;
-            strategies.forEach(s => {
+            strats.forEach(s => {
                 const name = s === 'dongting_tech' ? '买贵的好公司' : s === 'dongting_bottom' ? '抄底便宜的公司' : s;
-                const count = allData.stocks.filter(st => st.strategy === s).length;
-                tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name} (${count})</div>`;
+                const cnt = allData.stocks.filter(st => st.strategy === s).length;
+                tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name} (${cnt})</div>`;
             });
         }
 
         function renderStats() {
             const stocks = currentStrategy === 'all' ? allData.stocks : allData.stocks.filter(s => s.strategy === currentStrategy);
             const total = stocks.length;
-            const avgScore = total > 0 ? Math.round(stocks.reduce((sum, s) => sum + s.score, 0) / total) : 0;
-            const highCount = stocks.filter(s => s.score >= 70).length;
-            const midCount = stocks.filter(s => s.score >= 50 && s.score < 70).length;
-            const lowCount = stocks.filter(s => s.score < 50).length;
-
+            const avg = total > 0 ? Math.round(stocks.reduce((s, x) => s + x.score, 0) / total) : 0;
+            const hi = stocks.filter(s => s.score >= 70).length;
+            const mid = stocks.filter(s => s.score >= 50 && s.score < 70).length;
+            const lo = stocks.filter(s => s.score < 50).length;
             document.getElementById('statsBar').innerHTML = `
                 <div class="stat-item"><div class="stat-value">${total}</div><div class="stat-label">股票总数</div></div>
-                <div class="stat-item"><div class="stat-value">${avgScore}</div><div class="stat-label">平均分</div></div>
-                <div class="stat-item"><div class="stat-value" style="color:#4ade80">${highCount}</div><div class="stat-label">高分 (≥70)</div></div>
-                <div class="stat-item"><div class="stat-value" style="color:#fbbf24">${midCount}</div><div class="stat-label">中分 (50-69)</div></div>
-                <div class="stat-item"><div class="stat-value" style="color:#f87171">${lowCount}</div><div class="stat-label">低分 (<50)</div></div>
-            `;
+                <div class="stat-item"><div class="stat-value">${avg}</div><div class="stat-label">平均分</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#4ade80">${hi}</div><div class="stat-label">高分 ≥70</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#fbbf24">${mid}</div><div class="stat-label">中分 50-69</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#f87171">${lo}</div><div class="stat-label">低分 <50</div></div>`;
         }
 
-        function filterStrategy(strategy) {
-            currentStrategy = strategy;
-            renderTabs();
-            renderStats();
-            renderContent();
-        }
+        function filterStrategy(s) { currentStrategy = s; renderTabs(); renderStats(); renderContent(); }
 
         function renderContent() {
             const area = document.getElementById('contentArea');
-            let stocks = allData.stocks;
-
-            if (currentStrategy !== 'all') {
-                stocks = stocks.filter(s => s.strategy === currentStrategy);
-            }
-
-            if (stocks.length === 0) {
-                area.innerHTML = '<div class="empty">暂无数据</div>';
-                return;
-            }
-
-            // Group by strategy
+            let stocks = currentStrategy === 'all' ? allData.stocks : allData.stocks.filter(s => s.strategy === currentStrategy);
+            if (!stocks.length) { area.innerHTML = '<div class="empty">暂无数据</div>'; return; }
             const grouped = new Map();
-            stocks.forEach(s => {
-                if (!grouped.has(s.strategy)) grouped.set(s.strategy, []);
-                grouped.get(s.strategy).push(s);
-            });
-
+            stocks.forEach(s => { if (!grouped.has(s.strategy)) grouped.set(s.strategy, []); grouped.get(s.strategy).push(s); });
             area.innerHTML = '';
-            grouped.forEach((strategyStocks, strategy) => {
-                strategyStocks.sort((a, b) => b.score - a.score);
-                const group = createStrategyGroup(strategy, strategyStocks);
-                area.appendChild(group);
-            });
+            grouped.forEach((ss, strat) => { ss.sort((a, b) => b.score - a.score); area.appendChild(createStrategyGroup(strat, ss)); });
         }
 
         function createStrategyGroup(strategy, stocks) {
-            const group = document.createElement('div');
-            group.className = 'strategy-group';
-
-            const strategyName = strategy === 'dongting_tech' ? '买贵的好公司' : strategy === 'dongting_bottom' ? '抄底便宜的公司' : strategy;
-            const avgScore = Math.round(stocks.reduce((sum, s) => sum + s.score, 0) / stocks.length);
-            const highCount = stocks.filter(s => s.score >= 70).length;
-            const midCount = stocks.filter(s => s.score >= 50 && s.score < 70).length;
-            const lowCount = stocks.filter(s => s.score < 50).length;
-
-            group.innerHTML = `
-                <div class="strategy-group-header">
-                    <div class="strategy-group-title">${strategyName}</div>
-                    <div class="strategy-group-count">${stocks.length} 只股票</div>
-                    <div class="strategy-group-stats">
-                        <span>均分: <strong>${avgScore}</strong></span>
-                        <span><span class="stat-dot green"></span>${highCount}</span>
-                        <span><span class="stat-dot yellow"></span>${midCount}</span>
-                        <span><span class="stat-dot red"></span>${lowCount}</span>
-                    </div>
-                </div>
-                <div class="grid" id="grid-${strategy}"></div>
-            `;
-
-            const grid = group.querySelector('.grid');
-            stocks.forEach(stock => {
-                grid.appendChild(createStockCard(stock));
-            });
-
-            return group;
+            const g = document.createElement('div'); g.className = 'strategy-group';
+            const name = strategy === 'dongting_tech' ? '买贵的好公司' : strategy === 'dongting_bottom' ? '抄底便宜的公司' : strategy;
+            const avg = Math.round(stocks.reduce((s, x) => s + x.score, 0) / stocks.length);
+            const hi = stocks.filter(s => s.score >= 70).length, mid = stocks.filter(s => s.score >= 50 && s.score < 70).length, lo = stocks.filter(s => s.score < 50).length;
+            g.innerHTML = `<div class="strategy-group-header">
+                <div class="strategy-group-title">${name}</div>
+                <div class="strategy-group-count">${stocks.length} 只</div>
+                <div class="strategy-group-stats">
+                    <span>均分: <strong>${avg}</strong></span>
+                    <span><span class="stat-dot green"></span>${hi}</span>
+                    <span><span class="stat-dot yellow"></span>${mid}</span>
+                    <span><span class="stat-dot red"></span>${lo}</span>
+                </div></div><div class="grid" id="grid-${strategy}"></div>`;
+            const grid = g.querySelector('.grid');
+            stocks.forEach(s => grid.appendChild(createStockCard(s)));
+            return g;
         }
 
         function createStockCard(stock) {
-            const card = document.createElement('div');
-            card.className = 'card';
+            const card = document.createElement('div'); card.className = 'card';
+            const sc = stock.score >= 70 ? 'score-high' : stock.score >= 50 ? 'score-mid' : 'score-low';
+            const adv = stock.advice.replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim();
+            const ac = adv.includes('买') || adv.includes('跟踪') ? 'advice-buy' : adv.includes('持') || adv.includes('观察') || adv.includes('观望') ? 'advice-hold' : 'advice-sell';
+            const hasLS = stock.layer_scores && stock.layer_scores.length > 0;
+            const cid = `card-${stock.code}-${stock.strategy}`;
+            const hist = stock.history || [];
+            const prevScore = hist.length > 1 ? hist[1].score : null;
+            let changeHtml = '';
+            if (prevScore !== null) {
+                const d = stock.score - prevScore;
+                if (d > 0) changeHtml = `<span class="score-change up">▲${d}</span>`;
+                else if (d < 0) changeHtml = `<span class="score-change down">▼${Math.abs(d)}</span>`;
+                else changeHtml = `<span class="score-change same">●</span>`;
+            }
+            let prevAdvice = hist.length > 1 ? (hist[1].advice || '').replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim() : '';
+            let adviceChangeHtml = '';
+            if (prevAdvice && prevAdvice !== adv) adviceChangeHtml = `<span class="advice-change">${prevAdvice} → ${adv}</span>`;
 
-            const scoreClass = stock.score >= 70 ? 'score-high' : stock.score >= 50 ? 'score-mid' : 'score-low';
-            const adviceText = stock.advice.replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim();
-            const adviceClass = adviceText.includes('买') || adviceText.includes('跟踪') ? 'advice-buy' :
-                               adviceText.includes('持') || adviceText.includes('观察') || adviceText.includes('观望') ? 'advice-hold' : 'advice-sell';
+            // Anomaly layers (biggest change)
+            let anomalyHtml = '';
+            if (hist.length > 1 && hist[0].layer_scores && hist[1].layer_scores) {
+                const diffs = [];
+                hist[0].layer_scores.forEach((ls, i) => {
+                    if (hist[1].layer_scores[i]) {
+                        const d = ls.score - hist[1].layer_scores[i].score;
+                        if (Math.abs(d) >= 2) diffs.push({ name: ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, ''), diff: d, score: ls.score });
+                    }
+                });
+                if (diffs.length > 0) {
+                    anomalyHtml = '<div class="anomaly-layers">' + diffs.slice(0, 3).map(d => {
+                        const cls = d.diff > 0 ? '' : 'hot';
+                        const arrow = d.diff > 0 ? '▲' : '▼';
+                        return `<div class="anomaly-chip ${cls}"><span class="label">${d.name}</span><span class="value">${arrow}${Math.abs(d.diff)}</span></div>`;
+                    }).join('') + '</div>';
+                }
+            }
 
-            const hasLayerScores = stock.layer_scores && stock.layer_scores.length > 0;
-            const cardId = `card-${stock.code}-${stock.strategy}`;
+            // Sparkline
+            let sparkHtml = '';
+            if (hist.length > 1) {
+                const scores = [...hist].reverse().map(h => h.score);
+                const max = Math.max(...scores), min = Math.min(...scores);
+                const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+                sparkHtml = `<div class="sparkline-bar">
+                    <canvas class="sparkline-canvas" id="spark-${cid}"></canvas>
+                    <div class="sparkline-stats">
+                        <span>均 <strong>${avg}</strong></span>
+                        <span>高 <strong style="color:#4ade80">${max}</strong></span>
+                        <span>低 <strong style="color:#f87171">${min}</strong></span>
+                        <span>${scores.length}次</span>
+                    </div></div>`;
+            }
 
             card.innerHTML = `
                 <div class="card-header">
@@ -285,195 +338,275 @@
                         <div class="stock-time">分析于 ${timeAgo(stock.created_at)}</div>
                     </div>
                     <div class="score-section">
-                        <div class="score ${scoreClass}">${stock.score}</div>
+                        <div class="score-row"><div class="score ${sc}">${stock.score}</div>${changeHtml}</div>
                         <div class="score-label">综合评分</div>
                     </div>
                 </div>
                 <div class="advice-bar">
-                    <span class="advice ${adviceClass}">${adviceText}</span>
+                    <span class="advice ${ac}">${adv}</span>
                     <span class="strategy-tag">${stock.strategy_name}</span>
+                    ${adviceChangeHtml}
                 </div>
-                ${hasLayerScores ? `
-                    <div class="card-details collapsed" id="${cardId}-details">
-                        <div class="radar-container">
-                            <canvas id="radar-${stock.code}-${stock.strategy}"></canvas>
-                        </div>
-                        <div class="layer-summary">
-                            ${stock.layer_scores.map(ls => `
-                                <div class="layer-item">
-                                    <span class="layer-name" title="${ls.dimension}">${ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')}</span>
-                                    <span class="layer-value">${ls.score}/${ls.max_score}</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    <button class="expand-btn" id="${cardId}-btn" onclick="toggleDetails('${cardId}', event)">展开详情</button>
-                ` : ''}
-            `;
+                ${anomalyHtml}
+                ${sparkHtml}
+                ${hasLS ? `<div class="card-details collapsed" id="${cid}-details">
+                    <div class="radar-container"><canvas id="radar-${stock.code}-${stock.strategy}"></canvas></div>
+                    <div class="layer-summary">${stock.layer_scores.map(ls => `<div class="layer-item"><span class="layer-name" title="${ls.dimension}">${ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')}</span><span class="layer-value">${ls.score}/${ls.max_score}</span></div>`).join('')}</div>
+                </div><button class="expand-btn" id="${cid}-btn" onclick="toggleDetails('${cid}',event)">展开详情</button>` : ''}`;
 
-            card.addEventListener('click', (e) => {
-                if (e.target.classList.contains('expand-btn')) return;
-                showReport(stock);
-            });
-
+            card.addEventListener('click', e => { if (!e.target.classList.contains('expand-btn') && !e.target.classList.contains('h-cmp')) showReport(stock); });
+            setTimeout(() => { if (hist.length > 1) drawSparkline(cid, [...hist].reverse().map(h => h.score)); }, 50);
             return card;
         }
 
-        function toggleDetails(cardId, event) {
-            event.stopPropagation();
-            const details = document.getElementById(cardId + '-details');
-            const btn = document.getElementById(cardId + '-btn');
-            if (details.classList.contains('collapsed')) {
-                details.classList.remove('collapsed');
-                details.classList.add('expanded');
-                btn.textContent = '收起详情';
-                // Render radar chart on expand
-                const canvas = details.querySelector('canvas');
-                if (canvas && !canvas.chartRendered) {
-                    const stock = allData.stocks.find(s => `card-${s.code}-${s.strategy}` === cardId);
-                    if (stock) {
-                        setTimeout(() => createRadarChart(stock, canvas), 50);
-                        canvas.chartRendered = true;
-                    }
-                }
-            } else {
-                details.classList.remove('expanded');
-                details.classList.add('collapsed');
-                btn.textContent = '展开详情';
-            }
+        function drawSparkline(cid, scores) {
+            const c = document.getElementById(`spark-${cid}`);
+            if (!c) return;
+            new Chart(c, {
+                type: 'line',
+                data: { labels: scores.map((_, i) => i), datasets: [{ data: scores, borderColor: '#818cf8', backgroundColor: 'rgba(129,140,248,0.15)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 1.5 }] },
+                options: { responsive: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false, min: 0, max: 100 } }, animation: { duration: 500 } }
+            });
+        }
+
+        function toggleDetails(cid, e) {
+            e.stopPropagation();
+            const d = document.getElementById(cid + '-details'), b = document.getElementById(cid + '-btn');
+            if (d.classList.contains('collapsed')) {
+                d.classList.remove('collapsed'); d.classList.add('expanded'); b.textContent = '收起详情';
+                const canvas = d.querySelector('canvas');
+                if (canvas && !canvas._done) { const s = allData.stocks.find(x => `card-${x.code}-${x.strategy}` === cid); if (s) { setTimeout(() => createRadarChart(s, canvas), 50); canvas._done = true; } }
+            } else { d.classList.remove('expanded'); d.classList.add('collapsed'); b.textContent = '展开详情'; }
         }
 
         function createRadarChart(stock, canvas) {
-            if (!canvas) {
-                canvas = document.getElementById(`radar-${stock.code}-${stock.strategy}`);
-            }
+            if (!canvas) canvas = document.getElementById(`radar-${stock.code}-${stock.strategy}`);
             if (!canvas) return;
-
             new Chart(canvas, {
                 type: 'radar',
-                data: {
-                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')),
-                    datasets: [{
-                        label: '评分',
-                        data: stock.layer_scores.map(ls => ls.score),
-                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
-                        borderColor: 'rgb(139, 92, 246)',
-                        pointBackgroundColor: 'rgb(139, 92, 246)',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgb(139, 92, 246)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        r: {
-                            beginAtZero: true,
-                            max: 10,
-                            ticks: { stepSize: 2, color: '#94a3b8', font: { size: 10 } },
-                            grid: { color: '#334155' },
-                            pointLabels: { color: '#94a3b8', font: { size: 9 } }
-                        }
-                    }
-                }
+                data: { labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')), datasets: [{ label: '评分', data: stock.layer_scores.map(ls => ls.score), backgroundColor: 'rgba(139,92,246,0.2)', borderColor: 'rgb(139,92,246)', pointBackgroundColor: 'rgb(139,92,246)', pointBorderColor: '#fff' }] },
+                options: { responsive: true, plugins: { legend: { display: false } }, scales: { r: { beginAtZero: true, max: 10, ticks: { stepSize: 2, color: '#94a3b8', font: { size: 10 } }, grid: { color: '#334155' }, pointLabels: { color: '#94a3b8', font: { size: 9 } } } } }
             });
         }
 
         function showReport(stock) {
             const modal = document.getElementById('reportModal');
-            const title = document.getElementById('modalTitle');
-            const content = document.getElementById('reportContent');
-
-            title.textContent = `${stock.name} (${stock.code}) - ${stock.strategy_name}`;
-            content.innerHTML = '<div class="loading">加载报告中...</div>';
+            document.getElementById('modalTitle').textContent = `${stock.name} (${stock.code}) - ${stock.strategy_name}`;
+            document.getElementById('reportContent').innerHTML = '<div class="loading">加载报告中...</div>';
             modal.classList.add('active');
-
             loadReportContent(stock);
         }
 
         async function loadReportContent(stock) {
             try {
-                const stockData = allData.stocks.find(s => s.code === stock.code && s.strategy === stock.strategy);
-                if (stockData && stockData.raw_response) {
-                    document.getElementById('reportContent').innerHTML = formatReport(stockData.raw_response);
-                } else {
-                    document.getElementById('reportContent').innerHTML = formatReportFromStock(stock);
+                const sd = allData.stocks.find(s => s.code === stock.code && s.strategy === stock.strategy);
+                let html = (sd && sd.raw_response) ? formatReport(sd.raw_response) : formatReportFromStock(stock);
+                if (sd && sd.history && sd.history.length > 1) html += renderHistorySection(sd);
+                document.getElementById('reportContent').innerHTML = html;
+                if (sd && sd.history && sd.history.length > 1) {
+                    setTimeout(() => renderHistoryChart(sd, 'score'), 100);
+                    compareSelection = [];
                 }
-            } catch (error) {
+            } catch (e) {
                 document.getElementById('reportContent').innerHTML = formatReportFromStock(stock);
             }
         }
 
-        function formatReportFromStock(stock) {
-            let html = `<h2>📊 ${stock.name} 分析报告</h2>`;
-            html += `<p><strong>股票代码:</strong> ${stock.code}</p>`;
-            html += `<p><strong>策略:</strong> ${stock.strategy_name}</p>`;
-            html += `<p><strong>综合评分:</strong> ${stock.score}/100</p>`;
-            html += `<p><strong>操作建议:</strong> ${stock.advice}</p>`;
+        function renderHistorySection(sd) {
+            const h = sd.history;
+            const scores = h.map(x => x.score);
+            const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+            const max = Math.max(...scores), min = Math.min(...scores);
+            const volatility = max - min;
+            const trend = scores.length >= 3 ? (scores[0] > scores[2] ? '↗ 上升' : scores[0] < scores[2] ? '↘ 下降' : '→ 平稳') : '-';
 
-            if (stock.layer_scores && stock.layer_scores.length > 0) {
-                html += `<h3>📊 七层评分</h3>`;
-                html += `<table>
-                    <tr><th>层级</th><th>权重</th><th>评分</th><th>关键发现</th></tr>
-                    ${stock.layer_scores.map(ls => `
-                        <tr>
-                            <td>${ls.dimension}</td>
-                            <td>${ls.weight}</td>
-                            <td>${ls.score}/${ls.max_score}</td>
-                            <td>${ls.finding || '-'}</td>
-                        </tr>
-                    `).join('')}
-                </table>`;
+            let html = `<div class="history-section">
+                <h3>📈 评分趋势分析 (${h.length} 次)</h3>
+                <div class="history-summary">
+                    <div class="history-summary-card"><div class="val">${avg}</div><div class="lbl">平均分</div></div>
+                    <div class="history-summary-card"><div class="val" style="color:#4ade80">${max}</div><div class="lbl">最高分</div></div>
+                    <div class="history-summary-card"><div class="val" style="color:#f87171">${min}</div><div class="lbl">最低分</div></div>
+                    <div class="history-summary-card"><div class="val">${volatility}</div><div class="lbl">波动幅度</div></div>
+                    <div class="history-summary-card"><div class="val">${trend}</div><div class="lbl">近期趋势</div></div>
+                </div>
+                <div class="history-chart-tabs">
+                    <div class="history-chart-tab active" onclick="switchChartMode('score','${sd.code}','${sd.strategy}')">综合评分</div>
+                    <div class="history-chart-tab" onclick="switchChartMode('layers','${sd.code}','${sd.strategy}')">七层评分</div>
+                </div>
+                <div class="history-chart-container"><canvas id="history-chart" height="250"></canvas></div>
+                <div class="compare-section" id="compareSection" style="display:none">
+                    <div class="compare-header"><h4>🔍 双次对比</h4><span id="compareLabel" style="color:#94a3b8;font-size:12px"></span></div>
+                    <div id="compareContent"></div>
+                </div>
+                <h3 style="margin-top:20px">📋 历史记录 <span style="font-size:12px;color:#94a3b8;font-weight:400">(点击"对比"选取两次)</span></h3>
+                <div class="history-timeline">`;
+
+            h.forEach((item, idx) => {
+                const d = new Date(item.created_at);
+                const ds = d.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' });
+                const ts = d.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+                const cls = item.score >= 70 ? 'score-high' : item.score >= 50 ? 'score-mid' : 'score-low';
+                const isCur = idx === 0;
+                const prev = idx < h.length - 1 ? h[idx + 1].score : null;
+                let chg = '';
+                if (prev !== null) {
+                    const df = item.score - prev;
+                    if (df > 0) chg = `<span class="h-change up">+${df}</span>`;
+                    else if (df < 0) chg = `<span class="h-change down">${df}</span>`;
+                    else chg = `<span class="h-change same">±0</span>`;
+                } else chg = `<span class="h-change same">-</span>`;
+
+                let layersHtml = '';
+                if (item.layer_scores && item.layer_scores.length) {
+                    layersHtml = '<div class="h-layers">' + item.layer_scores.map(ls => {
+                        const c = ls.score >= 8 ? '#4ade80' : ls.score >= 5 ? '#fbbf24' : '#f87171';
+                        return `<div class="h-layer-dot" style="background:${c}" title="${ls.dimension}: ${ls.score}/${ls.max_score}">${ls.score}</div>`;
+                    }).join('') + '</div>';
+                }
+                const advClean = (item.advice || '').replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim().substring(0, 12);
+
+                html += `<div class="history-item ${isCur ? 'current' : ''}">
+                    <div class="h-date"><div>${ds}</div><div class="time">${ts}</div></div>
+                    <div class="h-score ${cls}">${item.score}</div>
+                    <div class="h-advice">${advClean}</div>
+                    ${layersHtml}
+                    ${chg}
+                    <button class="h-cmp" onclick="toggleCompare(${idx},'${sd.code}','${sd.strategy}',event)">对比</button>
+                </div>`;
+            });
+
+            html += '</div></div>';
+            return html;
+        }
+
+        function switchChartMode(mode, code, strategy) {
+            document.querySelectorAll('.history-chart-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            const sd = allData.stocks.find(s => s.code === code && s.strategy === strategy);
+            if (sd) renderHistoryChart(sd, mode);
+        }
+
+        function renderHistoryChart(sd, mode) {
+            const canvas = document.getElementById('history-chart');
+            if (!canvas) return;
+            if (historyChart) { historyChart.destroy(); historyChart = null; }
+            const h = [...sd.history].reverse();
+            const labels = h.map(x => { const d = new Date(x.created_at); return d.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' }) + ' ' + d.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }); });
+
+            if (mode === 'score') {
+                historyChart = new Chart(canvas, {
+                    type: 'line',
+                    data: { labels, datasets: [{ label: '综合评分', data: h.map(x => x.score), borderColor: '#818cf8', backgroundColor: 'rgba(129,140,248,0.1)', fill: true, tension: 0.3, pointBackgroundColor: '#818cf8', pointBorderColor: '#fff', pointRadius: 5, pointHoverRadius: 7 }] },
+                    options: { responsive: true, plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: ctx => { const item = h[ctx.dataIndex]; return item.layer_scores ? item.layer_scores.map(ls => `${ls.dimension}: ${ls.score}/${ls.max_score}`).join('\n') : ''; } } } }, scales: { y: { min: 0, max: 100, ticks: { color: '#94a3b8', stepSize: 10 }, grid: { color: '#1e293b' } }, x: { ticks: { color: '#94a3b8', maxRotation: 45, font: { size: 10 } }, grid: { color: '#1e293b' } } } }
+                });
+            } else {
+                const dims = h[0].layer_scores ? h[0].layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')) : [];
+                const colors = ['#38bdf8', '#a78bfa', '#34d399', '#fb923c', '#f472b6', '#67e8f9', '#fbbf24'];
+                const datasets = dims.map((dim, i) => ({ label: dim, data: h.map(x => x.layer_scores && x.layer_scores[i] ? x.layer_scores[i].score : 0), borderColor: colors[i % 7], backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, borderWidth: 1.5 }));
+                historyChart = new Chart(canvas, {
+                    type: 'line',
+                    data: { labels, datasets },
+                    options: { responsive: true, plugins: { legend: { position: 'top', labels: { color: '#94a3b8', font: { size: 11 }, boxWidth: 12, padding: 8 } } }, scales: { y: { min: 0, max: 10, ticks: { color: '#94a3b8', stepSize: 2 }, grid: { color: '#1e293b' } }, x: { ticks: { color: '#94a3b8', maxRotation: 45, font: { size: 10 } }, grid: { color: '#1e293b' } } } }
+                });
+            }
+        }
+
+        function toggleCompare(idx, code, strategy, e) {
+            e.stopPropagation();
+            const btn = e.target;
+            const i = compareSelection.findIndex(x => x.idx === idx);
+            if (i >= 0) { compareSelection.splice(i, 1); btn.classList.remove('selected'); }
+            else {
+                if (compareSelection.length >= 2) { const old = compareSelection.shift(); document.querySelectorAll('.h-cmp.selected').forEach(b => { if (b.textContent === '已选') { b.classList.remove('selected'); b.textContent = '对比'; } }); }
+                compareSelection.push({ idx, code, strategy }); btn.classList.add('selected'); btn.textContent = '已选';
+            }
+            renderCompare(code, strategy);
+        }
+
+        function renderCompare(code, strategy) {
+            const section = document.getElementById('compareSection');
+            const content = document.getElementById('compareContent');
+            const label = document.getElementById('compareLabel');
+            if (compareSelection.length < 2) { section.style.display = 'none'; return; }
+            const sd = allData.stocks.find(s => s.code === code && s.strategy === strategy);
+            if (!sd) return;
+            const a = sd.history[compareSelection[0].idx], b = sd.history[compareSelection[1].idx];
+            section.style.display = 'block';
+            const d1 = new Date(a.created_at), d2 = new Date(b.created_at);
+            label.textContent = `${d1.toLocaleDateString('zh-CN')} vs ${d2.toLocaleDateString('zh-CN')}`;
+            const diff = a.score - b.score;
+            const diffCls = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
+            const diffStr = diff > 0 ? `+${diff}` : diff < 0 ? `${diff}` : '±0';
+
+            let rowsHtml = '';
+            if (a.layer_scores && b.layer_scores) {
+                a.layer_scores.forEach((la, i) => {
+                    const lb = b.layer_scores[i];
+                    if (!lb) return;
+                    const d = la.score - lb.score;
+                    const color = d > 0 ? '#4ade80' : d < 0 ? '#f87171' : '#64748b';
+                    const name = la.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '');
+                    rowsHtml += `<div class="compare-diff-row">
+                        <div class="compare-diff-label">${name}</div>
+                        <div style="flex:1;display:flex;gap:4px;align-items:center">
+                            <div style="width:${la.score * 10}%;height:14px;background:#818cf8;border-radius:3px"></div>
+                            <div style="width:${lb.score * 10}%;height:14px;background:#64748b;border-radius:3px"></div>
+                        </div>
+                        <div class="compare-diff-val" style="color:${color}">${d > 0 ? '+' : ''}${d}</div>
+                    </div>`;
+                });
             }
 
+            content.innerHTML = `<div class="compare-grid">
+                <div class="compare-col"><div class="date">${d1.toLocaleDateString('zh-CN')} ${d1.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}</div><div class="score ${a.score >= 70 ? 'score-high' : a.score >= 50 ? 'score-mid' : 'score-low'}">${a.score}</div></div>
+                <div class="compare-vs">vs</div>
+                <div class="compare-col"><div class="date">${d2.toLocaleDateString('zh-CN')} ${d2.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}</div><div class="score ${b.score >= 70 ? 'score-high' : b.score >= 50 ? 'score-mid' : 'score-low'}">${b.score}</div></div>
+            </div>
+            <div style="text-align:center;margin:8px 0"><span class="score-change ${diffCls}" style="font-size:18px">${diffStr}</span></div>
+            <div class="compare-diff">${rowsHtml}</div>
+            <div style="margin-top:12px;display:flex;justify-content:center;gap:4px;font-size:11px;color:#64748b">
+                <span style="display:inline-block;width:12px;height:12px;background:#818cf8;border-radius:2px"></span> 较新
+                <span style="display:inline-block;width:12px;height:12px;background:#64748b;border-radius:2px;margin-left:8px"></span> 较旧
+            </div>`;
+        }
+
+        function formatReportFromStock(stock) {
+            let html = `<h2>📊 ${stock.name} 分析报告</h2><p><strong>股票代码:</strong> ${stock.code}</p><p><strong>策略:</strong> ${stock.strategy_name}</p><p><strong>综合评分:</strong> ${stock.score}/100</p><p><strong>操作建议:</strong> ${stock.advice}</p>`;
+            if (stock.layer_scores && stock.layer_scores.length) {
+                html += `<h3>📊 七层评分</h3><table><tr><th>层级</th><th>权重</th><th>评分</th></tr>${stock.layer_scores.map(ls => `<tr><td>${ls.dimension}</td><td>${ls.weight}</td><td>${ls.score}/${ls.max_score}</td></tr>`).join('')}</table>`;
+            }
             return html;
         }
 
         function formatReport(content) {
             if (!content) return '<p>暂无报告内容</p>';
-
-            const lines = content.split('\n');
-            let result = [];
-            let inTable = false;
-            let tableHtml = '';
-
+            const lines = content.split('\n'); let result = [], inTable = false, tableHtml = '';
             for (let line of lines) {
                 if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
                     if (line.includes('---')) continue;
                     const cells = line.split('|').filter(c => c.trim() !== '');
-                    if (cells.length > 0) {
-                        const isHeader = cells.some(c => c.includes('层级') || c.includes('维度') || c.includes('权重'));
-                        const tag = isHeader ? 'th' : 'td';
-                        const row = '<tr>' + cells.map(c => `<${tag}>${c.trim().replace(/\*\*/g, '')}</${tag}>`).join('') + '</tr>';
+                    if (cells.length) {
+                        const isH = cells.some(c => c.includes('层级') || c.includes('维度') || c.includes('权重'));
+                        const tag = isH ? 'th' : 'td';
                         if (!inTable) { inTable = true; tableHtml = '<table>'; }
-                        tableHtml += row;
+                        tableHtml += '<tr>' + cells.map(c => `<${tag}>${c.trim().replace(/\*\*/g, '')}</${tag}>`).join('') + '</tr>';
                     }
                 } else {
                     if (inTable) { tableHtml += '</table>'; result.push(tableHtml); inTable = false; tableHtml = ''; }
                     if (line.startsWith('### ')) result.push(`<h3>${line.substring(4)}</h3>`);
                     else if (line.startsWith('## ')) result.push(`<h2>${line.substring(3)}</h2>`);
                     else if (line.startsWith('# ')) result.push(`<h2>${line.substring(2)}</h2>`);
-                    else if (line.trim() === '') result.push('<br>');
-                    else {
-                        let processed = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>');
-                        if (processed.startsWith('- ') || processed.startsWith('* ')) result.push(`<li>${processed.substring(2)}</li>`);
-                        else result.push(`<p>${processed}</p>`);
-                    }
+                    else if (!line.trim()) result.push('<br>');
+                    else { let p = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>'); if (p.startsWith('- ') || p.startsWith('* ')) result.push(`<li>${p.substring(2)}</li>`); else result.push(`<p>${p}</p>`); }
                 }
             }
-
             if (inTable) { tableHtml += '</table>'; result.push(tableHtml); }
             return result.join('\n');
         }
 
-        function closeModal() {
-            document.getElementById('reportModal').classList.remove('active');
-        }
-
+        function closeModal() { document.getElementById('reportModal').classList.remove('active'); }
         document.getElementById('reportModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
         document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-
         loadData();
     </script>
 </body>
