@@ -9,34 +9,78 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
         .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
-        h1 { text-align: center; margin-bottom: 10px; color: #818cf8; }
-        .update-time { text-align: center; color: #94a3b8; margin-bottom: 20px; }
-        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
-        .tab { padding: 8px 20px; border-radius: 20px; cursor: pointer; background: #1e293b; border: 1px solid #334155; color: #94a3b8; }
+
+        /* Header */
+        .header { text-align: center; margin-bottom: 24px; }
+        .header h1 { color: #818cf8; font-size: 24px; margin-bottom: 8px; }
+        .header .update-time { color: #94a3b8; font-size: 14px; }
+
+        /* Strategy Tabs */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+        .tab { padding: 8px 20px; border-radius: 20px; cursor: pointer; background: #1e293b; border: 1px solid #334155; color: #94a3b8; font-size: 14px; transition: all 0.2s; }
+        .tab:hover { border-color: #818cf8; color: #e2e8f0; }
         .tab.active { background: #4f46e5; color: white; border-color: #4f46e5; }
+
+        /* Stats Bar */
+        .stats-bar { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; padding: 12px 20px; background: #1e293b; border-radius: 10px; border: 1px solid #334155; }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 20px; font-weight: 700; color: #818cf8; }
+        .stat-label { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+
+        /* Strategy Group */
+        .strategy-group { margin-bottom: 32px; }
+        .strategy-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e293b; }
+        .strategy-group-title { font-size: 18px; font-weight: 600; color: #e2e8f0; }
+        .strategy-group-count { font-size: 13px; color: #94a3b8; background: #334155; padding: 2px 10px; border-radius: 12px; }
+        .strategy-group-stats { display: flex; gap: 16px; margin-left: auto; font-size: 13px; color: #94a3b8; }
+        .strategy-group-stats span { display: flex; align-items: center; gap: 4px; }
+        .stat-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .stat-dot.green { background: #4ade80; }
+        .stat-dot.yellow { background: #fbbf24; }
+        .stat-dot.red { background: #f87171; }
+
+        /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+
+        /* Card */
         .card { background: #1e293b; border-radius: 12px; padding: 16px; border: 1px solid #334155; cursor: pointer; transition: all 0.2s; }
         .card:hover { border-color: #818cf8; transform: translateY(-2px); }
+
+        /* Card Header - Level 1: Most Important */
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
         .stock-info { flex: 1; }
-        .stock-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-        .stock-code { color: #94a3b8; font-size: 13px; }
+        .stock-name { font-size: 18px; font-weight: 700; margin-bottom: 2px; color: #f1f5f9; }
+        .stock-code { color: #64748b; font-size: 12px; }
+        .stock-time { color: #64748b; font-size: 11px; margin-top: 4px; }
+
+        /* Score Section - Level 1 */
         .score-section { text-align: right; }
-        .score { font-size: 32px; font-weight: 700; line-height: 1; }
+        .score { font-size: 36px; font-weight: 800; line-height: 1; }
         .score-high { color: #4ade80; }
         .score-mid { color: #fbbf24; }
         .score-low { color: #f87171; }
-        .advice { display: inline-block; padding: 4px 10px; border-radius: 16px; font-size: 12px; margin-top: 6px; }
+        .score-label { font-size: 11px; color: #64748b; margin-top: 2px; }
+
+        /* Level 2: Advice */
+        .advice-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .advice { display: inline-block; padding: 4px 12px; border-radius: 16px; font-size: 13px; font-weight: 500; }
         .advice-buy { background: #166534; color: #4ade80; }
         .advice-hold { background: #854d0e; color: #fbbf24; }
         .advice-sell { background: #991b1b; color: #f87171; }
-        .strategy-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; background: #334155; color: #94a3b8; margin-bottom: 8px; }
-        .radar-container { width: 100%; max-width: 280px; margin: 10px auto; }
+        .strategy-tag { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; background: #334155; color: #94a3b8; }
+
+        /* Level 3: Radar & Details (Collapsible) */
+        .card-details { overflow: hidden; transition: max-height 0.3s ease; }
+        .card-details.collapsed { max-height: 0; }
+        .card-details.expanded { max-height: 600px; }
+        .radar-container { width: 100%; max-width: 260px; margin: 10px auto; }
         .layer-summary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 10px; }
         .layer-item { display: flex; justify-content: space-between; padding: 4px 8px; background: #0f172a; border-radius: 4px; font-size: 12px; }
         .layer-name { color: #94a3b8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px; }
         .layer-value { font-weight: 600; color: #e2e8f0; }
-        
+        .expand-btn { display: block; width: 100%; text-align: center; padding: 6px; margin-top: 8px; background: none; border: 1px dashed #334155; border-radius: 6px; color: #64748b; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+        .expand-btn:hover { border-color: #818cf8; color: #818cf8; }
+
         /* Modal */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 100; overflow-y: auto; }
         .modal-overlay.active { display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; }
@@ -59,14 +103,25 @@
         .loading { text-align: center; padding: 40px; color: #94a3b8; }
         .error { text-align: center; padding: 40px; color: #f87171; }
         .empty { text-align: center; padding: 40px; color: #94a3b8; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .stats-bar { flex-wrap: wrap; gap: 12px; }
+            .strategy-group-header { flex-wrap: wrap; }
+            .strategy-group-stats { margin-left: 0; width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 每日股票雷达</h1>
-        <div class="update-time" id="updateTime">加载中...</div>
+        <div class="header">
+            <h1>📊 每日股票雷达</h1>
+            <div class="update-time" id="updateTime">加载中...</div>
+        </div>
         <div class="tabs" id="strategyTabs"></div>
-        <div class="grid" id="stockGrid">
+        <div class="stats-bar" id="statsBar"></div>
+        <div id="contentArea">
             <div class="loading">正在加载数据...</div>
         </div>
     </div>
@@ -78,9 +133,7 @@
                 <div class="modal-title" id="modalTitle">分析报告</div>
                 <button class="modal-close" onclick="closeModal()">&times;</button>
             </div>
-            <div class="report-content" id="reportContent">
-                加载中...
-            </div>
+            <div class="report-content" id="reportContent">加载中...</div>
         </div>
     </div>
 
@@ -88,18 +141,32 @@
         let allData = null;
         let currentStrategy = 'all';
 
+        function timeAgo(dateStr) {
+            if (!dateStr) return '';
+            const diff = Date.now() - new Date(dateStr).getTime();
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return '刚刚';
+            if (minutes < 60) return `${minutes}分钟前`;
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `${hours}小时前`;
+            const days = Math.floor(hours / 24);
+            return `${days}天前`;
+        }
+
         async function loadData() {
             try {
                 const response = await fetch('data/latest.json');
                 if (!response.ok) throw new Error('数据加载失败');
                 allData = await response.json();
-                
-                document.getElementById('updateTime').textContent = `更新时间: ${new Date(allData.update_time).toLocaleString('zh-CN')}`;
-                
+
+                const updateTime = new Date(allData.update_time);
+                document.getElementById('updateTime').textContent = `数据更新: ${updateTime.toLocaleString('zh-CN')} (${timeAgo(allData.update_time)})`;
+
                 renderTabs();
-                renderGrid();
+                renderStats();
+                renderContent();
             } catch (error) {
-                document.getElementById('stockGrid').innerHTML = `<div class="error">加载失败: ${error.message}</div>`;
+                document.getElementById('contentArea').innerHTML = `<div class="error">加载失败: ${error.message}</div>`;
             }
         }
 
@@ -109,95 +176,183 @@
             tabs.innerHTML = `<div class="tab ${currentStrategy === 'all' ? 'active' : ''}" onclick="filterStrategy('all')">全部</div>`;
             strategies.forEach(s => {
                 const name = s === 'dongting_tech' ? '买贵的好公司' : s === 'dongting_bottom' ? '抄底便宜的公司' : s;
-                tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name}</div>`;
+                const count = allData.stocks.filter(st => st.strategy === s).length;
+                tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name} (${count})</div>`;
             });
+        }
+
+        function renderStats() {
+            const stocks = currentStrategy === 'all' ? allData.stocks : allData.stocks.filter(s => s.strategy === currentStrategy);
+            const total = stocks.length;
+            const avgScore = total > 0 ? Math.round(stocks.reduce((sum, s) => sum + s.score, 0) / total) : 0;
+            const highCount = stocks.filter(s => s.score >= 70).length;
+            const midCount = stocks.filter(s => s.score >= 50 && s.score < 70).length;
+            const lowCount = stocks.filter(s => s.score < 50).length;
+
+            document.getElementById('statsBar').innerHTML = `
+                <div class="stat-item"><div class="stat-value">${total}</div><div class="stat-label">股票总数</div></div>
+                <div class="stat-item"><div class="stat-value">${avgScore}</div><div class="stat-label">平均分</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#4ade80">${highCount}</div><div class="stat-label">高分 (≥70)</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#fbbf24">${midCount}</div><div class="stat-label">中分 (50-69)</div></div>
+                <div class="stat-item"><div class="stat-value" style="color:#f87171">${lowCount}</div><div class="stat-label">低分 (<50)</div></div>
+            `;
         }
 
         function filterStrategy(strategy) {
             currentStrategy = strategy;
             renderTabs();
-            renderGrid();
+            renderStats();
+            renderContent();
         }
 
-        function renderGrid() {
-            const grid = document.getElementById('stockGrid');
+        function renderContent() {
+            const area = document.getElementById('contentArea');
             let stocks = allData.stocks;
-            
+
             if (currentStrategy !== 'all') {
                 stocks = stocks.filter(s => s.strategy === currentStrategy);
             }
-            
-            // 按分数排序
-            stocks.sort((a, b) => b.score - a.score);
-            
+
             if (stocks.length === 0) {
-                grid.innerHTML = '<div class="empty">暂无数据</div>';
+                area.innerHTML = '<div class="empty">暂无数据</div>';
                 return;
             }
-            
-            grid.innerHTML = '';
-            stocks.forEach(stock => {
-                const card = createStockCard(stock);
-                grid.appendChild(card);
+
+            // Group by strategy
+            const grouped = new Map();
+            stocks.forEach(s => {
+                if (!grouped.has(s.strategy)) grouped.set(s.strategy, []);
+                grouped.get(s.strategy).push(s);
             });
+
+            area.innerHTML = '';
+            grouped.forEach((strategyStocks, strategy) => {
+                strategyStocks.sort((a, b) => b.score - a.score);
+                const group = createStrategyGroup(strategy, strategyStocks);
+                area.appendChild(group);
+            });
+        }
+
+        function createStrategyGroup(strategy, stocks) {
+            const group = document.createElement('div');
+            group.className = 'strategy-group';
+
+            const strategyName = strategy === 'dongting_tech' ? '买贵的好公司' : strategy === 'dongting_bottom' ? '抄底便宜的公司' : strategy;
+            const avgScore = Math.round(stocks.reduce((sum, s) => sum + s.score, 0) / stocks.length);
+            const highCount = stocks.filter(s => s.score >= 70).length;
+            const midCount = stocks.filter(s => s.score >= 50 && s.score < 70).length;
+            const lowCount = stocks.filter(s => s.score < 50).length;
+
+            group.innerHTML = `
+                <div class="strategy-group-header">
+                    <div class="strategy-group-title">${strategyName}</div>
+                    <div class="strategy-group-count">${stocks.length} 只股票</div>
+                    <div class="strategy-group-stats">
+                        <span>均分: <strong>${avgScore}</strong></span>
+                        <span><span class="stat-dot green"></span>${highCount}</span>
+                        <span><span class="stat-dot yellow"></span>${midCount}</span>
+                        <span><span class="stat-dot red"></span>${lowCount}</span>
+                    </div>
+                </div>
+                <div class="grid" id="grid-${strategy}"></div>
+            `;
+
+            const grid = group.querySelector('.grid');
+            stocks.forEach(stock => {
+                grid.appendChild(createStockCard(stock));
+            });
+
+            return group;
         }
 
         function createStockCard(stock) {
             const card = document.createElement('div');
             card.className = 'card';
-            card.onclick = () => showReport(stock);
-            
+
             const scoreClass = stock.score >= 70 ? 'score-high' : stock.score >= 50 ? 'score-mid' : 'score-low';
-            const adviceClass = stock.advice.includes('买') || stock.advice.includes('跟踪') ? 'advice-buy' : 
-                               stock.advice.includes('持') || stock.advice.includes('观察') ? 'advice-hold' : 'advice-sell';
-            
-            // 清理建议文本
-            const cleanAdvice = stock.advice.replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim().substring(0, 20);
-            
+            const adviceText = stock.advice.replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim();
+            const adviceClass = adviceText.includes('买') || adviceText.includes('跟踪') ? 'advice-buy' :
+                               adviceText.includes('持') || adviceText.includes('观察') || adviceText.includes('观望') ? 'advice-hold' : 'advice-sell';
+
             const hasLayerScores = stock.layer_scores && stock.layer_scores.length > 0;
-            
+            const cardId = `card-${stock.code}-${stock.strategy}`;
+
             card.innerHTML = `
-                <div class="strategy-tag">${stock.strategy_name}</div>
                 <div class="card-header">
                     <div class="stock-info">
                         <div class="stock-name">${stock.name}</div>
                         <div class="stock-code">${stock.code}</div>
+                        <div class="stock-time">分析于 ${timeAgo(stock.created_at)}</div>
                     </div>
                     <div class="score-section">
                         <div class="score ${scoreClass}">${stock.score}</div>
-                        <div class="advice ${adviceClass}">${cleanAdvice}</div>
+                        <div class="score-label">综合评分</div>
                     </div>
                 </div>
+                <div class="advice-bar">
+                    <span class="advice ${adviceClass}">${adviceText}</span>
+                    <span class="strategy-tag">${stock.strategy_name}</span>
+                </div>
                 ${hasLayerScores ? `
-                    <div class="radar-container">
-                        <canvas id="radar-${stock.code}-${stock.strategy}"></canvas>
+                    <div class="card-details collapsed" id="${cardId}-details">
+                        <div class="radar-container">
+                            <canvas id="radar-${stock.code}-${stock.strategy}"></canvas>
+                        </div>
+                        <div class="layer-summary">
+                            ${stock.layer_scores.map(ls => `
+                                <div class="layer-item">
+                                    <span class="layer-name" title="${ls.dimension}">${ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')}</span>
+                                    <span class="layer-value">${ls.score}/${ls.max_score}</span>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
-                    <div class="layer-summary">
-                        ${stock.layer_scores.slice(0, 4).map(ls => `
-                            <div class="layer-item">
-                                <span class="layer-name" title="${ls.dimension}">${ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/, '')}</span>
-                                <span class="layer-value">${ls.score}/${ls.max_score}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                ` : '<div style="text-align:center;color:#94a3b8;font-size:12px;margin-top:10px;">暂无七层评分数据</div>'}
+                    <button class="expand-btn" id="${cardId}-btn" onclick="toggleDetails('${cardId}', event)">展开详情</button>
+                ` : ''}
             `;
-            
-            if (hasLayerScores) {
-                setTimeout(() => createRadarChart(stock), 100);
-            }
+
+            card.addEventListener('click', (e) => {
+                if (e.target.classList.contains('expand-btn')) return;
+                showReport(stock);
+            });
+
             return card;
         }
 
-        function createRadarChart(stock) {
-            const canvasId = `radar-${stock.code}-${stock.strategy}`;
-            const ctx = document.getElementById(canvasId);
-            if (!ctx) return;
-            
-            new Chart(ctx, {
+        function toggleDetails(cardId, event) {
+            event.stopPropagation();
+            const details = document.getElementById(cardId + '-details');
+            const btn = document.getElementById(cardId + '-btn');
+            if (details.classList.contains('collapsed')) {
+                details.classList.remove('collapsed');
+                details.classList.add('expanded');
+                btn.textContent = '收起详情';
+                // Render radar chart on expand
+                const canvas = details.querySelector('canvas');
+                if (canvas && !canvas.chartRendered) {
+                    const stock = allData.stocks.find(s => `card-${s.code}-${s.strategy}` === cardId);
+                    if (stock) {
+                        setTimeout(() => createRadarChart(stock, canvas), 50);
+                        canvas.chartRendered = true;
+                    }
+                }
+            } else {
+                details.classList.remove('expanded');
+                details.classList.add('collapsed');
+                btn.textContent = '展开详情';
+            }
+        }
+
+        function createRadarChart(stock, canvas) {
+            if (!canvas) {
+                canvas = document.getElementById(`radar-${stock.code}-${stock.strategy}`);
+            }
+            if (!canvas) return;
+
+            new Chart(canvas, {
                 type: 'radar',
                 data: {
-                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/, '')),
+                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '')),
                     datasets: [{
                         label: '评分',
                         data: stock.layer_scores.map(ls => ls.score),
@@ -229,18 +384,16 @@
             const modal = document.getElementById('reportModal');
             const title = document.getElementById('modalTitle');
             const content = document.getElementById('reportContent');
-            
+
             title.textContent = `${stock.name} (${stock.code}) - ${stock.strategy_name}`;
             content.innerHTML = '<div class="loading">加载报告中...</div>';
             modal.classList.add('active');
-            
-            // 从数据库加载完整报告
+
             loadReportContent(stock);
         }
 
         async function loadReportContent(stock) {
             try {
-                // 直接从本地数据中获取完整报告
                 const stockData = allData.stocks.find(s => s.code === stock.code && s.strategy === stock.strategy);
                 if (stockData && stockData.raw_response) {
                     document.getElementById('reportContent').innerHTML = formatReport(stockData.raw_response);
@@ -258,7 +411,7 @@
             html += `<p><strong>策略:</strong> ${stock.strategy_name}</p>`;
             html += `<p><strong>综合评分:</strong> ${stock.score}/100</p>`;
             html += `<p><strong>操作建议:</strong> ${stock.advice}</p>`;
-            
+
             if (stock.layer_scores && stock.layer_scores.length > 0) {
                 html += `<h3>📊 七层评分</h3>`;
                 html += `<table>
@@ -273,81 +426,44 @@
                     `).join('')}
                 </table>`;
             }
-            
-            html += `<p style="color:#94a3b8;margin-top:20px;">完整报告需要连接本地服务查看</p>`;
+
             return html;
         }
 
         function formatReport(content) {
             if (!content) return '<p>暂无报告内容</p>';
-            
-            // 先处理表格
-            let html = content;
-            
-            // 处理表格行
-            const tableRegex = /\|(.+)\|/g;
-            let tableRows = [];
+
+            const lines = content.split('\n');
+            let result = [];
             let inTable = false;
             let tableHtml = '';
-            
-            const lines = html.split('\n');
-            let result = [];
-            
+
             for (let line of lines) {
-                // 检测表格行
                 if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
-                    // 跳过分隔行 |---|---|
                     if (line.includes('---')) continue;
-                    
                     const cells = line.split('|').filter(c => c.trim() !== '');
                     if (cells.length > 0) {
                         const isHeader = cells.some(c => c.includes('层级') || c.includes('维度') || c.includes('权重'));
                         const tag = isHeader ? 'th' : 'td';
                         const row = '<tr>' + cells.map(c => `<${tag}>${c.trim().replace(/\*\*/g, '')}</${tag}>`).join('') + '</tr>';
-                        
-                        if (!inTable) {
-                            inTable = true;
-                            tableHtml = '<table>';
-                        }
+                        if (!inTable) { inTable = true; tableHtml = '<table>'; }
                         tableHtml += row;
                     }
                 } else {
-                    if (inTable) {
-                        tableHtml += '</table>';
-                        result.push(tableHtml);
-                        inTable = false;
-                        tableHtml = '';
-                    }
-                    
-                    // 处理标题
-                    if (line.startsWith('### ')) {
-                        result.push(`<h3>${line.substring(4)}</h3>`);
-                    } else if (line.startsWith('## ')) {
-                        result.push(`<h2>${line.substring(3)}</h2>`);
-                    } else if (line.startsWith('# ')) {
-                        result.push(`<h2>${line.substring(2)}</h2>`);
-                    } else if (line.trim() === '') {
-                        result.push('<br>');
-                    } else {
-                        // 处理加粗和列表
-                        let processed = line
-                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                            .replace(/\*(.*?)\*/g, '<em>$1</em>');
-                        
-                        if (processed.startsWith('- ') || processed.startsWith('* ')) {
-                            result.push(`<li>${processed.substring(2)}</li>`);
-                        } else {
-                            result.push(`<p>${processed}</p>`);
-                        }
+                    if (inTable) { tableHtml += '</table>'; result.push(tableHtml); inTable = false; tableHtml = ''; }
+                    if (line.startsWith('### ')) result.push(`<h3>${line.substring(4)}</h3>`);
+                    else if (line.startsWith('## ')) result.push(`<h2>${line.substring(3)}</h2>`);
+                    else if (line.startsWith('# ')) result.push(`<h2>${line.substring(2)}</h2>`);
+                    else if (line.trim() === '') result.push('<br>');
+                    else {
+                        let processed = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>');
+                        if (processed.startsWith('- ') || processed.startsWith('* ')) result.push(`<li>${processed.substring(2)}</li>`);
+                        else result.push(`<p>${processed}</p>`);
                     }
                 }
             }
-            
-            if (inTable) {
-                tableHtml += '</table>';
-                result.push(tableHtml);
-            }
-            
+
+            if (inTable) { tableHtml += '</table>'; result.push(tableHtml); }
             return result.join('\n');
         }
 
@@ -355,15 +471,8 @@
             document.getElementById('reportModal').classList.remove('active');
         }
 
-        // 点击背景关闭
-        document.getElementById('reportModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-
-        // ESC 关闭
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeModal();
-        });
+        document.getElementById('reportModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
 
         loadData();
     </script>
