@@ -59,7 +59,7 @@
 
         /* Sparkline */
         .sparkline-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 8px 10px; background: #0f172a; border-radius: 8px; }
-        .sparkline-canvas { width: 120px; height: 32px; }
+        .sparkline-canvas { width: 120px; height: 32px; display: block; }
         .sparkline-stats { display: flex; gap: 12px; font-size: 11px; color: #94a3b8; }
         .sparkline-stats strong { color: #e2e8f0; }
 
@@ -362,6 +362,7 @@
         function drawSparkline(cid, scores) {
             const c = document.getElementById(`spark-${cid}`);
             if (!c) return;
+            c.width = 120; c.height = 32;
             new Chart(c, {
                 type: 'line',
                 data: { labels: scores.map((_, i) => i), datasets: [{ data: scores, borderColor: '#818cf8', backgroundColor: 'rgba(129,140,248,0.15)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 1.5 }] },
