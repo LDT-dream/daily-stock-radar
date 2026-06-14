@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-06-14T12:31:31.824762",
+  "update_time": "2026-06-14T12:40:45.423793",
   "stocks": [
     {
       "code": "000660.KS",
@@ -639,49 +639,49 @@
           "weight": "25%",
           "score": 9,
           "max_score": 10,
-          "finding": ""
+          "finding": "AI 市场 TAM 超千亿美元，渗透率仍低，行业增速 >30%，技术快速迭代，政策支持明确"
         },
         {
           "dimension": "第二层 增长质量",
           "weight": "20%",
           "score": 2,
           "max_score": 10,
-          "finding": ""
+          "finding": "**致命伤**：营收同比 **-52.5%**，净利润亏损 4.7 亿美元，经营现金流 -5,576 万美元，ROE -63%，呈现典型的“增收不增利”甚至“失血式亏损”"
         },
         {
           "dimension": "第三层 竞争壁垒",
           "weight": "15%",
           "score": 5,
           "max_score": 10,
-          "finding": ""
+          "finding": "有一定 AI 平台技术积累，但面对微软、谷歌、Palantir 等巨头竞争，规模和客户壁垒较弱"
         },
         {
           "dimension": "第四层 管理层",
           "weight": "10%",
           "score": 3,
           "max_score": 10,
-          "finding": ""
+          "finding": "战略眼光尚可但执行力差：营收大幅下滑，亏损扩大，无分红回报股东"
         },
         {
           "dimension": "第五层 估值",
           "weight": "15%",
           "score": 3,
           "max_score": 10,
-          "finding": ""
+          "finding": "市销率 6.33x（偏高），PE 为负（亏损），EV/EBITDA 为负，无安全边际"
         },
         {
           "dimension": "第六层 技术择时",
           "weight": "10%",
           "score": 5,
           "max_score": 10,
-          "finding": ""
+          "finding": "趋势弱势空头（MA5 < MA10），但价格贴近 MA5 支撑，RSI 59.8 中性，MACD 多头排列但力度弱"
         },
         {
           "dimension": "第七层 催化剂",
           "weight": "5%",
           "score": 3,
           "max_score": 10,
-          "finding": ""
+          "finding": "AI 行业热度是唯一催化剂，公司自身无新产品/大客户订单等明确事件驱动"
         }
       ],
       "created_at": "2026-06-14 03:22:31.635027",
