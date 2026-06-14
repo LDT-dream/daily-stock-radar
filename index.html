@@ -8,108 +8,196 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        h1 { text-align: center; margin-bottom: 30px; color: #818cf8; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 10px; color: #818cf8; }
         .update-time { text-align: center; color: #94a3b8; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
-        .card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
-        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .stock-name { font-size: 18px; font-weight: 600; }
-        .stock-code { color: #94a3b8; font-size: 14px; }
-        .score { font-size: 36px; font-weight: 700; }
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .tab { padding: 8px 20px; border-radius: 20px; cursor: pointer; background: #1e293b; border: 1px solid #334155; color: #94a3b8; }
+        .tab.active { background: #4f46e5; color: white; border-color: #4f46e5; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 16px; border: 1px solid #334155; cursor: pointer; transition: all 0.2s; }
+        .card:hover { border-color: #818cf8; transform: translateY(-2px); }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .stock-info { flex: 1; }
+        .stock-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+        .stock-code { color: #94a3b8; font-size: 13px; }
+        .score-section { text-align: right; }
+        .score { font-size: 32px; font-weight: 700; line-height: 1; }
         .score-high { color: #4ade80; }
         .score-mid { color: #fbbf24; }
         .score-low { color: #f87171; }
-        .advice { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 500; }
+        .advice { display: inline-block; padding: 4px 10px; border-radius: 16px; font-size: 12px; margin-top: 6px; }
         .advice-buy { background: #166534; color: #4ade80; }
         .advice-hold { background: #854d0e; color: #fbbf24; }
         .advice-sell { background: #991b1b; color: #f87171; }
-        .radar-container { width: 100%; max-width: 300px; margin: 15px auto; }
-        .layer-scores { margin-top: 15px; }
-        .layer-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #334155; }
-        .layer-name { color: #94a3b8; }
-        .layer-value { font-weight: 600; }
-        .strategy-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #334155; color: #94a3b8; }
+        .strategy-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; background: #334155; color: #94a3b8; margin-bottom: 8px; }
+        .radar-container { width: 100%; max-width: 280px; margin: 10px auto; }
+        .layer-summary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 10px; }
+        .layer-item { display: flex; justify-content: space-between; padding: 4px 8px; background: #0f172a; border-radius: 4px; font-size: 12px; }
+        .layer-name { color: #94a3b8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px; }
+        .layer-value { font-weight: 600; color: #e2e8f0; }
+        
+        /* Modal */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 100; overflow-y: auto; }
+        .modal-overlay.active { display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; }
+        .modal { background: #1e293b; border-radius: 16px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 24px; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #334155; }
+        .modal-title { font-size: 20px; font-weight: 600; }
+        .modal-close { background: none; border: none; color: #94a3b8; font-size: 24px; cursor: pointer; padding: 4px 8px; }
+        .modal-close:hover { color: #e2e8f0; }
+        .report-content { line-height: 1.8; }
+        .report-content h2 { color: #818cf8; margin: 24px 0 12px; font-size: 18px; }
+        .report-content h3 { color: #a5b4fc; margin: 20px 0 10px; font-size: 16px; }
+        .report-content p { margin-bottom: 12px; }
+        .report-content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .report-content th, .report-content td { padding: 10px 12px; border: 1px solid #334155; text-align: left; }
+        .report-content th { background: #0f172a; color: #a5b4fc; }
+        .report-content strong { color: #e2e8f0; }
+        .report-content ul, .report-content ol { margin: 12px 0; padding-left: 24px; }
+        .report-content li { margin-bottom: 8px; }
+        .report-content blockquote { border-left: 3px solid #818cf8; padding-left: 16px; color: #94a3b8; margin: 16px 0; }
         .loading { text-align: center; padding: 40px; color: #94a3b8; }
         .error { text-align: center; padding: 40px; color: #f87171; }
+        .empty { text-align: center; padding: 40px; color: #94a3b8; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📊 每日股票雷达</h1>
         <div class="update-time" id="updateTime">加载中...</div>
+        <div class="tabs" id="strategyTabs"></div>
         <div class="grid" id="stockGrid">
             <div class="loading">正在加载数据...</div>
         </div>
     </div>
 
+    <!-- Report Modal -->
+    <div class="modal-overlay" id="reportModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">分析报告</div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="report-content" id="reportContent">
+                加载中...
+            </div>
+        </div>
+    </div>
+
     <script>
+        let allData = null;
+        let currentStrategy = 'all';
+
         async function loadData() {
             try {
                 const response = await fetch('data/latest.json');
                 if (!response.ok) throw new Error('数据加载失败');
-                const data = await response.json();
+                allData = await response.json();
                 
-                document.getElementById('updateTime').textContent = `更新时间: ${new Date(data.update_time).toLocaleString('zh-CN')}`;
+                document.getElementById('updateTime').textContent = `更新时间: ${new Date(allData.update_time).toLocaleString('zh-CN')}`;
                 
-                const grid = document.getElementById('stockGrid');
-                grid.innerHTML = '';
-                
-                data.stocks.forEach(stock => {
-                    const card = createStockCard(stock);
-                    grid.appendChild(card);
-                });
+                renderTabs();
+                renderGrid();
             } catch (error) {
                 document.getElementById('stockGrid').innerHTML = `<div class="error">加载失败: ${error.message}</div>`;
             }
         }
 
+        function renderTabs() {
+            const strategies = [...new Set(allData.stocks.map(s => s.strategy))];
+            const tabs = document.getElementById('strategyTabs');
+            tabs.innerHTML = `<div class="tab ${currentStrategy === 'all' ? 'active' : ''}" onclick="filterStrategy('all')">全部</div>`;
+            strategies.forEach(s => {
+                const name = s === 'dongting_tech' ? '买贵的好公司' : s === 'dongting_bottom' ? '抄底便宜的公司' : s;
+                tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name}</div>`;
+            });
+        }
+
+        function filterStrategy(strategy) {
+            currentStrategy = strategy;
+            renderTabs();
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('stockGrid');
+            let stocks = allData.stocks;
+            
+            if (currentStrategy !== 'all') {
+                stocks = stocks.filter(s => s.strategy === currentStrategy);
+            }
+            
+            // 按分数排序
+            stocks.sort((a, b) => b.score - a.score);
+            
+            if (stocks.length === 0) {
+                grid.innerHTML = '<div class="empty">暂无数据</div>';
+                return;
+            }
+            
+            grid.innerHTML = '';
+            stocks.forEach(stock => {
+                const card = createStockCard(stock);
+                grid.appendChild(card);
+            });
+        }
+
         function createStockCard(stock) {
             const card = document.createElement('div');
             card.className = 'card';
+            card.onclick = () => showReport(stock);
             
             const scoreClass = stock.score >= 70 ? 'score-high' : stock.score >= 50 ? 'score-mid' : 'score-low';
-            const adviceClass = stock.advice.includes('买') ? 'advice-buy' : stock.advice.includes('持') ? 'advice-hold' : 'advice-sell';
+            const adviceClass = stock.advice.includes('买') || stock.advice.includes('跟踪') ? 'advice-buy' : 
+                               stock.advice.includes('持') || stock.advice.includes('观察') ? 'advice-hold' : 'advice-sell';
+            
+            // 清理建议文本
+            const cleanAdvice = stock.advice.replace(/[🔍🟡🔴⛔🚫]/g, '').replace(/\*\*/g, '').trim().substring(0, 20);
+            
+            const hasLayerScores = stock.layer_scores && stock.layer_scores.length > 0;
             
             card.innerHTML = `
+                <div class="strategy-tag">${stock.strategy_name}</div>
                 <div class="card-header">
-                    <div>
+                    <div class="stock-info">
                         <div class="stock-name">${stock.name}</div>
                         <div class="stock-code">${stock.code}</div>
                     </div>
-                    <div class="strategy-tag">${stock.strategy_name}</div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 20px;">
-                    <div class="score ${scoreClass}">${stock.score}</div>
-                    <div>
-                        <span class="advice ${adviceClass}">${stock.advice}</span>
+                    <div class="score-section">
+                        <div class="score ${scoreClass}">${stock.score}</div>
+                        <div class="advice ${adviceClass}">${cleanAdvice}</div>
                     </div>
                 </div>
-                <div class="radar-container">
-                    <canvas id="radar-${stock.code}"></canvas>
-                </div>
-                <div class="layer-scores">
-                    ${stock.layer_scores.map(ls => `
-                        <div class="layer-row">
-                            <span class="layer-name">${ls.dimension}</span>
-                            <span class="layer-value">${ls.score}/${ls.max_score}</span>
-                        </div>
-                    `).join('')}
-                </div>
+                ${hasLayerScores ? `
+                    <div class="radar-container">
+                        <canvas id="radar-${stock.code}-${stock.strategy}"></canvas>
+                    </div>
+                    <div class="layer-summary">
+                        ${stock.layer_scores.slice(0, 4).map(ls => `
+                            <div class="layer-item">
+                                <span class="layer-name" title="${ls.dimension}">${ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/, '')}</span>
+                                <span class="layer-value">${ls.score}/${ls.max_score}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '<div style="text-align:center;color:#94a3b8;font-size:12px;margin-top:10px;">暂无七层评分数据</div>'}
             `;
             
-            setTimeout(() => createRadarChart(stock), 100);
+            if (hasLayerScores) {
+                setTimeout(() => createRadarChart(stock), 100);
+            }
             return card;
         }
 
         function createRadarChart(stock) {
-            const ctx = document.getElementById(`radar-${stock.code}`);
+            const canvasId = `radar-${stock.code}-${stock.strategy}`;
+            const ctx = document.getElementById(canvasId);
             if (!ctx) return;
             
             new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七]层\s*/, '')),
+                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/, '')),
                     datasets: [{
                         label: '评分',
                         data: stock.layer_scores.map(ls => ls.score),
@@ -128,14 +216,107 @@
                         r: {
                             beginAtZero: true,
                             max: 10,
-                            ticks: { stepSize: 2, color: '#94a3b8' },
+                            ticks: { stepSize: 2, color: '#94a3b8', font: { size: 10 } },
                             grid: { color: '#334155' },
-                            pointLabels: { color: '#94a3b8', font: { size: 10 } }
+                            pointLabels: { color: '#94a3b8', font: { size: 9 } }
                         }
                     }
                 }
             });
         }
+
+        function showReport(stock) {
+            const modal = document.getElementById('reportModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('reportContent');
+            
+            title.textContent = `${stock.name} (${stock.code}) - ${stock.strategy_name}`;
+            content.innerHTML = '<div class="loading">加载报告中...</div>';
+            modal.classList.add('active');
+            
+            // 从数据库加载完整报告
+            loadReportContent(stock);
+        }
+
+        async function loadReportContent(stock) {
+            try {
+                // 使用 history API 获取报告
+                const response = await fetch(`https://127.0.0.1:8000/api/v1/history/markdown/${stock.code}?strategy=${stock.strategy}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('reportContent').innerHTML = formatReport(data.content || data.markdown || '暂无报告内容');
+                } else {
+                    // 如果 API 不可用，显示已有数据
+                    document.getElementById('reportContent').innerHTML = formatReportFromStock(stock);
+                }
+            } catch (error) {
+                // API 不可用时，显示已有数据
+                document.getElementById('reportContent').innerHTML = formatReportFromStock(stock);
+            }
+        }
+
+        function formatReportFromStock(stock) {
+            let html = `<h2>📊 ${stock.name} 分析报告</h2>`;
+            html += `<p><strong>股票代码:</strong> ${stock.code}</p>`;
+            html += `<p><strong>策略:</strong> ${stock.strategy_name}</p>`;
+            html += `<p><strong>综合评分:</strong> ${stock.score}/100</p>`;
+            html += `<p><strong>操作建议:</strong> ${stock.advice}</p>`;
+            
+            if (stock.layer_scores && stock.layer_scores.length > 0) {
+                html += `<h3>📊 七层评分</h3>`;
+                html += `<table>
+                    <tr><th>层级</th><th>权重</th><th>评分</th><th>关键发现</th></tr>
+                    ${stock.layer_scores.map(ls => `
+                        <tr>
+                            <td>${ls.dimension}</td>
+                            <td>${ls.weight}</td>
+                            <td>${ls.score}/${ls.max_score}</td>
+                            <td>${ls.finding || '-'}</td>
+                        </tr>
+                    `).join('')}
+                </table>`;
+            }
+            
+            html += `<p style="color:#94a3b8;margin-top:20px;">完整报告需要连接本地服务查看</p>`;
+            return html;
+        }
+
+        function formatReport(content) {
+            // 简单的 Markdown 转 HTML
+            return content
+                .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^\- (.*$)/gm, '<li>$1</li>')
+                .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/\n/g, '<br>')
+                .replace(/^\|(.+)\|$/gm, (match) => {
+                    const cells = match.split('|').filter(c => c.trim());
+                    if (cells.some(c => c.includes('---'))) return '';
+                    const isHeader = cells.some(c => c.includes('层级') || c.includes('维度'));
+                    const tag = isHeader ? 'th' : 'td';
+                    return '<tr>' + cells.map(c => `<${tag}>${c.trim()}</${tag}>`).join('') + '</tr>';
+                })
+                .replace(/(<tr>.*<\/tr>)/s, '<table>$1</table>');
+        }
+
+        function closeModal() {
+            document.getElementById('reportModal').classList.remove('active');
+        }
+
+        // 点击背景关闭
+        document.getElementById('reportModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ESC 关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
 
         loadData();
     </script>
