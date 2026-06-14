@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日股票雷达 - AI 分析结果</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 30px; color: #818cf8; }
+        .update-time { text-align: center; color: #94a3b8; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .stock-name { font-size: 18px; font-weight: 600; }
+        .stock-code { color: #94a3b8; font-size: 14px; }
+        .score { font-size: 36px; font-weight: 700; }
+        .score-high { color: #4ade80; }
+        .score-mid { color: #fbbf24; }
+        .score-low { color: #f87171; }
+        .advice { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 500; }
+        .advice-buy { background: #166534; color: #4ade80; }
+        .advice-hold { background: #854d0e; color: #fbbf24; }
+        .advice-sell { background: #991b1b; color: #f87171; }
+        .radar-container { width: 100%; max-width: 300px; margin: 15px auto; }
+        .layer-scores { margin-top: 15px; }
+        .layer-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #334155; }
+        .layer-name { color: #94a3b8; }
+        .layer-value { font-weight: 600; }
+        .strategy-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #334155; color: #94a3b8; }
+        .loading { text-align: center; padding: 40px; color: #94a3b8; }
+        .error { text-align: center; padding: 40px; color: #f87171; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 每日股票雷达</h1>
+        <div class="update-time" id="updateTime">加载中...</div>
+        <div class="grid" id="stockGrid">
+            <div class="loading">正在加载数据...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('data/latest.json');
+                if (!response.ok) throw new Error('数据加载失败');
+                const data = await response.json();
+                
+                document.getElementById('updateTime').textContent = `更新时间: ${new Date(data.update_time).toLocaleString('zh-CN')}`;
+                
+                const grid = document.getElementById('stockGrid');
+                grid.innerHTML = '';
+                
+                data.stocks.forEach(stock => {
+                    const card = createStockCard(stock);
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                document.getElementById('stockGrid').innerHTML = `<div class="error">加载失败: ${error.message}</div>`;
+            }
+        }
+
+        function createStockCard(stock) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const scoreClass = stock.score >= 70 ? 'score-high' : stock.score >= 50 ? 'score-mid' : 'score-low';
+            const adviceClass = stock.advice.includes('买') ? 'advice-buy' : stock.advice.includes('持') ? 'advice-hold' : 'advice-sell';
+            
+            card.innerHTML = `
+                <div class="card-header">
+                    <div>
+                        <div class="stock-name">${stock.name}</div>
+                        <div class="stock-code">${stock.code}</div>
+                    </div>
+                    <div class="strategy-tag">${stock.strategy_name}</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <div class="score ${scoreClass}">${stock.score}</div>
+                    <div>
+                        <span class="advice ${adviceClass}">${stock.advice}</span>
+                    </div>
+                </div>
+                <div class="radar-container">
+                    <canvas id="radar-${stock.code}"></canvas>
+                </div>
+                <div class="layer-scores">
+                    ${stock.layer_scores.map(ls => `
+                        <div class="layer-row">
+                            <span class="layer-name">${ls.dimension}</span>
+                            <span class="layer-value">${ls.score}/${ls.max_score}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            setTimeout(() => createRadarChart(stock), 100);
+            return card;
+        }
+
+        function createRadarChart(stock) {
+            const ctx = document.getElementById(`radar-${stock.code}`);
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: stock.layer_scores.map(ls => ls.dimension.replace(/第[一二三四五六七]层\s*/, '')),
+                    datasets: [{
+                        label: '评分',
+                        data: stock.layer_scores.map(ls => ls.score),
+                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                        borderColor: 'rgb(139, 92, 246)',
+                        pointBackgroundColor: 'rgb(139, 92, 246)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(139, 92, 246)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 10,
+                            ticks: { stepSize: 2, color: '#94a3b8' },
+                            grid: { color: '#334155' },
+                            pointLabels: { color: '#94a3b8', font: { size: 10 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

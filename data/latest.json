@@ -1,0 +1,895 @@
+{
+  "update_time": "2026-06-14T12:20:32.452869",
+  "stocks": [
+    {
+      "code": "000660.KS",
+      "name": "000660.KS",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 76,
+      "advice": "🟡 **跟踪等待买点**",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:23:53.550942"
+    },
+    {
+      "code": "SNDK",
+      "name": "SNDK",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 67,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:21:55.486091"
+    },
+    {
+      "code": "002594",
+      "name": "002594",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 65,
+      "advice": "🔍 **观察**（等待更好买点）",
+      "layer_scores": [
+        {
+          "dimension": "第一层 生存能力",
+          "weight": "25%",
+          "score": 8,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 估值安全",
+          "weight": "20%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 盈利能力",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 股东友好",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 行业前景",
+          "weight": "15%",
+          "score": 8,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 6,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:03:25.708970"
+    },
+    {
+      "code": "300750",
+      "name": "300750",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 62,
+      "advice": "**观察**（综合评分62分，处于观望区间上沿）",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:01:13.764372"
+    },
+    {
+      "code": "AAPL",
+      "name": "AAPL",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 62,
+      "advice": "**观察**（60-80分区间）",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:21:13.008175"
+    },
+    {
+      "code": "HK01357",
+      "name": "HK01357",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 59,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-13 20:37:24.811051"
+    },
+    {
+      "code": "AVGO",
+      "name": "AVGO",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 58,
+      "advice": "🔴 **回避（抄底策略下）** / 🟡 **观察（成长策略下）**",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:14:25.922404"
+    },
+    {
+      "code": "MRVL",
+      "name": "MRVL",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 55,
+      "advice": "🔴 **回避**（不符合低价抄底策略）",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:17:30.066585"
+    },
+    {
+      "code": "042700.KS",
+      "name": "042700.KS",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 52,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:17:35.427067"
+    },
+    {
+      "code": "NOK",
+      "name": "NOK",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 51,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:14:18.534164"
+    },
+    {
+      "code": "AI",
+      "name": "AI",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 35,
+      "advice": "⛔ 回避**",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:19:11.408739"
+    },
+    {
+      "code": "VST",
+      "name": "VST",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 6,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:18:10.857626"
+    },
+    {
+      "code": "600519",
+      "name": "600519",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 1,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:10:33.500102"
+    },
+    {
+      "code": "NVDA",
+      "name": "NVDA",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "score": 0,
+      "advice": "🟡 跟踪等待买点**",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:14:33.415546"
+    },
+    {
+      "code": "000660.KS",
+      "name": "000660.KS",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 84,
+      "advice": "观望",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 10,
+          "max_score": 10,
+          "finding": "AI/HBM赛道极度景气，供不应求，行业增速>50%，技术迭代加速（HBM3E→HBM4）"
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "营收+198%，净利润+397%，毛利率68.3%，ROE 61.2%，现金流健康，高质量增长"
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 8,
+          "max_score": 10,
+          "finding": "全球HBM第二大厂商，技术领先，大客户认证壁垒高；但财阀治理结构有不确定性"
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "SK集团背景稳定，执行力强；但透明度一般，股东回报偏低（股息率仅0.14%）"
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "PE仅5.29，PEG约0.013（极度低估），EV/EBITDA 16.3，分析师目标价+17.4%"
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "短期弱势空头，MA5<MA10，RSI中性57，正在回调整理；支撑位207万，阻力位240万"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "AI需求爆发、HBM供不应求、业绩超预期、HBM4量产预期；风险：半导体周期、竞争"
+        }
+      ],
+      "created_at": "2026-06-14 03:43:49.079803"
+    },
+    {
+      "code": "NVDA",
+      "name": "NVDA",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 81,
+      "advice": "观望",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "AI芯片市场TAM超5000亿美元，渗透率仍处于早期阶段，行业增速>30%，NVIDIA占据70-95%市场份额，供需格局供不应求"
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "营收同比增长85.23%，净利润同比暴增210.63%，毛利率74.15%保持高位，ROE高达114.29%，现金流强劲"
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 9,
+          "max_score": 10,
+          "finding": "CUDA生态护城河深厚，AI加速器市占率70-95%，技术壁垒极高，客户转换成本大，品牌溢价能力强"
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 8,
+          "max_score": 10,
+          "finding": "黄仁勋战略眼光卓越，提前布局AI算力革命，连续多季业绩超预期，执行力强"
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "PE 31.42倍中等偏高，但前瞻PE仅16.12倍极具吸引力；PEG<1（基于210%利润增速），PS 19.61倍偏高"
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "当前MA空头排列（MA5<MA10<MA20），股价承压于均线下方，RSI 44.2中性偏弱，短期趋势偏空"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "AI算力需求持续爆发，新产品发布（RTX Spark等），但面临AMD/Intel/云厂商自研芯片竞争加剧"
+        }
+      ],
+      "created_at": "2026-06-14 03:42:07.760671"
+    },
+    {
+      "code": "AVGO",
+      "name": "AVGO",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 80,
+      "advice": "跟踪等待买点",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 9,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 9,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 9,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 8,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:15:25.462838"
+    },
+    {
+      "code": "300750",
+      "name": "300750",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 78,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:15:25.690100"
+    },
+    {
+      "code": "002594",
+      "name": "002594",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 76,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:16:59.771294"
+    },
+    {
+      "code": "SNDK",
+      "name": "SNDK",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 74,
+      "advice": "🟡 **观察等待**（基本面优秀，但技术面超买严重）",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:20:07.569655"
+    },
+    {
+      "code": "MRVL",
+      "name": "MRVL",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 70,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:11:26.572828"
+    },
+    {
+      "code": "AAPL",
+      "name": "AAPL",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 67,
+      "advice": "🔍 **观察等待**",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 8,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 6,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 9,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:19:35.428760"
+    },
+    {
+      "code": "HK09698",
+      "name": "HK09698",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 62,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:12:02.209823"
+    },
+    {
+      "code": "TSLA",
+      "name": "TSLA",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 57,
+      "advice": "**观察**（综合评分57分，低于60分门槛）",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "电动汽车TAM巨大（>5000亿美元），渗透率约15-20%仍处早期，行业增速25-30%，政策支持，技术迭代快"
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "营收增速15.78%、净利润增速16.63%（均低于30%标准），毛利率19.07%稳定，现金流健康（经营现金流39.37亿 vs 净利润4.77亿）"
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "自动驾驶技术领先，产能规模优势，品牌忠诚度高，充电网络生态完善，但面临中国车企等激烈竞争"
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "马斯克战略眼光强但精力分散，执行力面临挑战，无分红，信息透明度一般"
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "**估值极高**：PE 369倍，远期PE 162倍，PB 18.56，PS 15.6，EV/EBITDA 135，PEG>18，安全边际严重不足"
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "**空头排列**（MA5<MA10<MA20），价格406.43在MA5（398.56）之上但低于MA10/MA20，RSI中性（48.5），MACD多头但中性区域"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "正面：自动驾驶进展、新车型、能源业务；负面：竞争加剧、马斯克精力分散、政策不确定性"
+        }
+      ],
+      "created_at": "2026-06-14 03:40:06.822811"
+    },
+    {
+      "code": "600519",
+      "name": "600519",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 52,
+      "advice": "观望",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 8,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:15:34.578278"
+    },
+    {
+      "code": "AI",
+      "name": "AI",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 48,
+      "advice": "**回避**",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 9,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 2,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:22:31.635027"
+    },
+    {
+      "code": "VST",
+      "name": "VST",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 45,
+      "advice": "**回避**",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 6,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:15:06.475933"
+    },
+    {
+      "code": "NOK",
+      "name": "NOK",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 44,
+      "advice": "🚫 **回避**",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 3,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": ""
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 5,
+          "max_score": 10,
+          "finding": ""
+        }
+      ],
+      "created_at": "2026-06-14 03:12:25.089079"
+    },
+    {
+      "code": "042700.KS",
+      "name": "042700.KS",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 31,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:20:21.103965"
+    },
+    {
+      "code": "HK03888",
+      "name": "HK03888",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 10,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:16:08.575791"
+    },
+    {
+      "code": "HK01357",
+      "name": "HK01357",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 6,
+      "advice": "🔍 **观察等待**（综合得分63分，处于观望区间）",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "AI+影像赛道高景气，公司拥有2.58亿月活用户，海外用户8473万，AI图像编辑市场渗透率仍在提升期"
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "2025年收入增长28.8%至38.59亿元，毛利率高达73.57%，但净利润同比下降35.14%，增收不增利需警惕"
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "拥有MTLab核心AI研发能力，美图秀秀用户普及度最高，品牌壁垒强，但AI图像编辑领域竞争加剧"
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "持续投入AI技术研发，战略方向清晰，但利润下滑反映执行力有待验证"
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "当前PE 33倍，前瞻PE仅10.6倍（2026E），券商平均目标价9.36港元，高盛目标价14.3港元，上行空间大"
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "弱势空头趋势，价格跌破MA5/MA10，放量下跌，RSI中性（46.6），短期技术面偏弱"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "AI产品持续迭代，全球付费用户增长，南向资金持股33.43%，多家券商维持\"买入\"评级"
+        }
+      ],
+      "created_at": "2026-06-14 03:46:45.791268"
+    },
+    {
+      "code": "005930.KS",
+      "name": "005930.KS",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 5,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-14 03:11:52.262759"
+    },
+    {
+      "code": "MARKET",
+      "name": "MARKET",
+      "strategy": "market_review",
+      "strategy_name": "market_review",
+      "score": 50,
+      "advice": "查看复盘",
+      "layer_scores": [],
+      "created_at": "2026-06-14 00:33:10.862771"
+    },
+    {
+      "code": "600519",
+      "name": "600519",
+      "strategy": "simple",
+      "strategy_name": "simple",
+      "score": 48,
+      "advice": "观望",
+      "layer_scores": [],
+      "created_at": "2026-06-13 02:05:12.226779"
+    }
+  ]
+}
