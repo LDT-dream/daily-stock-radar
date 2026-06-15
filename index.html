@@ -402,8 +402,35 @@
             try {
                 const sd = allData.stocks.find(s => s.code === stock.code && s.strategy === stock.strategy);
                 let html = (sd && sd.raw_response) ? formatReport(sd.raw_response) : formatReportFromStock(stock);
+                const hasLS = sd && sd.layer_scores && sd.layer_scores.length > 0;
+                if (hasLS) {
+                    html += `<div style="margin-top:24px;padding-top:20px;border-top:2px solid #334155">
+                        <h3 style="color:#818cf8;margin-bottom:16px">📊 七层评分雷达图</h3>
+                        <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+                            <div style="flex:0 0 280px;max-width:280px"><canvas id="modal-radar-chart"></canvas></div>
+                            <div style="flex:1;min-width:200px">${sd.layer_scores.map(ls => {
+                                const name = ls.dimension.replace(/第[一二三四五六七1-7]层[：:\s]*/g, '').replace(/\*\*/g, '');
+                                const pct = Math.round(ls.score / ls.max_score * 100);
+                                const color = ls.score >= 8 ? '#4ade80' : ls.score >= 5 ? '#fbbf24' : '#f87171';
+                                return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                                    <span style="font-size:12px;color:#94a3b8;width:80px;text-align:right">${name}</span>
+                                    <div style="flex:1;height:10px;background:#0f172a;border-radius:5px;overflow:hidden">
+                                        <div style="width:${pct}%;height:100%;background:${color};border-radius:5px;transition:width 0.5s"></div>
+                                    </div>
+                                    <span style="font-size:13px;font-weight:600;color:#e2e8f0;min-width:36px">${ls.score}/${ls.max_score}</span>
+                                </div>`;
+                            }).join('')}</div>
+                        </div>
+                    </div>`;
+                }
                 if (sd && sd.history && sd.history.length > 1) html += renderHistorySection(sd);
                 document.getElementById('reportContent').innerHTML = html;
+                if (hasLS) {
+                    setTimeout(() => {
+                        const canvas = document.getElementById('modal-radar-chart');
+                        if (canvas) createRadarChart(sd, canvas);
+                    }, 100);
+                }
                 if (sd && sd.history && sd.history.length > 1) {
                     setTimeout(() => renderHistoryChart(sd, 'score'), 100);
                     compareSelection = [];
