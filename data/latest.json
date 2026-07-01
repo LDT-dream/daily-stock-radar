@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-01T14:04:52.876756",
+  "update_time": "2026-07-01T14:07:03.984060",
   "stocks": [
     {
       "code": "002594",
@@ -2392,763 +2392,122 @@
       ]
     },
     {
-      "code": "AVGO",
-      "name": "Broadcom Inc.",
-      "strategy": "dongting_tech",
-      "strategy_name": "买贵的好公司",
-      "score": 76,
-      "advice": "观望",
-      "layer_scores": [
-        {
-          "dimension": "第一层 赛道空间与景气度",
-          "weight": "25%",
-          "score": 9,
-          "max_score": 10,
-          "finding": "AI半导体赛道处于高景气周期，市场规模巨大（TAM>万亿美元），渗透率仍处于早期阶段，行业增速>30%，技术迭代活跃"
-        },
-        {
-          "dimension": "第二层 增长质量与持续性",
-          "weight": "20%",
-          "score": 9,
-          "max_score": 10,
-          "finding": "营收同比增长47.9%，净利润同比增长87.5%，增速质量优异；毛利率76.3%极高且稳定；ROE 37.3%优秀"
-        },
-        {
-          "dimension": "第三层 竞争壁垒与护城河",
-          "weight": "15%",
-          "score": 8,
-          "max_score": 10,
-          "finding": "全球AI芯片技术领先，拥有深厚技术壁垒；与大型科技公司建立长期客户关系；规模优势明显，生态系统完善"
-        },
-        {
-          "dimension": "第四层 管理层与执行力",
-          "weight": "10%",
-          "score": 8,
-          "max_score": 10,
-          "finding": "管理层战略眼光前瞻，提前布局AI半导体；业绩执行力强，连续超预期；有稳定分红政策，股东回报良好"
-        },
-        {
-          "dimension": "第五层 估值合理性",
-          "weight": "15%",
-          "score": 7,
-          "max_score": 10,
-          "finding": "当前PE 62倍较高，但远期PE 19倍合理；PEG 0.71<1优秀；分析师目标价523美元，上涨空间约40%"
-        },
-        {
-          "dimension": "第六层 技术择时",
-          "weight": "10%",
-          "score": 3,
-          "max_score": 10,
-          "finding": "技术面处于强势空头趋势，价格低于所有短期均线；RSI 38.7弱势；信号评分31分，无明确买入信号"
-        },
-        {
-          "dimension": "第七层 催化剂与风险",
-          "weight": "5%",
-          "score": 5,
-          "max_score": 10,
-          "finding": "正面催化：AI需求持续增长，业绩超预期；负面风险：估值较高，技术面走弱；新闻信息不足"
-        }
-      ],
-      "created_at": "2026-06-30 01:18:37.310337",
-      "raw_response": "```json\n{\n    \"stock_name\": \"博通股份\",\n    \"sentiment_score\": 77,\n    \"trend_prediction\": \"震荡\",\n    \"operation_advice\": \"观望\",\n    \"decision_type\": \"hold\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"AI半导体龙头基本面强劲，但技术面处于空头趋势，需等待右侧买点\",\n            \"signal_type\": \"🟡持有观望\",\n            \"time_sensitivity\": \"本周内\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者建议观望，等待技术面企稳信号，重点关注360-365美元支撑区域\",\n                \"has_position\": \"持仓者建议持有，若跌破350美元支撑考虑减仓，目标位450-500美元\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势空头排列，均线发散下行\",\n                \"is_bullish\": false,\n                \"trend_score\": 31\n            },\n            \"price_position\": {\n                \"current_price\": 374.37,\n                \"ma5\": 379.66,\n                \"ma10\": 385.22,\n                \"ma20\": 403.21,\n                \"bias_ma5\": -1.39,\n                \"bias_status\": \"价格低于短期均线，仅勉强站上120日线\",\n                \"support_level\": 360.0,\n                \"resistance_level\": 385.0\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 1.18,\n                \"volume_status\": \"量能平稳，近期成交量温和放大\",\n                \"turnover_rate\": null,\n                \"volume_meaning\": \"今日盘中成交量适中，量价关系中性\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"美股不支持筹码分布数据\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"新闻搜索未找到相关信息\",\n            \"risk_alerts\": [\"技术面处于强势空头趋势\", \"当前PE估值62倍相对较高\"],\n            \"positive_catalysts\": [\"AI半导体行业高景气度持续\", \"营收和净利润保持高速增长\"],\n            \"earnings_outlook\": \"最近财报显示营收同比增长47.9%，净利润同比增长87.5%，业绩表现优异\",\n            \"sentiment_summary\": \"基本面强劲但技术面弱势，市场情绪分歧较大\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"350-360美元（强支撑区域，风险回报比优）\",\n                \"secondary_buy\": \"370美元（MA120支撑，需放量确认）\",\n                \"stop_loss\": \"340美元（跌破关键支撑）\",\n                \"take_profit\": \"450-500美元（前高阻力区域）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"总仓位10-15%，分批建仓\",\n                \"entry_plan\": \"首次建仓30%，回调至350美元加仓50%，突破385美元再加20%\",\n                \"risk_control\": \"严格止损340美元，单笔亏损不超过总仓位2%\"\n            },\n            \"action_checklist\": [\n                \"✅ 基本面：营收增速47.9%，净利润增速87.5%，ROE 37.3%\",\n                \"✅ 赛道空间：AI半导体市场规模巨大，处于早期渗透阶段\",\n                \"⚠️ 技术趋势：强势空头排列，价格低于短期均线\",\n                \"⚠️ 估值水平：当前PE 62倍，但远期PE 19倍，PEG 0.71\",\n                \"❌ 买入信号：技术面未出现明确买入信号\",\n                \"✅ 风险回报：从当前价位到目标价有30%以上上涨空间\"\n            ]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"intraday\",\n                \"action_window\": \"盘中跟踪\",\n                \"immediate_action\": \"等待确认\",\n                \"watch_conditions\": [\n                    \"观察360美元支撑是否有效\",\n                    \"观察是否出现放量反弹突破385美元\",\n                    \"观察RSI是否从弱势区域回升\"\n                ],\n                \"next_check_time\": \"今日收盘前1小时（美东时间15:00）\",\n                \"confidence_reason\": \"行情数据为降级来源，技术面处于空头趋势，但基本面强劲，综合判断置信度为中等\",\n                \"data_limitations\": [\n                    \"实时行情数据为fallback来源\",\n                    \"筹码分布数据不可用（美股限制）\",\n                    \"新闻搜索未找到相关信息\"\n                ]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层 赛道空间与景气度\",\n            \"weight\": \"25%\",\n            \"score\": 9,\n            \"max_score\": 10,\n            \"finding\": \"AI半导体赛道处于高景气周期，市场规模巨大（TAM>万亿美元），渗透率仍处于早期阶段，行业增速>30%，技术迭代活跃\"\n        },\n        {\n            \"dimension\": \"第二层 增长质量与持续性\",\n            \"weight\": \"20%\",\n            \"score\": 9,\n            \"max_score\": 10,\n            \"finding\": \"营收同比增长47.9%，净利润同比增长87.5%，增速质量优异；毛利率76.3%极高且稳定；ROE 37.3%优秀\"\n        },\n        {\n            \"dimension\": \"第三层 竞争壁垒与护城河\",\n            \"weight\": \"15%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"全球AI芯片技术领先，拥有深厚技术壁垒；与大型科技公司建立长期客户关系；规模优势明显，生态系统完善\"\n        },\n        {\n            \"dimension\": \"第四层 管理层与执行力\",\n            \"weight\": \"10%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"管理层战略眼光前瞻，提前布局AI半导体；业绩执行力强，连续超预期；有稳定分红政策，股东回报良好\"\n        },\n        {\n            \"dimension\": \"第五层 估值合理性\",\n            \"weight\": \"15%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"当前PE 62倍较高，但远期PE 19倍合理；PEG 0.71<1优秀；分析师目标价523美元，上涨空间约40%\"\n        },\n        {\n            \"dimension\": \"第六层 技术择时\",\n            \"weight\": \"10%\",\n            \"score\": 3,\n            \"max_score\": 10,\n            \"finding\": \"技术面处于强势空头趋势，价格低于所有短期均线；RSI 38.7弱势；信号评分31分，无明确买入信号\"\n        },\n        {\n            \"dimension\": \"第七层 催化剂与风险\",\n            \"weight\": \"5%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"正面催化：AI需求持续增长，业绩超预期；负面风险：估值较高，技术面走弱；新闻信息不足\"\n        }\n    ],\n    \"analysis_summary\": \"博通股份是AI半导体赛道的核心龙头，基本面表现优异：营收增长47.9%，净利润增长87.5%，ROE 37.3%，毛利率76.3%。当前PE 62倍较高但远期PE 19倍合理，PEG 0.71显示估值有吸引力。然而技术面处于强势空头趋势，价格低于短期均线，RSI弱势。综合评分77分，建议观望等待技术面企稳后再介入。\",\n    \"key_points\": \"AI半导体龙头，营收净利润高增长，高毛利率高ROE，技术面空头趋势，估值有吸引力\",\n    \"risk_warning\": \"技术面处于强势空头趋势，当前PE 62倍较高，若跌破340美元关键支撑可能进一步下行\",\n    \"buy_reason\": \"采用高景气成长策略评估：AI半导体赛道空间巨大，公司增长质量优异（增速>50%，PEG<1），竞争壁垒深厚。技术面虽弱但基本面强劲，等待右侧买点信号\",\n    \"trend_analysis\": \"股价从4月高点422美元回调至当前374美元，跌幅约11%。技术面处于空头趋势，均线发散下行，但已触及120日均线支撑\",\n    \"short_term_outlook\": \"短期关注360-365美元支撑区域，若有效企稳可能展开技术性反弹；若跌破可能下探340美元\",\n    \"medium_term_outlook\": \"中期关注AI半导体行业景气度，若业绩持续超预期，估值修复将带来上涨机会。目标价450-500美元\",\n    \"technical_analysis\": \"技术面弱势：价格低于MA5/MA10/MA20/MA60，仅站上MA120；RSI 38.7弱势；MACD空头排列；无明显K线形态\",\n    \"ma_analysis\": \"均线系统呈空头排列：MA5(379.66)>MA10(385.22)>MA20(403.21)>价格(374.37)，仅MA120(364.79)在下方提供支撑\",\n    \"volume_analysis\": \"量能平稳：近30日成交量温和，量价关系中性。今日成交量1.07亿股，量比1.18略高于5日均量\",\n    \"pattern_analysis\": \"K线形态：未发现明显反转或持续形态，处于调整阶段\",\n    \"fundamental_analysis\": \"基本面优异：营收增长47.9%，净利润增长87.5%，毛利率76.3%，ROE 37.3%。远期PE 19倍，PEG 0.71显示估值合理\",\n    \"sector_position\": \"AI半导体赛道核心龙头，受益于AI算力需求爆发，行业处于高景气周期，公司市占率领先\",\n    \"company_highlights\": \"公司亮点：AI芯片技术领先，与英伟达竞争合作并存；客户包括微软、谷歌等科技巨头；毛利率高达76%\",\n    \"news_summary\": \"新闻搜索未找到最新信息，但公司最近财报显示业绩超预期，AI相关业务增长强劲\",\n    \"market_sentiment\": \"市场情绪分歧：基本面投资者看好长期增长，技术面交易者关注趋势反转信号\",\n    \"hot_topics\": \"AI算力需求，半导体周期，英伟达竞争，数据中心建设\"\n}\n```",
-      "history": [
-        {
-          "score": 76,
-          "advice": "观望",
-          "created_at": "2026-06-30 01:18:37.310337",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "AI半导体赛道处于高景气周期，市场规模巨大（TAM>万亿美元），渗透率仍处于早期阶段，行业增速>30%，技术迭代活跃"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收同比增长47.9%，净利润同比增长87.5%，增速质量优异；毛利率76.3%极高且稳定；ROE 37.3%优秀"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "全球AI芯片技术领先，拥有深厚技术壁垒；与大型科技公司建立长期客户关系；规模优势明显，生态系统完善"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "管理层战略眼光前瞻，提前布局AI半导体；业绩执行力强，连续超预期；有稳定分红政策，股东回报良好"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "当前PE 62倍较高，但远期PE 19倍合理；PEG 0.71<1优秀；分析师目标价523美元，上涨空间约40%"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "技术面处于强势空头趋势，价格低于所有短期均线；RSI 38.7弱势；信号评分31分，无明确买入信号"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "正面催化：AI需求持续增长，业绩超预期；负面风险：估值较高，技术面走弱；新闻信息不足"
-            }
-          ]
-        },
-        {
-          "score": 72,
-          "advice": "观望",
-          "created_at": "2026-06-17 16:56:40.408661",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间",
-              "weight": "25%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "半导体/AI芯片赛道处于高景气周期，市场空间巨大，行业增速高。"
-            },
-            {
-              "dimension": "第二层 增长质量",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增长48%，净利润增长88%，毛利率76%，ROE 37%，增长质量极高。"
-            },
-            {
-              "dimension": "第三层 竞争壁垒",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "作为半导体设计龙头，拥有技术、专利和客户壁垒，护城河深厚。"
-            },
-            {
-              "dimension": "第四层 管理层",
-              "weight": "10%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "管理层战略清晰，执行力强，公司ROE持续高位证明其运营效率。"
-            },
-            {
-              "dimension": "第五层 估值",
-              "weight": "15%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "静态PE 62倍偏高，但远期PE 19倍合理，高增长部分消化了高估值。"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "均线空头排列，价格跌破所有短期均线，RSI弱势，技术面发出回避信号。"
-            },
-            {
-              "dimension": "第七层 催化剂",
-              "weight": "5%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "AI需求是长期催化剂，但短期缺乏明确正面事件，且技术面压力较大。"
-            }
-          ]
-        },
-        {
-          "score": 78,
-          "advice": "观望",
-          "created_at": "2026-06-16 17:00:33.037809",
-          "layer_scores": [
-            {
-              "dimension": "第一层：赛道空间与景气度",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "AI/半导体赛道处于高景气上升周期，市场规模巨大，渗透率低，行业增速超30%，政策支持强劲。"
-            },
-            {
-              "dimension": "第二层：增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%高位稳定，增长质量高且可持续。"
-            },
-            {
-              "dimension": "第三层：竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "技术壁垒深厚（专利、研发），客户转换成本高（苹果、谷歌等大客户），规模和品牌优势明显。"
-            },
-            {
-              "dimension": "第四层：管理层与执行力",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "管理层战略眼光准，提前布局AI，执行力强，业绩持续超预期，股东回报良好。"
-            },
-            {
-              "dimension": "第五层：估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "当前PE 65.33较高，但远期PE 20.36合理，PEG约0.75（优秀），目标价522美元有上涨空间。"
-            },
-            {
-              "dimension": "第六层：技术择时",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "技术面处于强势空头排列，价格低于所有主要均线，RSI中性，趋势偏弱，需等待企稳信号。"
-            },
-            {
-              "dimension": "第七层：催化剂与风险",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "正面催化剂：AI需求爆发、新产品发布；风险：估值压力、竞争加剧、宏观经济不确定性。"
-            }
-          ]
-        },
-        {
-          "score": 78,
-          "advice": "持有",
-          "created_at": "2026-06-15 23:57:02.575535",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "AI半导体赛道高景气，TAM超千亿美元，渗透率<20%，行业增速>30%，供不应求，政策支持但有出口管制限制"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增速47.87%、净利润增速87.51%，利润增速远超营收，ROE 37.28%，毛利率76.28%，经营现金流强劲"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI定制ASIC技术领先，客户转换成本高（认证周期长），品牌知名度高，生态系统完善"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "连续两季财报超预期，AI战略布局领先，管理层执行力强，分红稳定（股息率0.63%）"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "远期PE 20.33合理，PEG约0.23（优秀），但当前PE 65.56偏高，需盈利增长持续兑现"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "强势空头排列，从高点回调约24%，RSI 40中性未超卖，缩量回调但趋势未扭转，需等待企稳信号"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "催化剂：AI需求爆发、业绩超预期、分析师目标价522美元；风险：出口管制、6月4日暴跌原因不明"
-            }
-          ]
-        },
-        {
-          "score": 74,
-          "advice": "观望",
-          "created_at": "2026-06-15 22:34:15.603639",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI和半导体行业高景气，公司营收增长47.9%，净利润增长87.5%，行业空间广阔"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收和净利润双高增长，毛利率76.3%，ROE 37.3%，现金流健康，增长质量优秀"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "半导体设计领域技术壁垒高，专利组合强大，但具体护城河宽度需更多数据确认"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "业绩持续超预期增长，显示管理层执行力强，但缺乏具体战略信息"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "PE 65.1倍看似偏高，但远期PE仅20.2倍，PEG约0.74，成长性匹配估值"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "技术面显示强势空头排列，股价远离均线，短期趋势偏弱，需等待转势信号"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "AI需求持续增长是正面催化剂，但股价大幅回调后技术面修复需要时间"
-            }
-          ]
-        },
-        {
-          "score": 81,
-          "advice": "观望",
-          "created_at": "2026-06-15 22:25:27.180158",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "AI与半导体赛道高景气，市场规模巨大（TAM>1000亿），政策支持明确，技术快速迭代。"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收同比增长47.9%，净利润增长87.5%，毛利率高达76.3%，现金流匹配良好，增长质量极高。"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "技术领先，拥有核心专利与高研发投入；客户粘性强，转换成本高；品牌与生态壁垒深厚。"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "管理层战略眼光敏锐，提前布局AI；执行力强，业绩持续超预期；股东回报稳定（股息率0.64%）。"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "PEG为0.74（优秀），远期PE 20.2倍合理，但当前PE 65倍绝对值偏高，EV/EBITDA 44.3倍亦处高位。"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "技术面呈强势空头排列，价格低于主要均线，处于调整周期。缩量回调提供潜在买点，但需等待企稳信号。"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "AI需求持续增长、新产品发布是主要催化剂；风险在于高估值回调、行业竞争加剧及宏观政策变化。"
-            }
-          ]
-        },
-        {
-          "score": 74,
-          "advice": "观望",
-          "created_at": "2026-06-15 21:15:33.106722",
-          "layer_scores": [
-            {
-              "dimension": "第一层：赛道空间与景气度",
-              "weight": "25%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI芯片赛道高景气，TAM超千亿美元，渗透率低，行业增速>30%，供需紧张，政策支持"
-            },
-            {
-              "dimension": "第二层：增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增速47.87%，净利润增速87.51%，ROE 37.28%，毛利率76.28%稳定，现金流匹配良好"
-            },
-            {
-              "dimension": "第三层：竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "技术壁垒高（AI网络芯片领先），客户壁垒强（大客户绑定），品牌和生态壁垒稳固"
-            },
-            {
-              "dimension": "第四层：管理层与执行力",
-              "weight": "10%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "战略眼光好（提前布局AI），执行力强（业绩超预期），有稳定分红"
-            },
-            {
-              "dimension": "第五层：估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "PE 63.68，远期PE 19.74，PEG=0.73<1估值合理，PS 24.09，EV/EBITDA 44.27"
-            },
-            {
-              "dimension": "第六层：技术择时",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "强势空头排列，价格低于所有均线，RSI中性40，MACD中性，缩量回调中"
-            },
-            {
-              "dimension": "第七层：催化剂与风险",
-              "weight": "5%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "正面催化：AI需求增长、业绩超预期；风险：技术面空头、估值较高、新闻缺失"
-            }
-          ]
-        },
-        {
-          "score": 80,
-          "advice": "观望",
-          "created_at": "2026-06-15 17:05:07.194615",
-          "layer_scores": [
-            {
-              "dimension": "第一层：赛道空间与景气度",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "AI、半导体高景气赛道，市场规模超千亿美元，渗透率仍处早期，行业增速>30%，供需格局供不应求"
-            },
-            {
-              "dimension": "第二层：增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%高位稳定，现金流匹配良好，真成长特征明显"
-            },
-            {
-              "dimension": "第三层：竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "技术领先（AI加速器、网络芯片），规模与客户壁垒高，品牌认知度强，软硬件生态协同"
-            },
-            {
-              "dimension": "第四层：管理层与执行力",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "战略前瞻布局AI，业绩连续超预期，股权激励完善，信息透明度高，稳定分红"
-            },
-            {
-              "dimension": "第五层：估值合理性",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "当前PE 63.68较高，但远期PE仅19.74，PEG约0.73（<1），营收增速47.87%支撑估值，估值处于合理区间"
-            },
-            {
-              "dimension": "第六层：技术择时",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "技术面强势空头，均线空头排列，价格低于MA5/10/20，RSI中性（40），MACD中性，缩量回调中"
-            },
-            {
-              "dimension": "第七层：催化剂与风险",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "AI需求增长、新产品发布、业绩超预期为正面催化；竞争加剧、估值回调、宏观风险为负面因素"
-            }
-          ]
-        },
-        {
-          "score": 75,
-          "advice": "观望",
-          "created_at": "2026-06-14 16:57:23.726837",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI半导体龙头，TAM超1000亿，渗透率<20%，行业增速>30%"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "营收增速47.87%，净利润增速87.51%，毛利率76.28%，ROE 37.28%"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 9,
-              "max_score": 10,
-              "finding": "技术壁垒强，专利护城河深，客户转换成本高，生态系统完善"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI战略布局前瞻，执行力强，连续业绩超预期，有稳定分红"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "当前PE 63.68偏高，远期PE 19.74合理，PS 24.09较高"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "强势空头排列，价格跌破所有均线，MACD中性，RSI 40"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": "AI芯片需求爆发，但估值修正风险存在"
-            }
-          ]
-        },
-        {
-          "score": 89,
-          "advice": "持有观察",
-          "created_at": "2026-06-14 15:19:05.965711",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间与景气度",
-              "weight": "25%",
-              "score": 10,
-              "max_score": 10,
-              "finding": "AI半导体赛道空间巨大，行业增速>30%，供不应求，政策支持，技术迭代快"
-            },
-            {
-              "dimension": "第二层 增长质量与持续性",
-              "weight": "20%",
-              "score": 10,
-              "max_score": 10,
-              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%，现金流匹配良好，订单可见度延至2028年"
-            },
-            {
-              "dimension": "第三层 竞争壁垒与护城河",
-              "weight": "15%",
-              "score": 10,
-              "max_score": 10,
-              "finding": "技术壁垒深厚，定制XPU领先，客户转换成本高，品牌认知度强，生态系统完善"
-            },
-            {
-              "dimension": "第四层 管理层与执行力",
-              "weight": "10%",
-              "score": 10,
-              "max_score": 10,
-              "finding": "战略眼光前瞻，提前布局AI芯片，执行力强，业绩连续超预期，股东回报稳定"
-            },
-            {
-              "dimension": "第五层 估值合理性",
-              "weight": "15%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "PEG 0.73优秀，远期PE 19.74合理，PS 24.09较高但增长支撑，估值处于合理区间"
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "技术面弱势，强势空头排列，价格低于所有主要均线，RSI中性，未出现买入信号"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "5%",
-              "score": 8,
-              "max_score": 10,
-              "finding": "AI订单强劲，机构上调目标价，业绩超预期；风险包括行业价格战和技术路线变化"
-            }
-          ]
-        },
-        {
-          "score": 80,
-          "advice": "跟踪等待买点",
-          "created_at": "2026-06-14 03:15:25.462838",
-          "layer_scores": [
-            {
-              "dimension": "第一层 赛道空间",
-              "weight": "25%",
-              "score": 9,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第二层 增长质量",
-              "weight": "20%",
-              "score": 9,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第三层 竞争壁垒",
-              "weight": "15%",
-              "score": 9,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第四层 管理层",
-              "weight": "10%",
-              "score": 8,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第五层 估值",
-              "weight": "15%",
-              "score": 7,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第六层 技术择时",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": ""
-            },
-            {
-              "dimension": "第七层 催化剂",
-              "weight": "5%",
-              "score": 7,
-              "max_score": 10,
-              "finding": ""
-            }
-          ]
-        },
-        {
-          "score": 79,
-          "advice": "观望",
-          "created_at": "2026-06-14 03:12:34.099935",
-          "layer_scores": []
-        },
-        {
-          "score": 58,
-          "advice": "观望",
-          "created_at": "2026-06-13 15:56:27.185549",
-          "layer_scores": []
-        },
-        {
-          "score": 78,
-          "advice": "持有",
-          "created_at": "2026-06-13 15:56:14.282243",
-          "layer_scores": []
-        }
-      ]
-    },
-    {
       "code": "VST",
       "name": "Vistra Corp.",
       "strategy": "dongting_tech",
       "strategy_name": "买贵的好公司",
-      "score": 74,
-      "advice": "持有观察",
+      "score": 67,
+      "advice": "观望",
       "layer_scores": [
         {
-          "dimension": "第一层 赛道空间与景气度",
+          "dimension": "第一层：赛道空间与景气度",
           "weight": "25%",
-          "score": 7,
+          "score": 5,
           "max_score": 10,
-          "finding": "能源行业处于转型期，公司营收增长43.4%显示高景气，但传统能源赛道增速有限"
+          "finding": "电力行业市场规模大（>1000亿美元），但渗透率高（>50%），行业增速中等（<15%）。受能源转型和电力需求增长驱动，景气度中等。"
         },
         {
-          "dimension": "第二层 增长质量与持续性",
+          "dimension": "第二层：增长质量与持续性",
           "weight": "20%",
-          "score": 9,
+          "score": 8,
           "max_score": 10,
-          "finding": "营收增长43.4%，净利润暴增409%，ROE 42.9%，现金流健康，增长质量优秀"
+          "finding": "营收同比增长43.4%，净利润同比增长409.1%，ROE高达42.9%，现金流匹配良好（经营现金流/净利润=1.22）。增长质量高，持续性需观察。"
         },
         {
-          "dimension": "第三层 竞争壁垒与护城河",
+          "dimension": "第三层：竞争壁垒与护城河",
           "weight": "15%",
           "score": 6,
           "max_score": 10,
-          "finding": "能源公司具有规模壁垒和监管壁垒，但具体竞争格局信息不足"
+          "finding": "规模优势明显（装机容量41GW），资本壁垒高，但技术壁垒一般，客户转换成本低。"
         },
         {
-          "dimension": "第四层 管理层与执行力",
+          "dimension": "第四层：管理层与执行力",
           "weight": "10%",
           "score": 7,
           "max_score": 10,
-          "finding": "业绩大幅超预期，显示管理层执行力强，机构持仓比例高"
+          "finding": "战略眼光：投资核能和天然气资产扩张。执行力：营收利润高速增长。股东回报：稳定分红（股息率0.57%）。"
         },
         {
-          "dimension": "第五层 估值合理性",
+          "dimension": "第五层：估值合理性",
           "weight": "15%",
           "score": 8,
           "max_score": 10,
-          "finding": "远期PE仅14.86，PEG<0.1，估值相对增长非常合理"
+          "finding": "远期PE 14.68（合理），PS 2.75（低于行业平均），EV/EBITDA 11.08。目标价222.89，上涨空间40.5%。PEG极低（0.07），但需注意高增速可持续性。"
         },
         {
-          "dimension": "第六层 技术择时",
+          "dimension": "第六层：技术择时",
           "weight": "10%",
-          "score": 8,
+          "score": 7,
           "max_score": 10,
-          "finding": "强势多头排列，价格回踩MA5，MACD多头，RSI中性，技术面良好"
+          "finding": "多头排列，价格回踩MA20支撑（155.85）。RSI中性（51.4），MACD多头。成交量缩量调整，非恐慌抛售。"
         },
         {
-          "dimension": "第七层 催化剂与风险",
+          "dimension": "第七层：催化剂与风险",
           "weight": "5%",
-          "score": 6,
+          "score": 7,
           "max_score": 10,
-          "finding": "AI电力需求、能源转型为催化，但缺乏具体新闻，风险包括高负债和能源价格波动"
+          "finding": "正面催化剂：电力需求增长、核能资产扩张。风险：行业竞争、政策变化、利率上升。未发现具体公司负面事件。"
         }
       ],
-      "created_at": "2026-06-30 01:18:41.148305",
-      "raw_response": "```json\n{\n    \"stock_name\": \"Vistra Corp.\",\n    \"sentiment_score\": 75,\n    \"trend_prediction\": \"看多\",\n    \"operation_advice\": \"买入\",\n    \"decision_type\": \"buy\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"能源转型龙头业绩爆发，技术面强势回踩，可分批布局\",\n            \"signal_type\": \"🟢买入信号\",\n            \"time_sensitivity\": \"今日内\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者可在当前价位附近小仓位试探性买入，或等待进一步回踩MA10支撑位\",\n                \"has_position\": \"持仓者可继续持有，若跌破155美元考虑减仓\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势多头排列，均线发散上行\",\n                \"is_bullish\": true,\n                \"trend_score\": 90\n            },\n            \"price_position\": {\n                \"current_price\": 163.315,\n                \"ma5\": 164.756,\n                \"ma10\": 160.542,\n                \"ma20\": 155.528,\n                \"bias_ma5\": -0.77,\n                \"bias_status\": \"略低于MA5，接近回踩买点\",\n                \"support_level\": 160.542,\n                \"resistance_level\": 171.35\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 1.13,\n                \"volume_status\": \"量能正常\",\n                \"turnover_rate\": 0,\n                \"volume_meaning\": \"成交量温和放大，趋势有量能支撑\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": 0,\n                \"avg_cost\": 0,\n                \"concentration\": 0,\n                \"chip_health\": \"美股筹码数据不可用\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"暂无最新新闻信息\",\n            \"risk_alerts\": [\n                \"能源价格波动风险\",\n                \"监管政策变化风险\",\n                \"高负债率风险（资产负债率355%）\"\n            ],\n            \"positive_catalysts\": [\n                \"营收同比增长43.4%，净利润暴增409%\",\n                \"AI数据中心电力需求增长\",\n                \"能源转型受益标的\",\n                \"机构持仓比例高达91.2%\"\n            ],\n            \"earnings_outlook\": \"业绩爆发式增长，最新财季营收56.4亿美元，净利润9.8亿美元\",\n            \"sentiment_summary\": \"基本面强劲，技术面偏多，市场情绪积极\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"160.50美元（MA10支撑位）\",\n                \"secondary_buy\": \"155.50美元（MA20支撑位）\",\n                \"stop_loss\": \"152.00美元（跌破前期低点）\",\n                \"take_profit\": \"175.00美元（前期高点附近）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"10-15%\",\n                \"entry_plan\": \"分两批建仓：首批5%仓位在163美元附近，第二批5%仓位等待回调至160.5美元\",\n                \"risk_control\": \"止损152美元，跌破即离场\"\n            },\n            \"action_checklist\": [\n                \"✅ 确认均线多头排列\",\n                \"✅ 确认RSI处于中性区域（57.8）\",\n                \"✅ 确认MACD多头信号\",\n                \"⚠️ 等待价格回踩MA10支撑确认\",\n                \"❌ 缺少筹码分布数据\",\n                \"❌ 缺少最新新闻情报\"\n            ]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"intraday\",\n                \"action_window\": \"盘中跟踪\",\n                \"immediate_action\": \"等待确认\",\n                \"watch_conditions\": [\n                    \"观察股价能否守住160.5美元MA10支撑\",\n                    \"观察成交量是否配合上涨\",\n                    \"关注标普500指数整体走势\"\n                ],\n                \"next_check_time\": \"2026-06-29 15:00（收盘前1小时）\",\n                \"confidence_reason\": \"行情数据为fallback状态，技术分析基于历史数据，实时行情质量受限\",\n                \"data_limitations\": [\n                    \"实时行情数据为fallback来源\",\n                    \"筹码分布数据不适用于美股\",\n                    \"新闻情报搜索未获取到结果\"\n                ]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层 赛道空间与景气度\",\n            \"weight\": \"25%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"能源行业处于转型期，公司营收增长43.4%显示高景气，但传统能源赛道增速有限\"\n        },\n        {\n            \"dimension\": \"第二层 增长质量与持续性\",\n            \"weight\": \"20%\",\n            \"score\": 9,\n            \"max_score\": 10,\n            \"finding\": \"营收增长43.4%，净利润暴增409%，ROE 42.9%，现金流健康，增长质量优秀\"\n        },\n        {\n            \"dimension\": \"第三层 竞争壁垒与护城河\",\n            \"weight\": \"15%\",\n            \"score\": 6,\n            \"max_score\": 10,\n            \"finding\": \"能源公司具有规模壁垒和监管壁垒，但具体竞争格局信息不足\"\n        },\n        {\n            \"dimension\": \"第四层 管理层与执行力\",\n            \"weight\": \"10%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"业绩大幅超预期，显示管理层执行力强，机构持仓比例高\"\n        },\n        {\n            \"dimension\": \"第五层 估值合理性\",\n            \"weight\": \"15%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"远期PE仅14.86，PEG<0.1，估值相对增长非常合理\"\n        },\n        {\n            \"dimension\": \"第六层 技术择时\",\n            \"weight\": \"10%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"强势多头排列，价格回踩MA5，MACD多头，RSI中性，技术面良好\"\n        },\n        {\n            \"dimension\": \"第七层 催化剂与风险\",\n            \"weight\": \"5%\",\n            \"score\": 6,\n            \"max_score\": 10,\n            \"finding\": \"AI电力需求、能源转型为催化，但缺乏具体新闻，风险包括高负债和能源价格波动\"\n        }\n    ],\n    \"analysis_summary\": \"Vistra Corp.作为能源转型受益标的，业绩爆发式增长（净利润+409%），技术面呈现强势多头排列。当前价格略低于MA5，接近回踩买点。估值合理（远期PE14.86），机构高度持仓。建议分批建仓，止损152美元。\",\n    \"key_points\": \"业绩爆发增长,能源转型龙头,技术面强势,估值合理,机构重仓\",\n    \"risk_warning\": \"能源价格波动风险、高负债率（355%）、监管政策变化风险。建议严格止损。\",\n    \"buy_reason\": \"应用'买贵的好公司'框架：高增长（净利润+409%）、合理估值（PEG<0.1）、技术面多头排列，符合成长股买入条件。\",\n    \"trend_analysis\": \"股价在4-5月经历深度回调后，6月以来强势反弹，目前处于上升趋势中的回调整理阶段，均线呈多头排列。\",\n    \"short_term_outlook\": \"短期关注160.5美元MA10支撑，若守住则有望向171.35美元前高发起挑战。\",\n    \"medium_term_outlook\": \"中期看，业绩高增长支撑股价，目标价可看至200美元以上（机构目标价222.89美元）。\",\n    \"technical_analysis\": \"均线多头排列，MACD金叉向上，RSI中性（57.8），量能温和放大，技术面整体偏多。\",\n    \"ma_analysis\": \"MA5（164.76）>MA10（160.54）>MA20（155.53）>MA60（154.84），完美多头排列，价格略低于MA5。\",\n    \"volume_analysis\": \"成交量较5日均量放大13%，量能正常，上涨有量能支撑。\",\n    \"pattern_analysis\": \"近期形成上升通道，回调至通道下轨附近，有支撑。\",\n    \"fundamental_analysis\": \"营收56.4亿美元（同比+43.4%），净利润9.8亿美元（同比+409%），ROE 42.9%，毛利率38.6%。业绩爆发式增长。\",\n    \"sector_position\": \"公用事业/能源板块，受AI数据中心电力需求增长和能源转型双重驱动。\",\n    \"company_highlights\": \"业绩高增长、机构高度持仓（91.2%）、稳定分红（股息率0.56%）、能源转型受益标的。\",\n    \"news_summary\": \"暂无最新新闻情报，需关注能源政策和公司业绩指引。\",\n    \"market_sentiment\": \"市场整体偏多（标普+1.03%，纳指+1.77%），VIX恐慌指数下降3.1%，情绪积极。\",\n    \"hot_topics\": \"AI算力电力需求、能源转型、清洁能源、数据中心电力供应\"\n}\n```",
+      "created_at": "2026-07-01 14:07:03.112289",
+      "raw_response": "```json\n{\n    \"stock_name\": \"Vistra Corp.\",\n    \"sentiment_score\": 67,\n    \"trend_prediction\": \"震荡\",\n    \"operation_advice\": \"观望\",\n    \"decision_type\": \"hold\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"Vistra Corp.高增长估值合理，技术面多头回踩，建议等待支撑确认后买入。\",\n            \"signal_type\": \"🟡持有观望\",\n            \"time_sensitivity\": \"不急\",\n            \"position_advice\": {\n                \"no_position\": \"等待股价回踩155.85支撑确认后买入\",\n                \"has_position\": \"持有，止损设在148.00\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"多头排列\",\n                \"is_bullish\": true,\n                \"trend_score\": 69\n            },\n            \"price_position\": {\n                \"current_price\": 158.63,\n                \"ma5\": 163.03,\n                \"ma10\": 162.53,\n                \"ma20\": 155.85,\n                \"bias_ma5\": -2.7,\n                \"bias_status\": \"价格略低于MA5，回踩整理中\",\n                \"support_level\": 155.85,\n                \"resistance_level\": 171.35\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 1.05,\n                \"volume_status\": \"缩量调整\",\n                \"turnover_rate\": null,\n                \"volume_meaning\": \"下跌时量能萎缩，非恐慌抛售，属健康调整\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"筹码数据缺失，无法分析\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"未发现直接相关公司新闻，但行业分析显示电力需求增长驱动核能及天然气资产扩张。\",\n            \"risk_alerts\": [\n                \"行业竞争加剧\",\n                \"政策变化风险\",\n                \"利率上升影响公用事业股票估值\"\n            ],\n            \"positive_catalysts\": [\n                \"电力需求持续增长\",\n                \"核能和天然气资产扩张战略\",\n                \"分析师目标价222.89美元，上涨空间40.5%\"\n            ],\n            \"earnings_outlook\": \"业绩高速增长：营收同比增长43.4%，净利润同比增长409.1%，ROE高达42.9%。\",\n            \"sentiment_summary\": \"基本面强劲，技术面处于健康调整期，市场情绪中性偏积极。\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"155.85（MA20支撑位）\",\n                \"secondary_buy\": \"150.00（强支撑区）\",\n                \"stop_loss\": \"148.00（跌破MA60及前低）\",\n                \"take_profit\": \"171.35（前高阻力）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"5%仓位（观察级别）\",\n                \"entry_plan\": \"1. 回踩155.85确认支撑后买入3%仓位；2. 跌至150.00加仓2%仓位。\",\n                \"risk_control\": \"止损148.00，单笔最大亏损约7.63美元/股，占总资金约0.38%\"\n            },\n            \"action_checklist\": [\n                \"✅ 赛道空间：电力行业市场规模大，但增速中等（5/10）\",\n                \"✅ 增长质量：营收利润高速增长，现金流匹配良好（8/10）\",\n                \"✅ 竞争壁垒：规模优势明显，但技术壁垒一般（6/10）\",\n                \"✅ 管理层：执行力强，股东回报稳定（7/10）\",\n                \"✅ 估值：远期PE合理，目标价上涨空间大（8/10）\",\n                \"✅ 技术择时：多头排列，回踩支撑（7/10）\",\n                \"✅ 催化剂：电力需求增长，核能扩张（7/10）\",\n                \"⚠️ 风险：行业竞争、政策变化、利率影响\"\n            ]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"premarket\",\n                \"action_window\": \"盘前计划\",\n                \"immediate_action\": \"等待确认\",\n                \"watch_conditions\": [\n                    \"观察开盘后价格是否站稳MA20（155.85）上方\",\n                    \"观察开盘后30分钟成交量变化\",\n                    \"观察是否出现放量反弹信号\"\n                ],\n                \"next_check_time\": \"开盘后30分钟（美东时间09:30后）\",\n                \"confidence_reason\": \"行情数据为降级状态，筹码和新闻数据缺失，技术分析数据质量良好。\",\n                \"data_limitations\": [\n                    \"行情数据降级（fallback）\",\n                    \"筹码分布数据缺失\",\n                    \"直接公司新闻缺失\"\n                ]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层：赛道空间与景气度\",\n            \"weight\": \"25%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"电力行业市场规模大（>1000亿美元），但渗透率高（>50%），行业增速中等（<15%）。受能源转型和电力需求增长驱动，景气度中等。\"\n        },\n        {\n            \"dimension\": \"第二层：增长质量与持续性\",\n            \"weight\": \"20%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"营收同比增长43.4%，净利润同比增长409.1%，ROE高达42.9%，现金流匹配良好（经营现金流/净利润=1.22）。增长质量高，持续性需观察。\"\n        },\n        {\n            \"dimension\": \"第三层：竞争壁垒与护城河\",\n            \"weight\": \"15%\",\n            \"score\": 6,\n            \"max_score\": 10,\n            \"finding\": \"规模优势明显（装机容量41GW），资本壁垒高，但技术壁垒一般，客户转换成本低。\"\n        },\n        {\n            \"dimension\": \"第四层：管理层与执行力\",\n            \"weight\": \"10%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"战略眼光：投资核能和天然气资产扩张。执行力：营收利润高速增长。股东回报：稳定分红（股息率0.57%）。\"\n        },\n        {\n            \"dimension\": \"第五层：估值合理性\",\n            \"weight\": \"15%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"远期PE 14.68（合理），PS 2.75（低于行业平均），EV/EBITDA 11.08。目标价222.89，上涨空间40.5%。PEG极低（0.07），但需注意高增速可持续性。\"\n        },\n        {\n            \"dimension\": \"第六层：技术择时\",\n            \"weight\": \"10%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"多头排列，价格回踩MA20支撑（155.85）。RSI中性（51.4），MACD多头。成交量缩量调整，非恐慌抛售。\"\n        },\n        {\n            \"dimension\": \"第七层：催化剂与风险\",\n            \"weight\": \"5%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"正面催化剂：电力需求增长、核能资产扩张。风险：行业竞争、政策变化、利率上升。未发现具体公司负面事件。\"\n        }\n    ],\n    \"analysis_summary\": \"Vistra Corp. (VST) 是一家美国大型电力公司，受益于电力需求增长和能源转型。基本面强劲：营收增长43%，利润增长409%，ROE高达43%。技术面处于多头排列回踩阶段，当前价158.63接近MA20支撑155.85。估值合理，远期PE仅14.68，目标价222.89。建议观望等待回踩支撑确认后买入，仓位5%。\",\n    \"key_points\": \"营收增长43.4%，净利润增长409.1%，远期PE仅14.68，多头排列回踩支撑，电力需求增长驱动\",\n    \"risk_warning\": \"风险提示：电力行业竞争加剧、政策变化、利率上升影响公用事业股票估值、高增速可持续性存疑。请严格止损。\",\n    \"buy_reason\": \"高景气成长策略：公司处于电力需求增长赛道，增长质量高（营收利润高速增长），估值合理（远期PE 14.68），技术面处于多头排列回踩买点。\",\n    \"trend_analysis\": \"股价从5月低点133美元附近强劲反弹至6月高点171.35美元，目前回踩至158.63美元，处于上升趋势中的健康调整阶段。均线呈多头排列（MA5>MA10>MA20），价格回踩MA20支撑。\",\n    \"short_term_outlook\": \"短期（1-3日）预计在155.85-165区间震荡整理。若能站稳MA20（155.85）上方，有望反弹至165附近。若跌破155.85，可能下探150支撑。\",\n    \"medium_term_outlook\": \"中期（1-2周）趋势依然向上，目标位171.35（前高）。若有效突破，上看180。支撑位150-155.85。\",\n    \"technical_analysis\": \"技术面整体偏多：趋势得分69分，多头排列，MACD多头，RSI中性（51.4）。成交量缩量调整，量价关系中性。关键支撑155.85，阻力171.35。\",\n    \"ma_analysis\": \"均线系统呈多头排列：MA5（163.03）>MA10（162.53）>MA20（155.85）>MA60（155.11）。价格目前低于MA5和MA10，但高于MA20和MA60，处于回踩确认阶段。\",\n    \"volume_analysis\": \"近30日成交量呈缩量趋势（-24.4%），量价关系中性（相关系数-0.115）。下跌时量能萎缩，非恐慌抛售，属健康调整。\",\n    \"pattern_analysis\": \"近60个交易日未发现明显K线形态，股价处于上升通道中的回调整理阶段。\",\n    \"fundamental_analysis\": \"基本面强劲：营收同比增长43.4%，净利润同比增长409.1%，ROE高达42.9%，毛利率38.6%。现金流健康，经营现金流11.99亿美元。股息稳定（股息率0.57%）。\",\n    \"sector_position\": \"公用事业板块中的独立发电及电力零售公司，规模行业领先（装机容量41GW）。受益于美国电力需求增长和能源转型，但受利率政策影响较大。\",\n    \"company_highlights\": \"公司亮点：1）高增长：营收利润高速增长；2）规模优势：装机容量行业领先；3）估值合理：远期PE仅14.68；4）核能扩张：布局核能资产应对电力需求增长。\",\n    \"news_summary\": \"未发现直接相关公司新闻。行业分析显示电力需求增长驱动核能及天然气资产扩张，分析师给予目标价222.89美元。\",\n    \"market_sentiment\": \"市场情绪中性偏积极。机构持股比例高达90.98%，显示机构看好。分析师共识目标价222.89美元，上涨空间40.5%。\",\n    \"hot_topics\": \"电力需求增长、核能复兴、能源转型、独立发电厂、ERCOT/PJM电力市场\"\n}\n```",
       "history": [
+        {
+          "score": 67,
+          "advice": "观望",
+          "created_at": "2026-07-01 14:07:03.112289",
+          "layer_scores": [
+            {
+              "dimension": "第一层：赛道空间与景气度",
+              "weight": "25%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "电力行业市场规模大（>1000亿美元），但渗透率高（>50%），行业增速中等（<15%）。受能源转型和电力需求增长驱动，景气度中等。"
+            },
+            {
+              "dimension": "第二层：增长质量与持续性",
+              "weight": "20%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "营收同比增长43.4%，净利润同比增长409.1%，ROE高达42.9%，现金流匹配良好（经营现金流/净利润=1.22）。增长质量高，持续性需观察。"
+            },
+            {
+              "dimension": "第三层：竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "规模优势明显（装机容量41GW），资本壁垒高，但技术壁垒一般，客户转换成本低。"
+            },
+            {
+              "dimension": "第四层：管理层与执行力",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "战略眼光：投资核能和天然气资产扩张。执行力：营收利润高速增长。股东回报：稳定分红（股息率0.57%）。"
+            },
+            {
+              "dimension": "第五层：估值合理性",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "远期PE 14.68（合理），PS 2.75（低于行业平均），EV/EBITDA 11.08。目标价222.89，上涨空间40.5%。PEG极低（0.07），但需注意高增速可持续性。"
+            },
+            {
+              "dimension": "第六层：技术择时",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "多头排列，价格回踩MA20支撑（155.85）。RSI中性（51.4），MACD多头。成交量缩量调整，非恐慌抛售。"
+            },
+            {
+              "dimension": "第七层：催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "正面催化剂：电力需求增长、核能资产扩张。风险：行业竞争、政策变化、利率上升。未发现具体公司负面事件。"
+            }
+          ]
+        },
         {
           "score": 74,
           "advice": "持有观察",
@@ -3811,6 +3170,759 @@
           "score": 68,
           "advice": "观望",
           "created_at": "2026-06-13 15:55:59.325153",
+          "layer_scores": []
+        }
+      ]
+    },
+    {
+      "code": "AVGO",
+      "name": "Broadcom Inc.",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "score": 57,
+      "advice": "观望",
+      "layer_scores": [
+        {
+          "dimension": "第一层 赛道空间",
+          "weight": "25%",
+          "score": 8,
+          "max_score": 10,
+          "finding": "公司处于AI、半导体、云计算等高景气赛道，行业空间巨大且增速高。"
+        },
+        {
+          "dimension": "第二层 增长质量",
+          "weight": "20%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "最新财报显示营收及AI芯片业务预测低于预期，增长质量存疑，市场担忧情绪升温。"
+        },
+        {
+          "dimension": "第三层 竞争壁垒",
+          "weight": "15%",
+          "score": 8,
+          "max_score": 10,
+          "finding": "公司在半导体和基础设施软件领域拥有深厚的技术、专利和客户粘性壁垒，护城河稳固。"
+        },
+        {
+          "dimension": "第四层 管理层",
+          "weight": "10%",
+          "score": 6,
+          "max_score": 10,
+          "finding": "管理层具备战略眼光，但本次业绩指引低于预期暴露了执行或市场沟通方面的问题。"
+        },
+        {
+          "dimension": "第五层 估值",
+          "weight": "15%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "当前PE（62.85）和PB（20.50）估值较高，在业绩增速放缓的背景下，估值压力较大。"
+        },
+        {
+          "dimension": "第六层 技术择时",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "技术面呈强势空头排列，价格远离长期均线，MACD和趋势信号均指向下跌，不是好的买点。"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "5%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "负面催化剂（业绩不及预期）已释放，但市场需要时间消化；正面催化需等待新产品或下一季度业绩反转。"
+        }
+      ],
+      "created_at": "2026-07-01 14:06:09.452488",
+      "raw_response": "```json\n{\n    \"stock_name\": \"博通\",\n    \"sentiment_score\": 45,\n    \"trend_prediction\": \"看空\",\n    \"operation_advice\": \"观望\",\n    \"decision_type\": \"hold\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"业绩低于预期叠加技术面走弱，建议观望等待企稳信号。\",\n            \"signal_type\": \"🟡持有观望\",\n            \"time_sensitivity\": \"本周内\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者建议继续观望，等待股价企稳并出现明确的底部信号后再考虑介入。\",\n                \"has_position\": \"持仓者建议控制仓位，若跌破关键支撑位（375.24）应考虑减仓，等待右侧信号。\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势空头排列，均线发散下行\",\n                \"is_bullish\": false,\n                \"trend_score\": 10\n            },\n            \"price_position\": {\n                \"current_price\": 377.75,\n                \"ma5\": 375.24,\n                \"ma10\": 382.76,\n                \"ma20\": 395.45,\n                \"bias_ma5\": 0.67,\n                \"bias_status\": \"价格贴近MA5，存在短期支撑\",\n                \"support_level\": 375.24,\n                \"resistance_level\": 494.22\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 0.98,\n                \"volume_status\": \"量能正常\",\n                \"turnover_rate\": null,\n                \"volume_meaning\": \"量能正常，无异常放大或缩小，表明市场分歧暂时不大。\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"数据缺失，无法评估\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"博通（Broadcom）业绩及AI芯片预测低于预期，导致股价盘后大幅下跌超过13%。\",\n            \"risk_alerts\": [\"业绩低于预期，引发市场对增长前景的担忧\", \"股价从高点大幅回落，技术形态走弱\", \"面临来自Marvell等竞争对手的激烈竞争\"],\n            \"positive_catalysts\": [\"摩根大通（JPMorgan）维持高目标价，显示部分机构长期看好\", \"AI行业长期增长趋势未变，公司仍处于核心赛道\"],\n            \"earnings_outlook\": \"短期业绩展望承压，市场预期下调，需等待下一季度财报验证增长逻辑。\",\n            \"sentiment_summary\": \"市场情绪偏谨慎，业绩“爆雷”导致投资者信心受挫，短期抛压可能持续。\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"375.24（MA5支撑位，需出现放量企稳信号）\",\n                \"secondary_buy\": \"370.00（前期震荡区间下沿）\",\n                \"stop_loss\": \"360.00（跌破前低支撑，趋势可能进一步恶化）\",\n                \"take_profit\": \"395.45（MA20阻力位，前期平台）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"观望或极轻仓（<5%）试探\",\n                \"entry_plan\": \"不急于入场。等待股价在MA5（375.24）上方连续站稳2-3个交易日，且成交量温和放大时，可考虑极轻仓试探。\",\n                \"risk_control\": \"严格止损：若股价跌破370.00，则无条件离场。\"\n            },\n            \"action_checklist\": [\"✅ 盘前观察：关注盘前交易价格是否在375.24之上\", \"✅ 开盘观察：开盘后30分钟观察股价是否快速跌破375.24支撑\", \"⚠️ 关注信号：若股价放量拉升突破382.76（MA10），可视为短期企稳信号\", \"❌ 禁止操作：绝对禁止在当前位置追高或重仓抄底\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"premarket\",\n                \"action_window\": \"盘前计划\",\n                \"immediate_action\": \"等待确认\",\n                \"watch_conditions\": [\"观察盘前价格能否维持在375.24（MA5）之上\", \"观察开盘后是否有恐慌性抛售\"],\n                \"next_check_time\": \"美东时间09:30开盘后30分钟\",\n                \"confidence_reason\": \"数据质量评分82/100。行情数据为降级状态，技术分析可用但新闻有限。置信度为中等。\",\n                \"data_limitations\": [\"行情数据为降级状态（fallback）\", \"新闻搜索结果有限，未覆盖最新业绩详情\", \"筹码分布数据缺失\"]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层 赛道空间\",\n            \"weight\": \"25%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"公司处于AI、半导体、云计算等高景气赛道，行业空间巨大且增速高。\"\n        },\n        {\n            \"dimension\": \"第二层 增长质量\",\n            \"weight\": \"20%\",\n            \"score\": 4,\n            \"max_score\": 10,\n            \"finding\": \"最新财报显示营收及AI芯片业务预测低于预期，增长质量存疑，市场担忧情绪升温。\"\n        },\n        {\n            \"dimension\": \"第三层 竞争壁垒\",\n            \"weight\": \"15%\",\n            \"score\": 8,\n            \"max_score\": 10,\n            \"finding\": \"公司在半导体和基础设施软件领域拥有深厚的技术、专利和客户粘性壁垒，护城河稳固。\"\n        },\n        {\n            \"dimension\": \"第四层 管理层\",\n            \"weight\": \"10%\",\n            \"score\": 6,\n            \"max_score\": 10,\n            \"finding\": \"管理层具备战略眼光，但本次业绩指引低于预期暴露了执行或市场沟通方面的问题。\"\n        },\n        {\n            \"dimension\": \"第五层 估值\",\n            \"weight\": \"15%\",\n            \"score\": 4,\n            \"max_score\": 10,\n            \"finding\": \"当前PE（62.85）和PB（20.50）估值较高，在业绩增速放缓的背景下，估值压力较大。\"\n        },\n        {\n            \"dimension\": \"第六层 技术择时\",\n            \"weight\": \"10%\",\n            \"score\": 3,\n            \"max_score\": 10,\n            \"finding\": \"技术面呈强势空头排列，价格远离长期均线，MACD和趋势信号均指向下跌，不是好的买点。\"\n        },\n        {\n            \"dimension\": \"第七层 催化剂\",\n            \"weight\": \"5%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"负面催化剂（业绩不及预期）已释放，但市场需要时间消化；正面催化需等待新产品或下一季度业绩反转。\"\n        }\n    ],\n    \"analysis_summary\": \"博通（AVGO）处于高景气的AI半导体赛道，但最新业绩指引不及预期导致股价重挫。技术面呈空头排列，估值偏高。综合七层评分58分，处于“观察”区间。建议投资者保持耐心，等待业绩风险释放和技术面企稳后再做决策。\",\n    \"key_points\": \"AI芯片赛道龙头，业绩指引不及预期，技术面空头排列，估值偏高，摩根大通维持高目标价\",\n    \"risk_warning\": \"主要风险在于业绩增长放缓可能导致估值杀，以及技术面破位后可能引发进一步下跌。需密切关注下一季度财报及AI芯片需求动态。\",\n    \"buy_reason\": \"不符合“买贵的好公司”技能买入条件。虽然赛道好（第一层高分），但增长质量（第二层）和技术择时（第六层）均不达标，且估值（第五层）缺乏安全垫。总分58分，建议观望。\",\n    \"trend_analysis\": \"股价自6月初业绩“爆雷”后从495美元附近高点大幅回落，目前处于明确的下跌趋势中。均线呈空头排列，价格在MA5附近弱势震荡，缺乏有效反弹动能。\",\n    \"short_term_outlook\": \"短期1-3日看，股价大概率维持弱势震荡，关键支撑在375.24（MA5）。若跌破该位置，可能开启新一轮下跌。\",\n    \"medium_term_outlook\": \"中期1-2周看，需要观察能否在370-380美元区间构筑平台并消化利空。若无法有效企稳，可能下探至360美元甚至更低。\",\n    \"technical_analysis\": \"技术指标全面看空：均线空头排列，MACD位于零轴下方且柱状线扩大，RSI处于中性偏弱区域。趋势评分为10（极度弱势），信号建议观望。\",\n    \"ma_analysis\": \"MA5（375.24）是当前最近的支撑，但上方MA10（382.76）和MA20（395.45）构成重重压力。价格与MA20的负乖离率达-4.48%，显示短期超卖，但在空头趋势下超卖可能持续。\",\n    \"volume_analysis\": \"近期成交量无明显异常，量比0.98显示交投活跃度一般。下跌过程中没有出现极端放量，说明恐慌盘可能已部分出清，但买盘力量同样不足。\",\n    \"pattern_analysis\": \"近期K线以阴线为主，呈现下跌中继或弱势整理形态。缺乏明确的底部反转信号（如早晨之星、锤头线等）。\",\n    \"fundamental_analysis\": \"基本面出现裂痕：最新季度业绩及下季度指引低于市场预期，引发对AI芯片业务增长可持续性的担忧。当前62.85倍的PE估值在增长放缓背景下显得昂贵。\",\n    \"sector_position\": \"公司是AI半导体和基础设施软件的核心玩家，行业地位稳固。但竞争对手（如Marvell）的追赶以及行业周期波动带来压力。\",\n    \"company_highlights\": \"亮点：AI赛道龙头、技术护城河深、业务多元化（半导体+软件）。风险：业绩指引“爆雷”、估值高企、技术面走坏。\",\n    \"news_summary\": \"近期核心新闻为公司二季度业绩及AI芯片预测低于预期，导致股价盘后大跌。部分机构（如摩根大通）仍维持高目标价，但市场情绪已转为谨慎。\",\n    \"market_sentiment\": \"市场情绪从乐观转向谨慎和担忧。业绩“爆雷”是主要情绪转折点，投资者正在重新评估其高估值的合理性。\",\n    \"hot_topics\": \"AI芯片需求、半导体周期、业绩指引、高估值泡沫\"\n}\n```",
+      "history": [
+        {
+          "score": 57,
+          "advice": "观望",
+          "created_at": "2026-07-01 14:06:09.452488",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间",
+              "weight": "25%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "公司处于AI、半导体、云计算等高景气赛道，行业空间巨大且增速高。"
+            },
+            {
+              "dimension": "第二层 增长质量",
+              "weight": "20%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "最新财报显示营收及AI芯片业务预测低于预期，增长质量存疑，市场担忧情绪升温。"
+            },
+            {
+              "dimension": "第三层 竞争壁垒",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "公司在半导体和基础设施软件领域拥有深厚的技术、专利和客户粘性壁垒，护城河稳固。"
+            },
+            {
+              "dimension": "第四层 管理层",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "管理层具备战略眼光，但本次业绩指引低于预期暴露了执行或市场沟通方面的问题。"
+            },
+            {
+              "dimension": "第五层 估值",
+              "weight": "15%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "当前PE（62.85）和PB（20.50）估值较高，在业绩增速放缓的背景下，估值压力较大。"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "技术面呈强势空头排列，价格远离长期均线，MACD和趋势信号均指向下跌，不是好的买点。"
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "5%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "负面催化剂（业绩不及预期）已释放，但市场需要时间消化；正面催化需等待新产品或下一季度业绩反转。"
+            }
+          ]
+        },
+        {
+          "score": 76,
+          "advice": "观望",
+          "created_at": "2026-06-30 01:18:37.310337",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "AI半导体赛道处于高景气周期，市场规模巨大（TAM>万亿美元），渗透率仍处于早期阶段，行业增速>30%，技术迭代活跃"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收同比增长47.9%，净利润同比增长87.5%，增速质量优异；毛利率76.3%极高且稳定；ROE 37.3%优秀"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "全球AI芯片技术领先，拥有深厚技术壁垒；与大型科技公司建立长期客户关系；规模优势明显，生态系统完善"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "管理层战略眼光前瞻，提前布局AI半导体；业绩执行力强，连续超预期；有稳定分红政策，股东回报良好"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "当前PE 62倍较高，但远期PE 19倍合理；PEG 0.71<1优秀；分析师目标价523美元，上涨空间约40%"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "技术面处于强势空头趋势，价格低于所有短期均线；RSI 38.7弱势；信号评分31分，无明确买入信号"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "正面催化：AI需求持续增长，业绩超预期；负面风险：估值较高，技术面走弱；新闻信息不足"
+            }
+          ]
+        },
+        {
+          "score": 72,
+          "advice": "观望",
+          "created_at": "2026-06-17 16:56:40.408661",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间",
+              "weight": "25%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "半导体/AI芯片赛道处于高景气周期，市场空间巨大，行业增速高。"
+            },
+            {
+              "dimension": "第二层 增长质量",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增长48%，净利润增长88%，毛利率76%，ROE 37%，增长质量极高。"
+            },
+            {
+              "dimension": "第三层 竞争壁垒",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "作为半导体设计龙头，拥有技术、专利和客户壁垒，护城河深厚。"
+            },
+            {
+              "dimension": "第四层 管理层",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "管理层战略清晰，执行力强，公司ROE持续高位证明其运营效率。"
+            },
+            {
+              "dimension": "第五层 估值",
+              "weight": "15%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "静态PE 62倍偏高，但远期PE 19倍合理，高增长部分消化了高估值。"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "均线空头排列，价格跌破所有短期均线，RSI弱势，技术面发出回避信号。"
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "5%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "AI需求是长期催化剂，但短期缺乏明确正面事件，且技术面压力较大。"
+            }
+          ]
+        },
+        {
+          "score": 78,
+          "advice": "观望",
+          "created_at": "2026-06-16 17:00:33.037809",
+          "layer_scores": [
+            {
+              "dimension": "第一层：赛道空间与景气度",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "AI/半导体赛道处于高景气上升周期，市场规模巨大，渗透率低，行业增速超30%，政策支持强劲。"
+            },
+            {
+              "dimension": "第二层：增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%高位稳定，增长质量高且可持续。"
+            },
+            {
+              "dimension": "第三层：竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "技术壁垒深厚（专利、研发），客户转换成本高（苹果、谷歌等大客户），规模和品牌优势明显。"
+            },
+            {
+              "dimension": "第四层：管理层与执行力",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "管理层战略眼光准，提前布局AI，执行力强，业绩持续超预期，股东回报良好。"
+            },
+            {
+              "dimension": "第五层：估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "当前PE 65.33较高，但远期PE 20.36合理，PEG约0.75（优秀），目标价522美元有上涨空间。"
+            },
+            {
+              "dimension": "第六层：技术择时",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "技术面处于强势空头排列，价格低于所有主要均线，RSI中性，趋势偏弱，需等待企稳信号。"
+            },
+            {
+              "dimension": "第七层：催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "正面催化剂：AI需求爆发、新产品发布；风险：估值压力、竞争加剧、宏观经济不确定性。"
+            }
+          ]
+        },
+        {
+          "score": 78,
+          "advice": "持有",
+          "created_at": "2026-06-15 23:57:02.575535",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "AI半导体赛道高景气，TAM超千亿美元，渗透率<20%，行业增速>30%，供不应求，政策支持但有出口管制限制"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增速47.87%、净利润增速87.51%，利润增速远超营收，ROE 37.28%，毛利率76.28%，经营现金流强劲"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI定制ASIC技术领先，客户转换成本高（认证周期长），品牌知名度高，生态系统完善"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "连续两季财报超预期，AI战略布局领先，管理层执行力强，分红稳定（股息率0.63%）"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "远期PE 20.33合理，PEG约0.23（优秀），但当前PE 65.56偏高，需盈利增长持续兑现"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "强势空头排列，从高点回调约24%，RSI 40中性未超卖，缩量回调但趋势未扭转，需等待企稳信号"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "催化剂：AI需求爆发、业绩超预期、分析师目标价522美元；风险：出口管制、6月4日暴跌原因不明"
+            }
+          ]
+        },
+        {
+          "score": 74,
+          "advice": "观望",
+          "created_at": "2026-06-15 22:34:15.603639",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI和半导体行业高景气，公司营收增长47.9%，净利润增长87.5%，行业空间广阔"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收和净利润双高增长，毛利率76.3%，ROE 37.3%，现金流健康，增长质量优秀"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "半导体设计领域技术壁垒高，专利组合强大，但具体护城河宽度需更多数据确认"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "业绩持续超预期增长，显示管理层执行力强，但缺乏具体战略信息"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "PE 65.1倍看似偏高，但远期PE仅20.2倍，PEG约0.74，成长性匹配估值"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "技术面显示强势空头排列，股价远离均线，短期趋势偏弱，需等待转势信号"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "AI需求持续增长是正面催化剂，但股价大幅回调后技术面修复需要时间"
+            }
+          ]
+        },
+        {
+          "score": 81,
+          "advice": "观望",
+          "created_at": "2026-06-15 22:25:27.180158",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "AI与半导体赛道高景气，市场规模巨大（TAM>1000亿），政策支持明确，技术快速迭代。"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收同比增长47.9%，净利润增长87.5%，毛利率高达76.3%，现金流匹配良好，增长质量极高。"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "技术领先，拥有核心专利与高研发投入；客户粘性强，转换成本高；品牌与生态壁垒深厚。"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "管理层战略眼光敏锐，提前布局AI；执行力强，业绩持续超预期；股东回报稳定（股息率0.64%）。"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "PEG为0.74（优秀），远期PE 20.2倍合理，但当前PE 65倍绝对值偏高，EV/EBITDA 44.3倍亦处高位。"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "技术面呈强势空头排列，价格低于主要均线，处于调整周期。缩量回调提供潜在买点，但需等待企稳信号。"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "AI需求持续增长、新产品发布是主要催化剂；风险在于高估值回调、行业竞争加剧及宏观政策变化。"
+            }
+          ]
+        },
+        {
+          "score": 74,
+          "advice": "观望",
+          "created_at": "2026-06-15 21:15:33.106722",
+          "layer_scores": [
+            {
+              "dimension": "第一层：赛道空间与景气度",
+              "weight": "25%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI芯片赛道高景气，TAM超千亿美元，渗透率低，行业增速>30%，供需紧张，政策支持"
+            },
+            {
+              "dimension": "第二层：增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增速47.87%，净利润增速87.51%，ROE 37.28%，毛利率76.28%稳定，现金流匹配良好"
+            },
+            {
+              "dimension": "第三层：竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "技术壁垒高（AI网络芯片领先），客户壁垒强（大客户绑定），品牌和生态壁垒稳固"
+            },
+            {
+              "dimension": "第四层：管理层与执行力",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "战略眼光好（提前布局AI），执行力强（业绩超预期），有稳定分红"
+            },
+            {
+              "dimension": "第五层：估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "PE 63.68，远期PE 19.74，PEG=0.73<1估值合理，PS 24.09，EV/EBITDA 44.27"
+            },
+            {
+              "dimension": "第六层：技术择时",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "强势空头排列，价格低于所有均线，RSI中性40，MACD中性，缩量回调中"
+            },
+            {
+              "dimension": "第七层：催化剂与风险",
+              "weight": "5%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "正面催化：AI需求增长、业绩超预期；风险：技术面空头、估值较高、新闻缺失"
+            }
+          ]
+        },
+        {
+          "score": 80,
+          "advice": "观望",
+          "created_at": "2026-06-15 17:05:07.194615",
+          "layer_scores": [
+            {
+              "dimension": "第一层：赛道空间与景气度",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "AI、半导体高景气赛道，市场规模超千亿美元，渗透率仍处早期，行业增速>30%，供需格局供不应求"
+            },
+            {
+              "dimension": "第二层：增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%高位稳定，现金流匹配良好，真成长特征明显"
+            },
+            {
+              "dimension": "第三层：竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "技术领先（AI加速器、网络芯片），规模与客户壁垒高，品牌认知度强，软硬件生态协同"
+            },
+            {
+              "dimension": "第四层：管理层与执行力",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "战略前瞻布局AI，业绩连续超预期，股权激励完善，信息透明度高，稳定分红"
+            },
+            {
+              "dimension": "第五层：估值合理性",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "当前PE 63.68较高，但远期PE仅19.74，PEG约0.73（<1），营收增速47.87%支撑估值，估值处于合理区间"
+            },
+            {
+              "dimension": "第六层：技术择时",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "技术面强势空头，均线空头排列，价格低于MA5/10/20，RSI中性（40），MACD中性，缩量回调中"
+            },
+            {
+              "dimension": "第七层：催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "AI需求增长、新产品发布、业绩超预期为正面催化；竞争加剧、估值回调、宏观风险为负面因素"
+            }
+          ]
+        },
+        {
+          "score": 75,
+          "advice": "观望",
+          "created_at": "2026-06-14 16:57:23.726837",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI半导体龙头，TAM超1000亿，渗透率<20%，行业增速>30%"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "营收增速47.87%，净利润增速87.51%，毛利率76.28%，ROE 37.28%"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 9,
+              "max_score": 10,
+              "finding": "技术壁垒强，专利护城河深，客户转换成本高，生态系统完善"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI战略布局前瞻，执行力强，连续业绩超预期，有稳定分红"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "当前PE 63.68偏高，远期PE 19.74合理，PS 24.09较高"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "强势空头排列，价格跌破所有均线，MACD中性，RSI 40"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "AI芯片需求爆发，但估值修正风险存在"
+            }
+          ]
+        },
+        {
+          "score": 89,
+          "advice": "持有观察",
+          "created_at": "2026-06-14 15:19:05.965711",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间与景气度",
+              "weight": "25%",
+              "score": 10,
+              "max_score": 10,
+              "finding": "AI半导体赛道空间巨大，行业增速>30%，供不应求，政策支持，技术迭代快"
+            },
+            {
+              "dimension": "第二层 增长质量与持续性",
+              "weight": "20%",
+              "score": 10,
+              "max_score": 10,
+              "finding": "营收增长47.87%，净利润增长87.51%，毛利率76.28%，现金流匹配良好，订单可见度延至2028年"
+            },
+            {
+              "dimension": "第三层 竞争壁垒与护城河",
+              "weight": "15%",
+              "score": 10,
+              "max_score": 10,
+              "finding": "技术壁垒深厚，定制XPU领先，客户转换成本高，品牌认知度强，生态系统完善"
+            },
+            {
+              "dimension": "第四层 管理层与执行力",
+              "weight": "10%",
+              "score": 10,
+              "max_score": 10,
+              "finding": "战略眼光前瞻，提前布局AI芯片，执行力强，业绩连续超预期，股东回报稳定"
+            },
+            {
+              "dimension": "第五层 估值合理性",
+              "weight": "15%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "PEG 0.73优秀，远期PE 19.74合理，PS 24.09较高但增长支撑，估值处于合理区间"
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "技术面弱势，强势空头排列，价格低于所有主要均线，RSI中性，未出现买入信号"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "5%",
+              "score": 8,
+              "max_score": 10,
+              "finding": "AI订单强劲，机构上调目标价，业绩超预期；风险包括行业价格战和技术路线变化"
+            }
+          ]
+        },
+        {
+          "score": 80,
+          "advice": "跟踪等待买点",
+          "created_at": "2026-06-14 03:15:25.462838",
+          "layer_scores": [
+            {
+              "dimension": "第一层 赛道空间",
+              "weight": "25%",
+              "score": 9,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第二层 增长质量",
+              "weight": "20%",
+              "score": 9,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第三层 竞争壁垒",
+              "weight": "15%",
+              "score": 9,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第四层 管理层",
+              "weight": "10%",
+              "score": 8,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第五层 估值",
+              "weight": "15%",
+              "score": 7,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第六层 技术择时",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": ""
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "5%",
+              "score": 7,
+              "max_score": 10,
+              "finding": ""
+            }
+          ]
+        },
+        {
+          "score": 79,
+          "advice": "观望",
+          "created_at": "2026-06-14 03:12:34.099935",
+          "layer_scores": []
+        },
+        {
+          "score": 58,
+          "advice": "观望",
+          "created_at": "2026-06-13 15:56:27.185549",
+          "layer_scores": []
+        },
+        {
+          "score": 78,
+          "advice": "持有",
+          "created_at": "2026-06-13 15:56:14.282243",
           "layer_scores": []
         }
       ]
