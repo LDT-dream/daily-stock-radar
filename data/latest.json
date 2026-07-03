@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-03T14:18:52.384551",
+  "update_time": "2026-07-03T14:20:17.653264",
   "jobs": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
       "strategy_name": "趋势投资",
       "schedule_time": "14:00",
       "stock_count": 18,
-      "last_run_at": "2026-07-02T20:33:29.712663",
+      "last_run_at": "2026-07-03T14:20:16.744299",
       "last_run_status": "success"
     }
   ],
@@ -12356,181 +12356,6 @@
       ]
     },
     {
-      "code": "601127",
-      "name": "赛力斯",
-      "strategy": "trend_trading",
-      "strategy_name": "趋势投资",
-      "score": 43,
-      "advice": "卖出",
-      "layer_scores": [
-        {
-          "dimension": "第一层 趋势强度",
-          "weight": "25%",
-          "score": 2,
-          "max_score": 10,
-          "finding": "空头排列，价格远低于所有均线，趋势明确下行"
-        },
-        {
-          "dimension": "第二层 动量质量",
-          "weight": "20%",
-          "score": 4,
-          "max_score": 10,
-          "finding": "RSI超卖有反弹可能，MACD金叉但在零轴下方"
-        },
-        {
-          "dimension": "第三层 量价配合",
-          "weight": "15%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "量比1.17温和放量，量价关系中性"
-        },
-        {
-          "dimension": "第四层 波动率",
-          "weight": "10%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "振幅3.97%适中，波动率环境可控"
-        },
-        {
-          "dimension": "第五层 相对强度",
-          "weight": "10%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "今日-1.26%跑赢大盘（上证-2.03%）"
-        },
-        {
-          "dimension": "第六层 关键位置",
-          "weight": "10%",
-          "score": 3,
-          "max_score": 10,
-          "finding": "远离MA20（8.88%），支撑薄弱"
-        },
-        {
-          "dimension": "第七层 催化剂",
-          "weight": "10%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "问界M9大定超4.2万台，但6月产销同比降27%"
-        }
-      ],
-      "created_at": "2026-07-02 20:33:29.703755",
-      "raw_response": "## 赛力斯（601127）<font color=\"red\">趋势投资</font>分析报告\n\n### 基本信息\n- 当前价格：60.38元\n- MA20：66.26元（价格在下方8.88%）\n- MA60：79.33元\n- RSI(14)：25.17（超卖）\n- 量比：1.17\n\n### 七层评分\n\n| 层级 | 权重 | 评分 | 关键发现 |\n|------|------|------|----------|\n| 第一层 趋势强度 | 25% | 2/10 | 空头排列（MA5<MA10<MA20<MA60），价格远低于所有均线，趋势明确下行 |\n| 第二层 动量质量 | 20% | 4/10 | RSI超卖（25.17<30）有反弹可能，MACD金叉但在零轴下方，动量偏弱 |\n| 第三层 量价配合 | 15% | 6/10 | 量比1.17温和放量，量价关系中性，无明显背离 |\n| 第四层 波动率 | 10% | 6/10 | 振幅3.97%适中，波动率环境可控 |\n| 第五层 相对强度 | 10% | 6/10 | 今日-1.26%跑赢大盘（上证-2.03%），相对表现尚可 |\n| 第六层 关键位置 | 10% | 3/10 | 远离MA20（8.88%），距MA60达23.88%，支撑薄弱，上方阻力密集 |\n| 第七层 催化剂 | 10% | 6/10 | 问界M9大定超4.2万台（正面），但6月产销同比降27%（负面），净利润增长81%（正面） |\n| **综合** | **100%** | **39分** | - |\n\n### 入场信号\n- 条件1 趋势确认：❌未触发（价格<MA20，空头排列）\n- 条件2 回调买入：❌未触发（价格<MA60，长期趋势已破坏）\n- 条件3 突破买入：❌未触发（无突破信号）\n\n### 操作建议\n- **评级**：回避/卖出\n- **建议仓位**：0%\n- **入场方式**：不建议入场\n- **止损位**：若持仓，止损位设在55元（跌破前低）\n- **目标位**：无明确目标位\n\n### 出场条件\n- 止损：价格 < 55元 或 亏损 > 15%\n- 止盈：RSI > 80 减仓 / RSI > 85 清仓 / 高点回撤 > 12% 清仓\n\n### 💰 一万元操作建议\n- **是否建议买入**：否\n- **建议操作**：观望，不建议买入\n- **具体价位**：等待趋势扭转信号\n- **仓位分配**：0仓位\n- **风险提示**：趋势下行，抄底风险大，需等待明确止跌信号\n\n```json\n{\n    \"stock_name\": \"赛力斯\",\n    \"sentiment_score\": 39,\n    \"trend_prediction\": \"看空\",\n    \"operation_advice\": \"卖出\",\n    \"decision_type\": \"sell\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"空头趋势明确，RSI超卖但无止跌信号，建议回避\",\n            \"signal_type\": \"🔴卖出信号\",\n            \"time_sensitivity\": \"今日内\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者建议观望，不建议抄底\",\n                \"has_position\": \"持仓者建议减仓或止损，保护本金\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\"ma_alignment\": \"空头排列 MA5<MA10<MA20<MA60\", \"is_bullish\": false, \"trend_score\": 2},\n            \"price_position\": {\"current_price\": 60.38, \"ma5\": 60.66, \"ma10\": 62.09, \"ma20\": 66.26, \"bias_ma5\": -0.46, \"bias_status\": \"价格略低于MA5\", \"support_level\": 55, \"resistance_level\": 78.77},\n            \"volume_analysis\": {\"volume_ratio\": 1.17, \"volume_status\": \"量能平稳\", \"turnover_rate\": 2.07, \"volume_meaning\": \"温和放量，量价关系中性\"},\n            \"chip_structure\": {\"profit_ratio\": null, \"avg_cost\": null, \"concentration\": null, \"chip_health\": \"数据缺失\"}\n        },\n        \"intelligence\": {\n            \"latest_news\": \"问界6月交付30199台，上半年累计交付同比增长10.2%；6月新能源汽车产量同比下降27.24%\",\n            \"risk_alerts\": [\"6月产销同比大幅下降27%\", \"大盘环境差，市场整体下跌\", \"技术面空头排列\"],\n            \"positive_catalysts\": [\"问界M9大定突破42000台\", \"2025年上半年归母净利润同比增长81.03%\", \"华为汽车概念\"],\n            \"earnings_outlook\": \"2025年上半年营收同比下降4.06%，但归母净利润同比增长81.03%，盈利能力改善\",\n            \"sentiment_summary\": \"短期受产销数据影响偏负面，但长期盈利改善预期存在\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\"ideal_buy\": \"不建议买入\", \"secondary_buy\": \"无\", \"stop_loss\": \"55元（跌破前低）\", \"take_profit\": \"无明确目标\"},\n            \"position_strategy\": {\"suggested_position\": \"0%\", \"entry_plan\": \"观望\", \"risk_control\": \"持仓者减仓\"},\n            \"action_checklist\": [\"❌ 价格<MA20（空头排列）\", \"❌ RSI超卖但无止跌信号\", \"❌ 6月产销同比大幅下降\", \"✅ 问界M9大定超4.2万台（正面）\", \"⚠️ 大盘环境差，系统性风险\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\"phase\": \"postmarket\", \"action_window\": \"盘后复盘\", \"immediate_action\": \"观察/止损止盈预警\", \"watch_conditions\": [\"明日开盘是否继续下跌\", \"是否出现放量止跌信号\", \"大盘能否企稳\"], \"next_check_time\": \"明日开盘前\", \"confidence_reason\": \"盘后数据完整，技术面清晰，但需关注明日市场情绪\", \"data_limitations\": [\"筹码分布数据缺失\", \"资金流向数据获取失败\", \"新闻关联度较低\"]}\n        }\n    },\n    \"layer_scores\": [\n        {\"dimension\": \"第一层 趋势强度\", \"weight\": \"25%\", \"score\": 2, \"max_score\": 10, \"finding\": \"空头排列，价格远低于所有均线，趋势明确下行\"},\n        {\"dimension\": \"第二层 动量质量\", \"weight\": \"20%\", \"score\": 4, \"max_score\": 10, \"finding\": \"RSI超卖有反弹可能，MACD金叉但在零轴下方\"},\n        {\"dimension\": \"第三层 量价配合\", \"weight\": \"15%\", \"score\": 6, \"max_score\": 10, \"finding\": \"量比1.17温和放量，量价关系中性\"},\n        {\"dimension\": \"第四层 波动率\", \"weight\": \"10%\", \"score\": 6, \"max_score\": 10, \"finding\": \"振幅3.97%适中，波动率环境可控\"},\n        {\"dimension\": \"第五层 相对强度\", \"weight\": \"10%\", \"score\": 6, \"max_score\": 10, \"finding\": \"今日-1.26%跑赢大盘（上证-2.03%）\"},\n        {\"dimension\": \"第六层 关键位置\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"远离MA20（8.88%），支撑薄弱\"},\n        {\"dimension\": \"第七层 催化剂\", \"weight\": \"10%\", \"score\": 6, \"max_score\": 10, \"finding\": \"问界M9大定超4.2万台，但6月产销同比降27%\"}\n    ],\n    \"analysis_summary\": \"赛力斯处于明确的空头趋势中，价格远低于所有均线，RSI超卖但无止跌信号。6月产销数据同比大幅下降27%，对短期情绪构成压力。尽管问界M9大定数据亮眼，但技术面弱势，建议回避。\",\n    \"key_points\": \"空头排列，RSI超卖，6月产销下降27%，问界M9大定超4.2万台，大盘环境差\",\n    \"risk_warning\": \"技术面空头趋势，6月产销大幅下降，大盘系统性风险\",\n    \"buy_reason\": \"无买入理由，趋势投资框架评分39分，属于卖出区间\",\n    \"trend_analysis\": \"从4月高点88.64元下跌至60.38元，跌幅31.9%，呈现明确的下降趋势，无止跌信号\",\n    \"short_term_outlook\": \"短期1-3日继续看跌，关注55元支撑位\",\n    \"medium_term_outlook\": \"中期1-2周维持弱势，需等待趋势扭转信号\",\n    \"technical_analysis\": \"空头排列，RSI超卖，MACD金叉但零轴下方，技术面偏弱\",\n    \"ma_analysis\": \"MA5(60.66)<MA10(62.09)<MA20(66.26)<MA60(79.33)，空头排列\",\n    \"volume_analysis\": \"量比1.17，量能平稳，量价关系中性\",\n    \"pattern_analysis\": \"出现流星线（看跌信号），中等强度\",\n    \"fundamental_analysis\": \"PE 17.64，PB 2.63，估值相对合理，但短期受产销数据影响\",\n    \"sector_position\": \"所属华为汽车、新能源车板块今日表现不佳\",\n    \"company_highlights\": \"问界品牌高端化成功，M9大定超4.2万台；但6月产销同比下降27%\",\n    \"news_summary\": \"6月产销同比下降27%，但问界M9大定超4.2万台，上半年交付增长10.2%\",\n    \"market_sentiment\": \"市场情绪悲观，大盘大幅下跌，汽车板块承压\",\n    \"hot_topics\": \"华为汽车、问界品牌、新能源车、产销数据\"\n}\n```",
-      "history": [
-        {
-          "score": 43,
-          "advice": "卖出",
-          "created_at": "2026-07-02 20:33:29.703755",
-          "layer_scores": [
-            {
-              "dimension": "第一层 趋势强度",
-              "weight": "25%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "空头排列，价格远低于所有均线，趋势明确下行"
-            },
-            {
-              "dimension": "第二层 动量质量",
-              "weight": "20%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "RSI超卖有反弹可能，MACD金叉但在零轴下方"
-            },
-            {
-              "dimension": "第三层 量价配合",
-              "weight": "15%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "量比1.17温和放量，量价关系中性"
-            },
-            {
-              "dimension": "第四层 波动率",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "振幅3.97%适中，波动率环境可控"
-            },
-            {
-              "dimension": "第五层 相对强度",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "今日-1.26%跑赢大盘（上证-2.03%）"
-            },
-            {
-              "dimension": "第六层 关键位置",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "远离MA20（8.88%），支撑薄弱"
-            },
-            {
-              "dimension": "第七层 催化剂",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "问界M9大定超4.2万台，但6月产销同比降27%"
-            }
-          ]
-        },
-        {
-          "score": 28,
-          "advice": "观望",
-          "created_at": "2026-07-02 02:45:28.744199",
-          "layer_scores": [
-            {
-              "dimension": "趋势强度",
-              "weight": "25%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "空头排列，价格跌破MA20，趋势向下"
-            },
-            {
-              "dimension": "动量质量",
-              "weight": "20%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "RSI超卖，MACD空头，动量衰竭"
-            },
-            {
-              "dimension": "量价配合",
-              "weight": "15%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "量能温和，缺乏资金推动"
-            },
-            {
-              "dimension": "波动率环境",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "振幅适中，波动率可控"
-            },
-            {
-              "dimension": "相对强度",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "股价跌幅较大，可能跑输大盘"
-            },
-            {
-              "dimension": "关键位置",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "远离MA20，上方阻力密集"
-            },
-            {
-              "dimension": "催化剂与风险",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "业绩增长与产销下滑并存"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "code": "MU",
       "name": "Micron Technology, Inc.",
       "strategy": "trend_trading",
@@ -13455,6 +13280,237 @@
       ]
     },
     {
+      "code": "601127",
+      "name": "赛力斯",
+      "strategy": "trend_trading",
+      "strategy_name": "趋势投资",
+      "score": 36,
+      "advice": "持有观察",
+      "layer_scores": [
+        {
+          "dimension": "第一层 趋势强度",
+          "weight": "25%",
+          "score": 1,
+          "max_score": 10,
+          "finding": "空头排列（MA5<MA10<MA20），价格跌破MA20，趋势强度极弱。"
+        },
+        {
+          "dimension": "第二层 动量质量",
+          "weight": "20%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "RSI超卖（25.2），MACD金叉但仍在零轴下方，动量疲弱。"
+        },
+        {
+          "dimension": "第三层 量价配合",
+          "weight": "15%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "量比1.47（温和放量），量能正常，无明显背离。"
+        },
+        {
+          "dimension": "第四层 波动率环境",
+          "weight": "10%",
+          "score": 7,
+          "max_score": 10,
+          "finding": "日内振幅3.99%，波动率适中，无异常波动。"
+        },
+        {
+          "dimension": "第五层 相对强度",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "无大盘对比数据，板块表现一般，相对强度中性。"
+        },
+        {
+          "dimension": "第六层 关键位置",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "价格远离MA20（-8.88%），距前高较远，上方阻力明显。"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "正面催化（问界交付增长）与负面风险（产销同比下降）并存。"
+        }
+      ],
+      "created_at": "2026-07-03 14:19:22.347874",
+      "raw_response": "```json\n{\n    \"stock_name\": \"赛力斯\",\n    \"sentiment_score\": 36,\n    \"trend_prediction\": \"强烈看空\",\n    \"operation_advice\": \"卖出\",\n    \"decision_type\": \"sell\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"空头排列超卖反弹，但趋势仍弱，建议观望。\",\n            \"signal_type\": \"⚠️风险警告\",\n            \"time_sensitivity\": \"今日内\",\n            \"position_advice\": {\n                \"no_position\": \"建议观望，等待趋势反转信号。\",\n                \"has_position\": \"建议减仓或止损，控制风险。\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"空头排列 MA5<MA10<MA20\",\n                \"is_bullish\": false,\n                \"trend_score\": 25\n            },\n            \"price_position\": {\n                \"current_price\": 62.3,\n                \"ma5\": 60.66,\n                \"ma10\": 62.09,\n                \"ma20\": 66.26,\n                \"bias_ma5\": -0.46,\n                \"bias_status\": \"价格略低于MA5(-0.5%)\",\n                \"support_level\": 58.71,\n                \"resistance_level\": 78.77\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 1.47,\n                \"volume_status\": \"温和放量\",\n                \"turnover_rate\": 2.15,\n                \"volume_meaning\": \"量能正常，无明显背离。\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"数据缺失\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"赛力斯6月新能源汽车产量3.37万辆，同比下降27.24%；销量3.37万辆，同比下降26.94%。问界6月交付30199台，上半年累计交付同比增长10.2%。\",\n            \"risk_alerts\": [\"产量销量同比下降\", \"空头排列趋势\", \"价格远离MA20\"],\n            \"positive_catalysts\": [\"问界交付量增长\", \"全新问界M9大定突破42000台\", \"一季度净利润7.54亿元\"],\n            \"earnings_outlook\": \"一季度收入257.46亿元，净利润7.54亿元。\",\n            \"sentiment_summary\": \"中性偏空，产销数据下降与交付增长并存，技术面弱势。\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"58.00（前低支撑）\",\n                \"secondary_buy\": \"65.00（突破MA20确认）\",\n                \"stop_loss\": \"55.00（跌破前低）\",\n                \"take_profit\": \"70.00（MA60附近）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"0%（观望）\",\n                \"entry_plan\": \"等待RSI反弹至40以上且价格站上MA5\",\n                \"risk_control\": \"止损55元，亏损不超过总资金5%\"\n            },\n            \"action_checklist\": [\"✅ 检查RSI是否继续超卖\", \"⚠️ 观察是否放量突破MA5\", \"❌ 避免追高，等待回调\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"intraday\",\n                \"action_window\": \"盘中跟踪\",\n                \"immediate_action\": \"观察\",\n                \"watch_conditions\": [\"RSI是否反弹至30以上\", \"是否放量突破60.66（MA5）\", \"支撑位58.71是否有效\"],\n                \"next_check_time\": \"14:45（收盘前15分钟）\",\n                \"confidence_reason\": \"数据部分缺失（筹码、新闻有限），技术指标矛盾（空头排列但RSI超卖）\",\n                \"data_limitations\": [\"筹码分布数据缺失\", \"新闻数据有限，未找到全面机构分析\"]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层 趋势强度\",\n            \"weight\": \"25%\",\n            \"score\": 1,\n            \"max_score\": 10,\n            \"finding\": \"空头排列（MA5<MA10<MA20），价格跌破MA20，趋势强度极弱。\"\n        },\n        {\n            \"dimension\": \"第二层 动量质量\",\n            \"weight\": \"20%\",\n            \"score\": 3,\n            \"max_score\": 10,\n            \"finding\": \"RSI超卖（25.2），MACD金叉但仍在零轴下方，动量疲弱。\"\n        },\n        {\n            \"dimension\": \"第三层 量价配合\",\n            \"weight\": \"15%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"量比1.47（温和放量），量能正常，无明显背离。\"\n        },\n        {\n            \"dimension\": \"第四层 波动率环境\",\n            \"weight\": \"10%\",\n            \"score\": 7,\n            \"max_score\": 10,\n            \"finding\": \"日内振幅3.99%，波动率适中，无异常波动。\"\n        },\n        {\n            \"dimension\": \"第五层 相对强度\",\n            \"weight\": \"10%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"无大盘对比数据，板块表现一般，相对强度中性。\"\n        },\n        {\n            \"dimension\": \"第六层 关键位置\",\n            \"weight\": \"10%\",\n            \"score\": 3,\n            \"max_score\": 10,\n            \"finding\": \"价格远离MA20（-8.88%），距前高较远，上方阻力明显。\"\n        },\n        {\n            \"dimension\": \"第七层 催化剂\",\n            \"weight\": \"10%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"正面催化（问界交付增长）与负面风险（产销同比下降）并存。\"\n        }\n    ],\n    \"analysis_summary\": \"赛力斯处于空头排列，价格跌破MA20，趋势强度极弱。RSI超卖显示短期反弹可能，但整体趋势仍向下。产销数据同比下降构成基本面压力，但问界交付增长提供一定支撑。建议观望等待趋势反转信号。\",\n    \"key_points\": \"空头排列，RSI超卖，产销下降，问界交付增长，量能正常\",\n    \"risk_warning\": \"产量销量同比下降，技术面空头排列，价格远离均线，反弹力度存疑。\",\n    \"buy_reason\": \"趋势投资技能评分36分，属于卖出区间。主要风险：空头排列、产销数据下滑。虽有RSI超卖反弹可能，但趋势未改。\",\n    \"trend_analysis\": \"股价处于下降趋势，均线空头排列，价格在MA20下方运行，短期虽有反弹但趋势未反转。\",\n    \"short_term_outlook\": \"1-3日可能技术性反弹，但受制于MA5（60.66）压力，反弹空间有限。\",\n    \"medium_term_outlook\": \"1-2周内若无法站上MA20（66.26），趋势仍将向下，可能测试前低58.71。\",\n    \"technical_analysis\": \"技术指标矛盾：MACD金叉但仍在零轴下方，RSI超卖但趋势向下。需等待更明确信号。\",\n    \"ma_analysis\": \"均线系统空头排列，MA5（60.66）<MA10（62.09）<MA20（66.26）<MA60（79.33），长期趋势偏空。\",\n    \"volume_analysis\": \"量比1.47，换手率2.15%，量能正常，无明显主力异动。\",\n    \"pattern_analysis\": \"近期K线以阴线为主，显示卖压较重，未见明显底部形态。\",\n    \"fundamental_analysis\": \"一季度净利润7.54亿元，但6月产销同比大幅下降，基本面承压。\",\n    \"sector_position\": \"所属汽车、华为汽车板块，板块表现一般，无明显轮动优势。\",\n    \"company_highlights\": \"问界系列交付增长，新车型M9大定突破42000台，但产销数据下滑需关注。\",\n    \"news_summary\": \"赛力斯6月产销同比下降超26%，但问界交付量保持增长，新车型订单表现良好。\",\n    \"market_sentiment\": \"市场情绪偏谨慎，产销数据下滑引发担忧，但华为合作仍提供想象空间。\",\n    \"hot_topics\": \"华为汽车、新能源车、产销数据、问界交付\"\n}\n```",
+      "history": [
+        {
+          "score": 36,
+          "advice": "持有观察",
+          "created_at": "2026-07-03 14:19:22.347874",
+          "layer_scores": [
+            {
+              "dimension": "第一层 趋势强度",
+              "weight": "25%",
+              "score": 1,
+              "max_score": 10,
+              "finding": "空头排列（MA5<MA10<MA20），价格跌破MA20，趋势强度极弱。"
+            },
+            {
+              "dimension": "第二层 动量质量",
+              "weight": "20%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "RSI超卖（25.2），MACD金叉但仍在零轴下方，动量疲弱。"
+            },
+            {
+              "dimension": "第三层 量价配合",
+              "weight": "15%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "量比1.47（温和放量），量能正常，无明显背离。"
+            },
+            {
+              "dimension": "第四层 波动率环境",
+              "weight": "10%",
+              "score": 7,
+              "max_score": 10,
+              "finding": "日内振幅3.99%，波动率适中，无异常波动。"
+            },
+            {
+              "dimension": "第五层 相对强度",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "无大盘对比数据，板块表现一般，相对强度中性。"
+            },
+            {
+              "dimension": "第六层 关键位置",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "价格远离MA20（-8.88%），距前高较远，上方阻力明显。"
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "正面催化（问界交付增长）与负面风险（产销同比下降）并存。"
+            }
+          ]
+        },
+        {
+          "score": 43,
+          "advice": "卖出",
+          "created_at": "2026-07-02 20:33:29.703755",
+          "layer_scores": [
+            {
+              "dimension": "第一层 趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "空头排列，价格远低于所有均线，趋势明确下行"
+            },
+            {
+              "dimension": "第二层 动量质量",
+              "weight": "20%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "RSI超卖有反弹可能，MACD金叉但在零轴下方"
+            },
+            {
+              "dimension": "第三层 量价配合",
+              "weight": "15%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "量比1.17温和放量，量价关系中性"
+            },
+            {
+              "dimension": "第四层 波动率",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "振幅3.97%适中，波动率环境可控"
+            },
+            {
+              "dimension": "第五层 相对强度",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "今日-1.26%跑赢大盘（上证-2.03%）"
+            },
+            {
+              "dimension": "第六层 关键位置",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "远离MA20（8.88%），支撑薄弱"
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "问界M9大定超4.2万台，但6月产销同比降27%"
+            }
+          ]
+        },
+        {
+          "score": 28,
+          "advice": "观望",
+          "created_at": "2026-07-02 02:45:28.744199",
+          "layer_scores": [
+            {
+              "dimension": "趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "空头排列，价格跌破MA20，趋势向下"
+            },
+            {
+              "dimension": "动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI超卖，MACD空头，动量衰竭"
+            },
+            {
+              "dimension": "量价配合",
+              "weight": "15%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "量能温和，缺乏资金推动"
+            },
+            {
+              "dimension": "波动率环境",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "振幅适中，波动率可控"
+            },
+            {
+              "dimension": "相对强度",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "股价跌幅较大，可能跑输大盘"
+            },
+            {
+              "dimension": "关键位置",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "远离MA20，上方阻力密集"
+            },
+            {
+              "dimension": "催化剂与风险",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "业绩增长与产销下滑并存"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "code": "HK01810",
       "name": "小米集团-W",
       "strategy": "trend_trading",
@@ -13917,356 +13973,6 @@
       ]
     },
     {
-      "code": "600338",
-      "name": "西藏珠峰",
-      "strategy": "trend_trading",
-      "strategy_name": "趋势投资",
-      "score": 30,
-      "advice": "观望",
-      "layer_scores": [
-        {
-          "dimension": "第一层 趋势强度",
-          "weight": "25%",
-          "score": 1,
-          "max_score": 10,
-          "finding": "强势空头排列，MA5/MA10/MA20/MA60全部向下，价格低于所有主要均线，趋势持续下行"
-        },
-        {
-          "dimension": "第二层 动量质量",
-          "weight": "20%",
-          "score": 2,
-          "max_score": 10,
-          "finding": "RSI 35.2处于弱势区间，MACD空头排列，DIF<DEA且在零轴下方，动量持续向下"
-        },
-        {
-          "dimension": "第三层 量价配合",
-          "weight": "15%",
-          "score": 3,
-          "max_score": 10,
-          "finding": "量比0.71显示缩量，下跌时成交量较大，上涨时量能不足，量价配合不佳"
-        },
-        {
-          "dimension": "第四层 波动率环境",
-          "weight": "10%",
-          "score": 5,
-          "max_score": 10,
-          "finding": "振幅3.16%处于正常范围，波动率适中，但趋势向下增加不确定性"
-        },
-        {
-          "dimension": "第五层 相对强度",
-          "weight": "10%",
-          "score": 5,
-          "max_score": 10,
-          "finding": "缺乏行业对比数据，假设与大盘表现持平"
-        },
-        {
-          "dimension": "第六层 关键位置",
-          "weight": "10%",
-          "score": 4,
-          "max_score": 10,
-          "finding": "价格贴近MA5支撑，但远离MA20和MA60阻力，上方套牢盘密集"
-        },
-        {
-          "dimension": "第七层 催化剂与风险",
-          "weight": "10%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "业绩增长123%是正面催化剂，但缺乏其他短期催化，技术面风险较高"
-        }
-      ],
-      "created_at": "2026-07-02 20:32:08.891403",
-      "raw_response": "```json\n{\n    \"stock_name\": \"西藏珠峰\",\n    \"sentiment_score\": 31,\n    \"trend_prediction\": \"强烈看空\",\n    \"operation_advice\": \"观望\",\n    \"decision_type\": \"hold\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"强势空头趋势，业绩增长但技术面弱势，建议观望\",\n            \"signal_type\": \"⚠️风险警告\",\n            \"time_sensitivity\": \"不急\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者建议继续观望，等待技术面企稳信号\",\n                \"has_position\": \"持仓者建议减仓或设置严格止损，保护本金\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势空头排列，均线发散下行\",\n                \"is_bullish\": false,\n                \"trend_score\": 10\n            },\n            \"price_position\": {\n                \"current_price\": 15.14,\n                \"ma5\": 15.09,\n                \"ma10\": 16.28,\n                \"ma20\": 16.78,\n                \"bias_ma5\": 0.33,\n                \"bias_status\": \"价格贴近MA5支撑，但整体趋势向下\",\n                \"support_level\": 15.09,\n                \"resistance_level\": 18.75\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 0.71,\n                \"volume_status\": \"量能萎缩，下跌时缩量\",\n                \"turnover_rate\": 5.45,\n                \"volume_meaning\": \"市场交投清淡，缺乏主力资金关注\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": 0,\n                \"avg_cost\": 0,\n                \"concentration\": 0,\n                \"chip_health\": \"筹码数据缺失，无法判断\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"BYD销售增长（行业相关），公司2025年净利润同比增长123%\",\n            \"risk_alerts\": [\"强势空头趋势风险\", \"均线系统全面走弱\", \"缺乏主力资金关注\"],\n            \"positive_catalysts\": [\"2025年业绩大幅增长123%\", \"有色金属行业景气度回升\"],\n            \"earnings_outlook\": \"业绩预告显示2025年净利润同比增长123%，基本面改善明显\",\n            \"sentiment_summary\": \"基本面业绩改善，但技术面持续走弱，市场情绪偏空\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"15.09（MA5支撑位）\",\n                \"secondary_buy\": \"14.50（前期低点附近）\",\n                \"stop_loss\": \"14.33（近期低点下方）\",\n                \"take_profit\": \"16.28（MA10阻力位）\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"0%（观望）\",\n                \"entry_plan\": \"等待价格站上MA5且RSI回升至40以上，成交量放大\",\n                \"risk_control\": \"严格止损，最大亏损不超过总资金的2%\"\n            },\n            \"action_checklist\": [\"✅ 检查均线系统：空头排列，不宜做多\", \"✅ 检查RSI指标：35.2弱势，超卖但未企稳\", \"✅ 检查成交量：缩量下跌，缺乏反弹动力\", \"⚠️ 检查支撑位：MA5支撑15.09，跌破将加速下跌\", \"❌ 检查趋势强度：强势空头，趋势向下\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"postmarket\",\n                \"action_window\": \"盘后复盘\",\n                \"immediate_action\": \"观察\",\n                \"watch_conditions\": [\"价格站上MA5（15.09）并企稳\", \"RSI从35.2回升至40以上\", \"成交量放大至量比>1.0\"],\n                \"next_check_time\": \"明日开盘\",\n                \"confidence_reason\": \"数据质量良好，但筹码数据缺失，技术面信号明确\",\n                \"data_limitations\": [\"筹码分布数据缺失\", \"缺乏主力资金流向数据\"]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\n            \"dimension\": \"第一层 趋势强度\",\n            \"weight\": \"25%\",\n            \"score\": 1,\n            \"max_score\": 10,\n            \"finding\": \"强势空头排列，MA5/MA10/MA20/MA60全部向下，价格低于所有主要均线，趋势持续下行\"\n        },\n        {\n            \"dimension\": \"第二层 动量质量\",\n            \"weight\": \"20%\",\n            \"score\": 2,\n            \"max_score\": 10,\n            \"finding\": \"RSI 35.2处于弱势区间，MACD空头排列，DIF<DEA且在零轴下方，动量持续向下\"\n        },\n        {\n            \"dimension\": \"第三层 量价配合\",\n            \"weight\": \"15%\",\n            \"score\": 3,\n            \"max_score\": 10,\n            \"finding\": \"量比0.71显示缩量，下跌时成交量较大，上涨时量能不足，量价配合不佳\"\n        },\n        {\n            \"dimension\": \"第四层 波动率环境\",\n            \"weight\": \"10%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"振幅3.16%处于正常范围，波动率适中，但趋势向下增加不确定性\"\n        },\n        {\n            \"dimension\": \"第五层 相对强度\",\n            \"weight\": \"10%\",\n            \"score\": 5,\n            \"max_score\": 10,\n            \"finding\": \"缺乏行业对比数据，假设与大盘表现持平\"\n        },\n        {\n            \"dimension\": \"第六层 关键位置\",\n            \"weight\": \"10%\",\n            \"score\": 4,\n            \"max_score\": 10,\n            \"finding\": \"价格贴近MA5支撑，但远离MA20和MA60阻力，上方套牢盘密集\"\n        },\n        {\n            \"dimension\": \"第七层 催化剂与风险\",\n            \"weight\": \"10%\",\n            \"score\": 6,\n            \"max_score\": 10,\n            \"finding\": \"业绩增长123%是正面催化剂，但缺乏其他短期催化，技术面风险较高\"\n        }\n    ],\n    \"analysis_summary\": \"西藏珠峰（600338）当前处于强势空头趋势，均线系统全面走弱，价格低于所有主要均线。尽管2025年业绩大幅增长123%，但技术面持续下行，RSI弱势，量能萎缩。建议空仓者观望，持仓者设置严格止损。\",\n    \"key_points\": \"强势空头排列，业绩增长123%，RSI弱势35.2，量比0.71缩量，MA5支撑15.09\",\n    \"risk_warning\": \"强势空头趋势风险，均线系统全面走弱，缺乏主力资金关注，价格可能继续下探\",\n    \"buy_reason\": \"技术面空头信号明确，不符合趋势投资任何入场条件，建议观望等待企稳\",\n    \"trend_analysis\": \"股价从27.61高点持续下跌至15.14，跌幅达45.2%，形成明显的下降趋势。均线系统呈现空头排列，MA5/MA10/MA20/MA60全部向下，趋势强度极弱。\",\n    \"short_term_outlook\": \"短期1-3日可能继续在15.09（MA5）附近震荡，若跌破15.09将加速下探至14.50支撑位\",\n    \"medium_term_outlook\": \"中期1-2周需观察价格能否站上MA10（16.28）阻力，否则下行趋势将延续\",\n    \"technical_analysis\": \"技术面全面走弱：MACD空头，RSI弱势，均线空头排列，量能萎缩。信号得分38分，处于观望区域。\",\n    \"ma_analysis\": \"均线系统空头排列：MA5(15.09)<MA10(16.28)<MA20(16.78)<MA60(19.59)，价格低于所有均线，趋势向下\",\n    \"volume_analysis\": \"量比0.71显示交投清淡，下跌时成交量较大，上涨时量能不足，缺乏资金关注\",\n    \"pattern_analysis\": \"近期K线呈现下跌中继形态，缺乏有效的底部反转信号\",\n    \"fundamental_analysis\": \"2025年业绩大幅改善：净利润同比增长123%，营收增长48.22%，基本面进入复苏通道\",\n    \"sector_position\": \"有色金属行业受益于金属价格高位运行，但公司股价表现弱于行业\",\n    \"company_highlights\": \"亮点：业绩大幅增长，塔中矿业产能恢复；风险：技术面持续走弱，缺乏主力资金关注\",\n    \"news_summary\": \"最新新闻：BYD销售增长（行业利好），公司2025年净利润增长123%业绩预告\",\n    \"market_sentiment\": \"市场情绪偏空，技术面弱势主导，业绩利好未能提振股价\",\n    \"hot_topics\": \"有色金属，业绩预增，矿业复苏\"\n}\n```",
-      "history": [
-        {
-          "score": 30,
-          "advice": "观望",
-          "created_at": "2026-07-02 20:32:08.891403",
-          "layer_scores": [
-            {
-              "dimension": "第一层 趋势强度",
-              "weight": "25%",
-              "score": 1,
-              "max_score": 10,
-              "finding": "强势空头排列，MA5/MA10/MA20/MA60全部向下，价格低于所有主要均线，趋势持续下行"
-            },
-            {
-              "dimension": "第二层 动量质量",
-              "weight": "20%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "RSI 35.2处于弱势区间，MACD空头排列，DIF<DEA且在零轴下方，动量持续向下"
-            },
-            {
-              "dimension": "第三层 量价配合",
-              "weight": "15%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "量比0.71显示缩量，下跌时成交量较大，上涨时量能不足，量价配合不佳"
-            },
-            {
-              "dimension": "第四层 波动率环境",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "振幅3.16%处于正常范围，波动率适中，但趋势向下增加不确定性"
-            },
-            {
-              "dimension": "第五层 相对强度",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "缺乏行业对比数据，假设与大盘表现持平"
-            },
-            {
-              "dimension": "第六层 关键位置",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "价格贴近MA5支撑，但远离MA20和MA60阻力，上方套牢盘密集"
-            },
-            {
-              "dimension": "第七层 催化剂与风险",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "业绩增长123%是正面催化剂，但缺乏其他短期催化，技术面风险较高"
-            }
-          ]
-        },
-        {
-          "score": 35,
-          "advice": "观望",
-          "created_at": "2026-07-02 02:46:25.312832",
-          "layer_scores": [
-            {
-              "dimension": "第一层：趋势强度",
-              "weight": "25%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "空头排列，价格跌破所有主要均线，MA20斜率为负"
-            },
-            {
-              "dimension": "第二层：动量质量",
-              "weight": "20%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "RSI弱势(37.13)，MACD空头排列，动量衰竭"
-            },
-            {
-              "dimension": "第三层：量价配合",
-              "weight": "15%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "量能平稳，上涨放量下跌缩量，但整体量能不足"
-            },
-            {
-              "dimension": "第四层：波动率",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "日内振幅4.92%，波动率适中"
-            },
-            {
-              "dimension": "第五层：相对强度",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "从高位大幅下跌，跑输大盘，行业排名靠后"
-            },
-            {
-              "dimension": "第六层：关键位置",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "远离MA20，但有MA5支撑，上方阻力明显"
-            },
-            {
-              "dimension": "第七层：催化剂",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "业绩预增92%-135%正面催化，但趋势风险明显"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "code": "600938",
-      "name": "中国海油",
-      "strategy": "trend_trading",
-      "strategy_name": "趋势投资",
-      "score": 30,
-      "advice": "观望",
-      "layer_scores": [
-        {
-          "dimension": "趋势强度",
-          "weight": "25%",
-          "score": 2,
-          "max_score": 10,
-          "finding": "强势空头排列，价格远离所有均线，MA20斜率向下，趋势明确下行。"
-        },
-        {
-          "dimension": "动量质量",
-          "weight": "20%",
-          "score": 2,
-          "max_score": 10,
-          "finding": "RSI严重超卖(15.6)，MACD空头排列，下跌动量强劲，虽超卖但未见反转信号。"
-        },
-        {
-          "dimension": "量价配合",
-          "weight": "15%",
-          "score": 5,
-          "max_score": 10,
-          "finding": "量比0.99接近正常，下跌趋势中量能温和，未出现恐慌性抛售或背离。"
-        },
-        {
-          "dimension": "波动率环境",
-          "weight": "10%",
-          "score": 6,
-          "max_score": 10,
-          "finding": "日内振幅2.74%，波动率处于正常范围，无异常放大。"
-        },
-        {
-          "dimension": "相对强度",
-          "weight": "10%",
-          "score": 3,
-          "max_score": 10,
-          "finding": "股价从高点大幅下跌，预计将跑输大盘及行业指数。"
-        },
-        {
-          "dimension": "关键位置",
-          "weight": "10%",
-          "score": 2,
-          "max_score": 10,
-          "finding": "价格远离MA20（-13.86%），下方无有效技术支撑，上方阻力位在37.2。"
-        },
-        {
-          "dimension": "催化剂与风险",
-          "weight": "10%",
-          "score": 3,
-          "max_score": 10,
-          "finding": "负面风险（业绩下滑、油价跌）远大于正面催化（RSI超卖反弹），行业基本面承压。"
-        }
-      ],
-      "created_at": "2026-07-02 20:29:17.035943",
-      "raw_response": "```json\n{\n    \"stock_name\": \"中国海油\",\n    \"sentiment_score\": 31,\n    \"trend_prediction\": \"强烈看空\",\n    \"operation_advice\": \"观望\",\n    \"decision_type\": \"hold\",\n    \"confidence_level\": \"中\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"趋势空头，RSI超卖但反弹动力不足，建议回避。\",\n            \"signal_type\": \"⚠️风险警告\",\n            \"time_sensitivity\": \"不急\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者建议观望，等待趋势反转信号出现。\",\n                \"has_position\": \"持仓者建议逢高减仓或设置止损，规避进一步下跌风险。\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势空头排列，MA5<MA10<MA20<MA60\",\n                \"is_bullish\": false,\n                \"trend_score\": 20\n            },\n            \"price_position\": {\n                \"current_price\": 26.75,\n                \"ma5\": 27.13,\n                \"ma10\": 28.32,\n                \"ma20\": 31.06,\n                \"bias_ma5\": -1.39,\n                \"bias_status\": \"价格略低于MA5\",\n                \"support_level\": 0,\n                \"resistance_level\": 37.2\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 0.99,\n                \"volume_status\": \"量能正常\",\n                \"turnover_rate\": 2.12,\n                \"volume_meaning\": \"量价配合一般，下跌趋势中未出现明显放量恐慌\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"数据缺失，无法评估持仓结构\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"CNOOC北海利润暴跌90%，油价面临自疫情以来最大季度跌幅。\",\n            \"risk_alerts\": [\"CNOOC北海利润暴跌90%\", \"油价面临自疫情以来最大季度跌幅\", \"强势空头趋势持续\", \"无有效技术支撑位\"],\n            \"positive_catalysts\": [\"RSI严重超卖（RSI12=15.6），存在技术性反弹可能\", \"霍尔木兹海峡事件可能对油价产生短期刺激\"],\n            \"earnings_outlook\": \"短期业绩承压，北海业务利润大幅下滑。\",\n            \"sentiment_summary\": \"市场情绪偏空，技术面与基本面均呈弱势。\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"无（趋势未反转）\",\n                \"secondary_buy\": \"无（无明确支撑）\",\n                \"stop_loss\": \"无持仓，无需止损\",\n                \"take_profit\": \"无持仓，无需止盈\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"0%\",\n                \"entry_plan\": \"不满足任何入场条件，不入场。\",\n                \"risk_control\": \"空仓规避，等待趋势明确反转信号。\"\n            },\n            \"action_checklist\": [\"观察国际油价走势，判断是否企稳\", \"关注RSI是否出现底背离信号\", \"等待股价有效站上MA5且MA5拐头向上\", \"复盘油气板块整体强弱\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"postmarket\"\n            },\n            \"action_window\": \"盘后复盘\",\n            \"immediate_action\": \"观察\",\n            \"watch_conditions\": [\"油价是否企稳反弹\", \"股价是否出现止跌K线组合\", \"RSI是否出现底部背离\"],\n            \"next_check_time\": \"明日开盘前\",\n            \"confidence_reason\": \"数据质量良好，技术趋势明确为空头。筹码分布数据缺失，但对趋势判断影响有限。\",\n            \"data_limitations\": [\"筹码分布数据缺失\", \"新闻信息有限，未覆盖国内行业政策\"]\n        }\n    },\n    \"layer_scores\": [\n        {\"dimension\": \"趋势强度\", \"weight\": \"25%\", \"score\": 2, \"max_score\": 10, \"finding\": \"强势空头排列，价格远离所有均线，MA20斜率向下，趋势明确下行。\"},\n        {\"dimension\": \"动量质量\", \"weight\": \"20%\", \"score\": 2, \"max_score\": 10, \"finding\": \"RSI严重超卖(15.6)，MACD空头排列，下跌动量强劲，虽超卖但未见反转信号。\"},\n        {\"dimension\": \"量价配合\", \"weight\": \"15%\", \"score\": 5, \"max_score\": 10, \"finding\": \"量比0.99接近正常，下跌趋势中量能温和，未出现恐慌性抛售或背离。\"},\n        {\"dimension\": \"波动率环境\", \"weight\": \"10%\", \"score\": 6, \"max_score\": 10, \"finding\": \"日内振幅2.74%，波动率处于正常范围，无异常放大。\"},\n        {\"dimension\": \"相对强度\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"股价从高点大幅下跌，预计将跑输大盘及行业指数。\"},\n        {\"dimension\": \"关键位置\", \"weight\": \"10%\", \"score\": 2, \"max_score\": 10, \"finding\": \"价格远离MA20（-13.86%），下方无有效技术支撑，上方阻力位在37.2。\"},\n        {\"dimension\": \"催化剂与风险\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"负面风险（业绩下滑、油价跌）远大于正面催化（RSI超卖反弹），行业基本面承压。\"}\n    ],\n    \"analysis_summary\": \"中国海油处于明确的下跌趋势中，均线呈空头排列，价格远离关键均线。尽管RSI进入超卖区提示短期反弹可能，但下跌动量、行业基本面（油价下跌、北海业务利润暴跌）及缺乏有效支撑等因素共同构成高风险环境。综合评分31分，评级“回避”。\",\n    \"key_points\": \"强势空头排列，RSI严重超卖，CNOOC北海利润暴跌，油价季度跌幅创纪录，无技术支撑\",\n    \"risk_warning\": \"主要风险包括：1）技术趋势持续下行；2）公司特定业务利润大幅下滑；3）油价面临宏观下行压力。请勿在下跌趋势中抄底。\",\n    \"buy_reason\": \"无买入理由。激活的“趋势投资”技能七层评分显示各维度均表现不佳，综合分远低于60分的入场门槛，触发“回避”信号。\",\n    \"trend_analysis\": \"股价自4月以来持续下跌，形成清晰的下降通道。近期下跌加速，接连跌破多个整数关口，目前处于寻底阶段。\",\n    \"short_term_outlook\": \"短期（1-3日）存在技术性超跌反弹可能，但反弹空间和持续性存疑，大概率为弱势反抽。\",\n    \"medium_term_outlook\": \"中期（1-2周）趋势仍看空。除非出现放量阳线站上MA5并扭转其方向，否则下跌趋势难以改变。\",\n    \"technical_analysis\": \"技术面全面走弱：均线空头排列，MACD死叉向下，RSI超卖但未底背离，价格处于所有均线下方。唯一亮点是RSI超卖提示反弹概率，但在强趋势下反弹可能无力。\",\n    \"ma_analysis\": \"MA5(27.13) < MA10(28.32) < MA20(31.06) < MA60(35.04)，呈现完美的空头排列。价格偏离MA20达-13.86%，显示下跌动能强劲。\",\n    \"volume_analysis\": \"量能分析显示成交量处于正常水平，下跌过程中未出现显著放量，表明恐慌性抛售暂未出现，但也缺乏承接买盘。\",\n    \"pattern_analysis\": \"近期K线以阴线为主，夹杂少量反弹小阳线，整体为下跌中继形态，未见明确的反转K线组合。\",\n    \"fundamental_analysis\": \"根据新闻，公司北海业务利润大幅下滑90%，对基本面构成负面影响。同时，国际油价面临下行压力，作为上游油气公司，业绩与油价高度相关，前景承压。PE为10.2，估值处于历史相对低位，但低估值在下跌趋势中并非安全边际。\",\n    \"sector_position\": \"所属油气开采板块受油价波动影响巨大。当前全球原油市场面临供应过剩担忧，板块整体承压。\",\n    \"company_highlights\": \"公司为中国最大海上油气生产商，具备资源和成本优势。当前风险点在于国际油价下行周期及部分海外业务利润骤降。\",\n    \"news_summary\": \"最新新闻显示CNOOC北海利润暴跌90%，主因Buzzard油田产量下降。同时，国际油价季度跌幅创疫情以来新高，行业基本面转弱。\",\n    \"market_sentiment\": \"市场对能源股情绪偏谨慎，受油价下跌和个别公司业绩利空影响，抛售压力较大。\",\n    \"hot_topics\": \"国际油价，霍尔木兹海峡，能源安全，LNG供需，石油输出国组织(OPEC)政策\"\n}\n```",
-      "history": [
-        {
-          "score": 30,
-          "advice": "观望",
-          "created_at": "2026-07-02 20:29:17.035943",
-          "layer_scores": [
-            {
-              "dimension": "趋势强度",
-              "weight": "25%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "强势空头排列，价格远离所有均线，MA20斜率向下，趋势明确下行。"
-            },
-            {
-              "dimension": "动量质量",
-              "weight": "20%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "RSI严重超卖(15.6)，MACD空头排列，下跌动量强劲，虽超卖但未见反转信号。"
-            },
-            {
-              "dimension": "量价配合",
-              "weight": "15%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "量比0.99接近正常，下跌趋势中量能温和，未出现恐慌性抛售或背离。"
-            },
-            {
-              "dimension": "波动率环境",
-              "weight": "10%",
-              "score": 6,
-              "max_score": 10,
-              "finding": "日内振幅2.74%，波动率处于正常范围，无异常放大。"
-            },
-            {
-              "dimension": "相对强度",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "股价从高点大幅下跌，预计将跑输大盘及行业指数。"
-            },
-            {
-              "dimension": "关键位置",
-              "weight": "10%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "价格远离MA20（-13.86%），下方无有效技术支撑，上方阻力位在37.2。"
-            },
-            {
-              "dimension": "催化剂与风险",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "负面风险（业绩下滑、油价跌）远大于正面催化（RSI超卖反弹），行业基本面承压。"
-            }
-          ]
-        },
-        {
-          "score": 32,
-          "advice": "观望",
-          "created_at": "2026-07-02 02:45:13.626997",
-          "layer_scores": [
-            {
-              "dimension": "趋势强度",
-              "weight": "25%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "强势空头排列，MA5<MA10<MA20<MA60，价格远离MA20达-14.3%"
-            },
-            {
-              "dimension": "动量质量",
-              "weight": "20%",
-              "score": 2,
-              "max_score": 10,
-              "finding": "RSI=16.3极度超卖，MACD空头排列，动量持续恶化"
-            },
-            {
-              "dimension": "量价配合",
-              "weight": "15%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "缩量下跌（量比0.75），主力净流入3.01亿有抄底迹象"
-            },
-            {
-              "dimension": "波动率环境",
-              "weight": "10%",
-              "score": 5,
-              "max_score": 10,
-              "finding": "日内振幅1.99%，波动率中等，未出现异常恐慌"
-            },
-            {
-              "dimension": "相对强度",
-              "weight": "10%",
-              "score": 3,
-              "max_score": 10,
-              "finding": "股价从高位跌超32%，相对大盘表现较弱"
-            },
-            {
-              "dimension": "关键位置",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "处于筹码密集区下方，上方套牢盘沉重"
-            },
-            {
-              "dimension": "催化剂与风险",
-              "weight": "10%",
-              "score": 4,
-              "max_score": 10,
-              "finding": "油价下跌、地缘政治不确定性，缺乏正面催化"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "code": "QCOM",
       "name": "QUALCOMM Incorporated",
       "strategy": "trend_trading",
@@ -14723,6 +14429,468 @@
               "score": 5,
               "max_score": 10,
               "finding": "半导体AI主题正面，但净利润下滑33.9%且PE高达438"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "600938",
+      "name": "中国海油",
+      "strategy": "trend_trading",
+      "strategy_name": "趋势投资",
+      "score": 27,
+      "advice": "持有观察",
+      "layer_scores": [
+        {
+          "dimension": "第一层 趋势强度",
+          "weight": "25%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "强势空头排列，MA全面下行，价格远离所有均线"
+        },
+        {
+          "dimension": "第二层 动量质量",
+          "weight": "20%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "RSI严重超卖15.6，MACD空头，动量衰竭"
+        },
+        {
+          "dimension": "第三层 量价配合",
+          "weight": "15%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "今日量比1.12温和，但下跌趋势中量价关系中性"
+        },
+        {
+          "dimension": "第四层 波动率",
+          "weight": "10%",
+          "score": 5,
+          "max_score": 10,
+          "finding": "振幅3.59%适中，波动率可控"
+        },
+        {
+          "dimension": "第五层 相对强度",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "石油石化板块今日下跌2.5%，跑输大盘"
+        },
+        {
+          "dimension": "第六层 关键位置",
+          "weight": "10%",
+          "score": 1,
+          "max_score": 10,
+          "finding": "远离所有均线，上方套牢盘密集，支撑薄弱"
+        },
+        {
+          "dimension": "第七层 催化剂",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "负面新闻：CNOOC北海利润暴跌90%，行业走弱"
+        }
+      ],
+      "created_at": "2026-07-03 14:18:55.675374",
+      "raw_response": "## 中国海油（600938）<font color=\"red\">趋势投资</font>分析报告\n\n### 基本信息\n- 当前价格：27.56元（实时，涨幅+3.03%）\n- MA5：27.13（价格在上方1.6%）\n- MA10：28.32（价格在下方2.7%）\n- MA20：31.06（价格在下方11.3%）\n- MA60：35.04（价格在下方21.3%）\n- RSI(14)：15.6（严重超卖）\n- 量比：1.12\n- PE：10.52 | PB：1.57\n\n### 七层评分\n\n| 层级 | 权重 | 评分 | 关键发现 |\n|------|------|------|----------|\n| 第一层 趋势强度 | 25% | 2/10 | 强势空头排列，MA全面下行，价格远离所有均线 |\n| 第二层 动量质量 | 20% | 2/10 | RSI严重超卖15.6，MACD空头，动量衰竭 |\n| 第三层 量价配合 | 15% | 4/10 | 今日量比1.12温和，但下跌趋势中量价关系中性 |\n| 第四层 波动率 | 10% | 5/10 | 振幅3.59%适中，波动率可控 |\n| 第五层 相对强度 | 10% | 3/10 | 石油石化板块今日下跌2.5%，跑输大盘（+0.78%） |\n| 第六层 关键位置 | 10% | 1/10 | 远离所有均线，上方套牢盘密集，支撑薄弱 |\n| 第七层 催化剂 | 10% | 3/10 | 负面新闻：CNOOC北海利润暴跌90%；行业走弱 |\n| **综合** | **100%** | **24.5分** | **强烈看空，不建议参与** |\n\n### 入场信号\n- ❌ 条件1 趋势确认：未触发（价格<MA20<MA60，空头排列）\n- ❌ 条件2 回调买入：未触发（RSI虽超卖但价格<MA60，趋势破坏）\n- ❌ 条件3 突破买入：未触发（无突破信号）\n\n### 操作建议\n- **评级**：回避\n- **建议仓位**：0%\n- **入场方式**：不入场\n- **止损位**：不适用\n- **目标位**：不适用\n\n### 出场条件\n- 持仓者止损：价格跌破26.50或亏损>15%\n- 止盈：RSI>60减仓/RSI>70清仓/高点回撤>12%清仓\n- 趋势反转信号：价格站上MA20（31.06）且MA20拐头向上\n\n---\n\n### 💰 一万元操作建议\n- **是否建议买入**：❌ 否\n- **建议操作**：继续观望，等待趋势反转信号\n- **具体价位**：不建议入场\n- **仓位分配**：0%仓位\n- **风险提示**：当前处于强势空头趋势，RSI严重超卖可能有技术反弹，但趋势未改变前不宜抄底\n\n---\n\n### ⚠️ 风险警示\n1. **趋势风险**：强势空头排列，MA20与MA60持续下行\n2. **基本面风险**：CNOOC北海利润暴跌90%，产量下降\n3. **行业风险**：石油石化板块整体走弱\n4. **技术风险**：虽RSI超卖，但空头趋势未反转前反弹空间有限\n\n### 📊 盘中观察要点\n1. **今日涨幅3.03%是否为超跌反弹**：观察量能能否持续放大\n2. **能否站稳MA5（27.13）**：站稳则短期有反弹可能\n3. **板块联动**：关注石油石化板块是否止跌企稳\n4. **资金流向**：今日主力净流入3.14亿，观察后续资金动向\n\n---\n\n```json\n{\n    \"stock_name\": \"中国海油\",\n    \"sentiment_score\": 24,\n    \"trend_prediction\": \"强烈看空\",\n    \"operation_advice\": \"卖出\",\n    \"decision_type\": \"sell\",\n    \"confidence_level\": \"高\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"强势空头趋势，RSI超卖但趋势未反转，建议回避\",\n            \"signal_type\": \"🔴卖出信号\",\n            \"time_sensitivity\": \"今日内\",\n            \"position_advice\": {\n                \"no_position\": \"继续观望，不建议入场\",\n                \"has_position\": \"考虑减仓或止损，趋势反转前不宜持有\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"强势空头排列，MA5<MA10<MA20<MA60\",\n                \"is_bullish\": false,\n                \"trend_score\": 2\n            },\n            \"price_position\": {\n                \"current_price\": 27.56,\n                \"ma5\": 27.13,\n                \"ma10\": 28.32,\n                \"ma20\": 31.06,\n                \"bias_ma5\": 1.59,\n                \"bias_status\": \"价格略高于MA5，但仍处于空头趋势\",\n                \"support_level\": 26.50,\n                \"resistance_level\": 31.06\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 1.12,\n                \"volume_status\": \"量能温和\",\n                \"turnover_rate\": 1.75,\n                \"volume_meaning\": \"今日放量上涨，但需观察持续性\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": null,\n                \"avg_cost\": null,\n                \"concentration\": null,\n                \"chip_health\": \"数据缺失，无法评估\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"CNOOC北海利润暴跌90%，产量下降；石油石化板块今日下跌2.5%\",\n            \"risk_alerts\": [\"CNOOC北海利润暴跌90%\", \"石油石化板块整体走弱\", \"强势空头趋势\"],\n            \"positive_catalysts\": [\"RSI严重超卖，存在技术反弹可能\", \"PE估值10.52偏低\", \"今日主力净流入3.14亿\"],\n            \"earnings_outlook\": \"北海业务利润大幅下滑，整体业绩承压\",\n            \"sentiment_summary\": \"市场情绪偏空，行业走弱，基本面承压\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"暂不建议买入，等待趋势反转\",\n                \"secondary_buy\": \"价格站上MA20(31.06)且MA20拐头向上\",\n                \"stop_loss\": \"26.50元\",\n                \"take_profit\": \"不适用\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"0%\",\n                \"entry_plan\": \"不入场，等待趋势反转信号\",\n                \"risk_control\": \"持仓者应设置止损26.50元\"\n            },\n            \"action_checklist\": [\"❌ 观察今日涨幅是否为超跌反弹\", \"❌ 观察能否站稳MA5(27.13)\", \"❌ 关注板块联动情况\", \"❌ 等待趋势反转信号\"]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"intraday\",\n                \"action_window\": \"盘中跟踪\",\n                \"immediate_action\": \"观望\",\n                \"watch_conditions\": [\"观察今日涨幅持续性\", \"观察MA5支撑\", \"观察板块联动\"],\n                \"next_check_time\": \"收盘前15分钟\",\n                \"confidence_reason\": \"数据质量良好，趋势信号明确\",\n                \"data_limitations\": [\"筹码分布数据缺失\", \"新闻数据有限\"]\n            }\n        }\n    },\n    \"layer_scores\": [\n        {\"dimension\": \"第一层 趋势强度\", \"weight\": \"25%\", \"score\": 2, \"max_score\": 10, \"finding\": \"强势空头排列，MA全面下行，价格远离所有均线\"},\n        {\"dimension\": \"第二层 动量质量\", \"weight\": \"20%\", \"score\": 2, \"max_score\": 10, \"finding\": \"RSI严重超卖15.6，MACD空头，动量衰竭\"},\n        {\"dimension\": \"第三层 量价配合\", \"weight\": \"15%\", \"score\": 4, \"max_score\": 10, \"finding\": \"今日量比1.12温和，但下跌趋势中量价关系中性\"},\n        {\"dimension\": \"第四层 波动率\", \"weight\": \"10%\", \"score\": 5, \"max_score\": 10, \"finding\": \"振幅3.59%适中，波动率可控\"},\n        {\"dimension\": \"第五层 相对强度\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"石油石化板块今日下跌2.5%，跑输大盘\"},\n        {\"dimension\": \"第六层 关键位置\", \"weight\": \"10%\", \"score\": 1, \"max_score\": 10, \"finding\": \"远离所有均线，上方套牢盘密集，支撑薄弱\"},\n        {\"dimension\": \"第七层 催化剂\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"负面新闻：CNOOC北海利润暴跌90%，行业走弱\"}\n    ],\n    \"analysis_summary\": \"中国海油处于强势空头趋势，价格远离所有均线，RSI严重超卖。今日涨幅3.03%可能是技术反弹，但趋势未反转前不宜参与。基本面承压，北海利润暴跌90%，行业走弱。建议继续观望，等待趋势反转信号。\",\n    \"key_points\": \"强势空头排列,RSI严重超卖15.6,今日涨幅3.03%可能是超跌反弹,CNOOC北海利润暴跌90%,石油石化板块走弱\",\n    \"risk_warning\": \"强势空头趋势，RSI超卖但趋势未反转前反弹空间有限。北海利润暴跌，基本面承压。行业整体走弱。\",\n    \"buy_reason\": \"不建议买入。趋势投资策略要求跟随趋势，当前为强势空头，不符合入场条件。RSI超卖存在技术反弹可能，但趋势未反转前风险大于收益。\",\n    \"trend_analysis\": \"从4月初39元下跌至当前27.56元，跌幅超29%。MA5/10/20/60全面空头排列，价格远离所有均线。RSI严重超卖至15.6，存在技术反弹可能，但趋势未反转前不宜抄底。\",\n    \"short_term_outlook\": \"短期可能有超跌反弹，目标位MA5(27.13)附近，但反弹空间有限，上方MA10(28.32)有较强阻力。\",\n    \"medium_term_outlook\": \"中期趋势仍然向下，需等待价格站上MA20(31.06)且MA20拐头向上才能确认趋势反转。\",\n    \"technical_analysis\": \"技术面全面看空。MA空头排列，MACD空头，RSI超卖。今日涨幅3.03%可能是技术反弹，但量能一般，反弹持续性存疑。\",\n    \"ma_analysis\": \"均线系统空头排列：MA5(27.13)<MA10(28.32)<MA20(31.06)<MA60(35.04)。价格略高于MA5，但远离其他均线。MA20持续下行，趋势未反转。\",\n    \"volume_analysis\": \"今日量比1.12温和，换手率1.75%。量能平稳，无明显放量或缩量。量价关系中性，反弹持续性需观察。\",\n    \"pattern_analysis\": \"K线形态显示持续下跌趋势，今日涨幅可能是超跌反弹，但需观察后续走势确认。\",\n    \"fundamental_analysis\": \"PE 10.52估值偏低，PB 1.57。但北海业务利润暴跌90%，整体业绩承压。估值优势被基本面风险抵消。\",\n    \"sector_position\": \"石油石化板块今日下跌2.5%，行业整体走弱。中国海油作为行业龙头，受行业周期影响较大。\",\n    \"company_highlights\": \"公司亮点：国企改革、估值偏低、主力净流入3.14亿。风险：北海利润暴跌、行业周期下行、技术面空头。\",\n    \"news_summary\": \"CNOOC北海利润暴跌90%，产量下降；LNG供应可能面临紧张；石油石化板块整体走弱。\",\n    \"market_sentiment\": \"市场情绪偏空，行业走弱，技术面空头。今日涨幅可能是超跌反弹，但整体氛围谨慎。\",\n    \"hot_topics\": \"石油石化板块,国企改革,估值修复,超跌反弹\"\n}\n```",
+      "history": [
+        {
+          "score": 27,
+          "advice": "持有观察",
+          "created_at": "2026-07-03 14:18:55.675374",
+          "layer_scores": [
+            {
+              "dimension": "第一层 趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "强势空头排列，MA全面下行，价格远离所有均线"
+            },
+            {
+              "dimension": "第二层 动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI严重超卖15.6，MACD空头，动量衰竭"
+            },
+            {
+              "dimension": "第三层 量价配合",
+              "weight": "15%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "今日量比1.12温和，但下跌趋势中量价关系中性"
+            },
+            {
+              "dimension": "第四层 波动率",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "振幅3.59%适中，波动率可控"
+            },
+            {
+              "dimension": "第五层 相对强度",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "石油石化板块今日下跌2.5%，跑输大盘"
+            },
+            {
+              "dimension": "第六层 关键位置",
+              "weight": "10%",
+              "score": 1,
+              "max_score": 10,
+              "finding": "远离所有均线，上方套牢盘密集，支撑薄弱"
+            },
+            {
+              "dimension": "第七层 催化剂",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "负面新闻：CNOOC北海利润暴跌90%，行业走弱"
+            }
+          ]
+        },
+        {
+          "score": 30,
+          "advice": "观望",
+          "created_at": "2026-07-02 20:29:17.035943",
+          "layer_scores": [
+            {
+              "dimension": "趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "强势空头排列，价格远离所有均线，MA20斜率向下，趋势明确下行。"
+            },
+            {
+              "dimension": "动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI严重超卖(15.6)，MACD空头排列，下跌动量强劲，虽超卖但未见反转信号。"
+            },
+            {
+              "dimension": "量价配合",
+              "weight": "15%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "量比0.99接近正常，下跌趋势中量能温和，未出现恐慌性抛售或背离。"
+            },
+            {
+              "dimension": "波动率环境",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "日内振幅2.74%，波动率处于正常范围，无异常放大。"
+            },
+            {
+              "dimension": "相对强度",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "股价从高点大幅下跌，预计将跑输大盘及行业指数。"
+            },
+            {
+              "dimension": "关键位置",
+              "weight": "10%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "价格远离MA20（-13.86%），下方无有效技术支撑，上方阻力位在37.2。"
+            },
+            {
+              "dimension": "催化剂与风险",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "负面风险（业绩下滑、油价跌）远大于正面催化（RSI超卖反弹），行业基本面承压。"
+            }
+          ]
+        },
+        {
+          "score": 32,
+          "advice": "观望",
+          "created_at": "2026-07-02 02:45:13.626997",
+          "layer_scores": [
+            {
+              "dimension": "趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "强势空头排列，MA5<MA10<MA20<MA60，价格远离MA20达-14.3%"
+            },
+            {
+              "dimension": "动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI=16.3极度超卖，MACD空头排列，动量持续恶化"
+            },
+            {
+              "dimension": "量价配合",
+              "weight": "15%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "缩量下跌（量比0.75），主力净流入3.01亿有抄底迹象"
+            },
+            {
+              "dimension": "波动率环境",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "日内振幅1.99%，波动率中等，未出现异常恐慌"
+            },
+            {
+              "dimension": "相对强度",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "股价从高位跌超32%，相对大盘表现较弱"
+            },
+            {
+              "dimension": "关键位置",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "处于筹码密集区下方，上方套牢盘沉重"
+            },
+            {
+              "dimension": "催化剂与风险",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "油价下跌、地缘政治不确定性，缺乏正面催化"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "600338",
+      "name": "西藏珠峰",
+      "strategy": "trend_trading",
+      "strategy_name": "趋势投资",
+      "score": 26,
+      "advice": "卖出",
+      "layer_scores": [
+        {
+          "dimension": "趋势强度",
+          "weight": "25%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "MA5<MA10<MA20<MA60完美空头排列，价格远低于MA20(-9.8%)，MA20斜率向下"
+        },
+        {
+          "dimension": "动量质量",
+          "weight": "20%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "RSI=35.2弱势，MACD空头(DIF=-1.08,DEA=-0.95)，动量持续向下"
+        },
+        {
+          "dimension": "量价配合",
+          "weight": "15%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "量比0.72缩量，下跌放量，OBV下行，无企稳信号"
+        },
+        {
+          "dimension": "波动率",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "振幅3.17%适中，近期波动率较高"
+        },
+        {
+          "dimension": "相对强度",
+          "weight": "10%",
+          "score": 2,
+          "max_score": 10,
+          "finding": "大幅跑输大盘，从高点下跌45%"
+        },
+        {
+          "dimension": "关键位置",
+          "weight": "10%",
+          "score": 4,
+          "max_score": 10,
+          "finding": "贴近MA5支撑，但整体支撑薄弱，上方阻力密集"
+        },
+        {
+          "dimension": "催化剂",
+          "weight": "10%",
+          "score": 3,
+          "max_score": 10,
+          "finding": "主力资金净流出7100万，无正面催化，板块承压"
+        }
+      ],
+      "created_at": "2026-07-03 14:20:16.728954",
+      "raw_response": "## 西藏珠峰（600338）<font color=\"red\">趋势投资</font>分析报告\n\n### 基本信息\n- 当前价格：15.12元\n- MA5：15.09元（价格在上方0.3%）\n- MA10：16.28元（价格在下方7.0%）\n- MA20：16.78元（价格在下方9.8%）\n- MA60：19.59元（价格在下方22.8%）\n- RSI(14)：35.2（弱势区域）\n- 量比：0.72（缩量）\n- 换手率：3.98%\n\n---\n\n### 七层评分\n\n| 层级 | 权重 | 评分 | 关键发现 |\n|------|------|------|----------|\n| 第一层 趋势强度 | 25% | 2/10 | MA5<MA10<MA20<MA60，完美空头排列；价格远低于MA20（-9.8%）；MA20斜率向下且低于MA60；空头持续超30个交易日 |\n| 第二层 动量质量 | 20% | 2/10 | RSI=35.2处于弱势区域；MACD空头（DIF=-1.08，DEA=-0.95）；动量方向持续向下；RSI长期<50 |\n| 第三层 量价配合 | 15% | 3/10 | 量比0.72明显缩量；下跌放量（6月25-26日巨量下跌）；OBV趋势下行；无放量企稳信号 |\n| 第四层 波动率 | 10% | 4/10 | 当日振幅3.17%适中；近期波动率较高（连续大幅下跌）；ATR处于高位 |\n| 第五层 相对强度 | 10% | 2/10 | 近期大幅跑输大盘；从高点27.61下跌45%；有色金属板块整体表现不佳 |\n| 第六层 关键位置 | 10% | 4/10 | 价格贴近MA5（15.09）支撑；下方支撑薄弱；上方阻力密集（MA10/MA20/MA60）；距前高跌幅45% |\n| 第七层 催化剂 | 10% | 3/10 | 主力资金净流出7100万；所属锂矿、有色金属板块承压；无明显正面催化；政策面暂无利好 |\n| **综合** | **100%** | **2.84分（28分）** | **强势空头，回避** |\n\n---\n\n### 入场信号\n- 条件1 趋势确认：❌ 未触发（价格<MA20<MA60，空头排列）\n- 条件2 回调买入：❌ 未触发（RSI<50但价格<MA60，趋势破坏）\n- 条件3 突破买入：❌ 未触发（无突破信号，趋势向下）\n\n### 操作建议\n- **评级**：❌ 回避\n- **建议仓位**：0%\n- **入场方式**：不入场\n- **止损位**：如已持仓，止损位14.33元（近期低点）\n- **目标位**：暂无目标位（趋势向下）\n\n### 出场条件\n- 止损：价格 < 14.33元 或 亏损 > 15%\n- 止盈：RSI > 70 减仓 / RSI > 80 清仓\n\n### 💰 一万元操作建议\n- **是否建议买入**：❌ 否\n- **建议操作**：观望，不建议参与\n- **具体价位**：不建议买入\n- **仓位分配**：空仓\n- **风险提示**：趋势空头，主力资金持续流出，下行风险大\n\n---\n\n```json\n{\n    \"stock_name\": \"西藏珠峰\",\n    \"sentiment_score\": 25,\n    \"trend_prediction\": \"强烈看空\",\n    \"operation_advice\": \"卖出\",\n    \"decision_type\": \"sell\",\n    \"confidence_level\": \"高\",\n    \"dashboard\": {\n        \"core_conclusion\": {\n            \"one_sentence\": \"强势空头排列，主力资金持续流出，回避为主\",\n            \"signal_type\": \"🔴卖出信号\",\n            \"time_sensitivity\": \"立即行动\",\n            \"position_advice\": {\n                \"no_position\": \"空仓者不建议参与，等待趋势反转信号\",\n                \"has_position\": \"持仓者建议减仓或止损，保护本金优先\"\n            }\n        },\n        \"data_perspective\": {\n            \"trend_status\": {\n                \"ma_alignment\": \"MA5<MA10<MA20<MA60，完美空头排列\",\n                \"is_bullish\": false,\n                \"trend_score\": 2\n            },\n            \"price_position\": {\n                \"current_price\": 15.12,\n                \"ma5\": 15.09,\n                \"ma10\": 16.28,\n                \"ma20\": 16.78,\n                \"bias_ma5\": 0.33,\n                \"bias_status\": \"价格贴近MA5，但整体趋势向下\",\n                \"support_level\": 14.33,\n                \"resistance_level\": 16.28\n            },\n            \"volume_analysis\": {\n                \"volume_ratio\": 0.72,\n                \"volume_status\": \"缩量\",\n                \"turnover_rate\": 3.98,\n                \"volume_meaning\": \"缩量下跌，买盘不足，市场情绪低迷\"\n            },\n            \"chip_structure\": {\n                \"profit_ratio\": 0,\n                \"avg_cost\": 0,\n                \"concentration\": 0,\n                \"chip_health\": \"数据缺失\"\n            }\n        },\n        \"intelligence\": {\n            \"latest_news\": \"暂无最新新闻\",\n            \"risk_alerts\": [\"主力资金净流出7100万\", \"均线空头排列\", \"从高点下跌45%\"],\n            \"positive_catalysts\": [],\n            \"earnings_outlook\": \"暂无业绩预告\",\n            \"sentiment_summary\": \"市场情绪悲观，资金持续流出\"\n        },\n        \"battle_plan\": {\n            \"sniper_points\": {\n                \"ideal_buy\": \"不建议买入\",\n                \"secondary_buy\": \"不建议买入\",\n                \"stop_loss\": \"14.33元（近期低点）\",\n                \"take_profit\": \"无目标位\"\n            },\n            \"position_strategy\": {\n                \"suggested_position\": \"0%\",\n                \"entry_plan\": \"等待趋势反转信号：价格站上MA20且MA20上穿MA60\",\n                \"risk_control\": \"如已持仓，止损14.33元；未持仓不入场\"\n            },\n            \"action_checklist\": [\n                \"✅ 检查均线排列：MA5<MA10<MA20<MA60，空头排列\",\n                \"✅ 检查价格位置：价格15.12低于MA20(16.78) 9.8%\",\n                \"✅ 检查RSI：35.2处于弱势区域\",\n                \"✅ 检查MACD：空头排列，DIF<DEA<0\",\n                \"✅ 检查资金流向：主力净流出7100万\",\n                \"✅ 检查量比：0.72缩量\",\n                \"❌ 不满足任何入场条件\"\n            ]\n        },\n        \"phase_decision\": {\n            \"phase_context\": {\n                \"phase\": \"intraday\",\n                \"action_window\": \"盘中跟踪\",\n                \"immediate_action\": \"止损止盈预警\"\n            },\n            \"action_window\": \"盘中跟踪\",\n            \"immediate_action\": \"止损止盈预警\",\n            \"watch_conditions\": [\n                \"观察是否跌破14.33元支撑位\",\n                \"观察RSI是否跌破30\",\n                \"观察是否有放量企稳信号\"\n            ],\n            \"next_check_time\": \"14:30 盘中检查\",\n            \"confidence_reason\": \"数据质量良好（88分），技术指标清晰显示空头趋势\",\n            \"data_limitations\": [\"筹码分布数据缺失\", \"新闻情报未获取到\"]\n        }\n    },\n    \"layer_scores\": [\n        {\"dimension\": \"趋势强度\", \"weight\": \"25%\", \"score\": 2, \"max_score\": 10, \"finding\": \"MA5<MA10<MA20<MA60完美空头排列，价格远低于MA20(-9.8%)，MA20斜率向下\"},\n        {\"dimension\": \"动量质量\", \"weight\": \"20%\", \"score\": 2, \"max_score\": 10, \"finding\": \"RSI=35.2弱势，MACD空头(DIF=-1.08,DEA=-0.95)，动量持续向下\"},\n        {\"dimension\": \"量价配合\", \"weight\": \"15%\", \"score\": 3, \"max_score\": 10, \"finding\": \"量比0.72缩量，下跌放量，OBV下行，无企稳信号\"},\n        {\"dimension\": \"波动率\", \"weight\": \"10%\", \"score\": 4, \"max_score\": 10, \"finding\": \"振幅3.17%适中，近期波动率较高\"},\n        {\"dimension\": \"相对强度\", \"weight\": \"10%\", \"score\": 2, \"max_score\": 10, \"finding\": \"大幅跑输大盘，从高点下跌45%\"},\n        {\"dimension\": \"关键位置\", \"weight\": \"10%\", \"score\": 4, \"max_score\": 10, \"finding\": \"贴近MA5支撑，但整体支撑薄弱，上方阻力密集\"},\n        {\"dimension\": \"催化剂\", \"weight\": \"10%\", \"score\": 3, \"max_score\": 10, \"finding\": \"主力资金净流出7100万，无正面催化，板块承压\"}\n    ],\n    \"analysis_summary\": \"西藏珠峰处于强势空头趋势，均线系统完全空头排列（MA5<MA10<MA20<MA60），价格15.12元远低于MA20的16.78元，RSI=35.2处于弱势区域，MACD空头排列。主力资金净流出7100万，量比0.72显示买盘不足。从高点27.61元下跌45%，趋势投资框架评分为28分，触发回避信号。\",\n    \"key_points\": \"均线完美空头排列,价格远低于MA20,RSI弱势区域,主力资金大幅流出,从高点下跌45%\",\n    \"risk_warning\": \"趋势空头，下行风险大；主力资金持续流出；无明显支撑位；可能继续创新低\",\n    \"buy_reason\": \"趋势投资框架触发回避信号：趋势强度2分，动量质量2分，综合评分28分<60分，不符合任何入场条件\",\n    \"trend_analysis\": \"股价从4月高点27.61元持续下跌至15.12元，跌幅达45%。均线系统完全空头排列，MA5/MA10/MA20/MA60依次向下，趋势明确向下。\",\n    \"short_term_outlook\": \"短期继续看空，可能测试14.33元支撑位，若跌破则看13元附近\",\n    \"medium_term_outlook\": \"中期趋势向下，需等待均线系统修复（MA20上穿MA60）才能确认趋势反转\",\n    \"technical_analysis\": \"技术面全面偏空：均线空头排列、RSI弱势、MACD空头、缩量下跌，无任何看多信号\",\n    \"ma_analysis\": \"均线系统空头排列：MA5(15.09)<MA10(16.28)<MA20(16.78)<MA60(19.59)，价格贴近MA5但远低于其他均线\",\n    \"volume_analysis\": \"量比0.72明显缩量，换手率3.98%适中，下跌时放量（6月25-26日巨量），显示抛压较大\",\n    \"pattern_analysis\": \"近期K线以阴线为主，6月25-26日出现连续大阴线（-8.74%和-8.90%），显示恐慌性抛售\",\n    \"fundamental_analysis\": \"PE=24.44，PB=3.06，总市值138亿，属于有色金属行业，受锂矿价格波动影响较大\",\n    \"sector_position\": \"所属板块：有色金属、铅锌、锂矿概念、锂电池概念、西藏板块、一带一路\",\n    \"company_highlights\": \"公司主营铅锌矿开采，涉及锂矿概念，受大宗商品价格影响较大\",\n    \"news_summary\": \"暂无最新新闻\",\n    \"market_sentiment\": \"市场情绪悲观，主力资金持续流出，散户接盘\",\n    \"hot_topics\": \"锂矿概念、有色金属、西藏板块\"\n}\n```",
+      "history": [
+        {
+          "score": 26,
+          "advice": "卖出",
+          "created_at": "2026-07-03 14:20:16.728954",
+          "layer_scores": [
+            {
+              "dimension": "趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "MA5<MA10<MA20<MA60完美空头排列，价格远低于MA20(-9.8%)，MA20斜率向下"
+            },
+            {
+              "dimension": "动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI=35.2弱势，MACD空头(DIF=-1.08,DEA=-0.95)，动量持续向下"
+            },
+            {
+              "dimension": "量价配合",
+              "weight": "15%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "量比0.72缩量，下跌放量，OBV下行，无企稳信号"
+            },
+            {
+              "dimension": "波动率",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "振幅3.17%适中，近期波动率较高"
+            },
+            {
+              "dimension": "相对强度",
+              "weight": "10%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "大幅跑输大盘，从高点下跌45%"
+            },
+            {
+              "dimension": "关键位置",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "贴近MA5支撑，但整体支撑薄弱，上方阻力密集"
+            },
+            {
+              "dimension": "催化剂",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "主力资金净流出7100万，无正面催化，板块承压"
+            }
+          ]
+        },
+        {
+          "score": 30,
+          "advice": "观望",
+          "created_at": "2026-07-02 20:32:08.891403",
+          "layer_scores": [
+            {
+              "dimension": "第一层 趋势强度",
+              "weight": "25%",
+              "score": 1,
+              "max_score": 10,
+              "finding": "强势空头排列，MA5/MA10/MA20/MA60全部向下，价格低于所有主要均线，趋势持续下行"
+            },
+            {
+              "dimension": "第二层 动量质量",
+              "weight": "20%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "RSI 35.2处于弱势区间，MACD空头排列，DIF<DEA且在零轴下方，动量持续向下"
+            },
+            {
+              "dimension": "第三层 量价配合",
+              "weight": "15%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "量比0.71显示缩量，下跌时成交量较大，上涨时量能不足，量价配合不佳"
+            },
+            {
+              "dimension": "第四层 波动率环境",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "振幅3.16%处于正常范围，波动率适中，但趋势向下增加不确定性"
+            },
+            {
+              "dimension": "第五层 相对强度",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "缺乏行业对比数据，假设与大盘表现持平"
+            },
+            {
+              "dimension": "第六层 关键位置",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "价格贴近MA5支撑，但远离MA20和MA60阻力，上方套牢盘密集"
+            },
+            {
+              "dimension": "第七层 催化剂与风险",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "业绩增长123%是正面催化剂，但缺乏其他短期催化，技术面风险较高"
+            }
+          ]
+        },
+        {
+          "score": 35,
+          "advice": "观望",
+          "created_at": "2026-07-02 02:46:25.312832",
+          "layer_scores": [
+            {
+              "dimension": "第一层：趋势强度",
+              "weight": "25%",
+              "score": 2,
+              "max_score": 10,
+              "finding": "空头排列，价格跌破所有主要均线，MA20斜率为负"
+            },
+            {
+              "dimension": "第二层：动量质量",
+              "weight": "20%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "RSI弱势(37.13)，MACD空头排列，动量衰竭"
+            },
+            {
+              "dimension": "第三层：量价配合",
+              "weight": "15%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "量能平稳，上涨放量下跌缩量，但整体量能不足"
+            },
+            {
+              "dimension": "第四层：波动率",
+              "weight": "10%",
+              "score": 5,
+              "max_score": 10,
+              "finding": "日内振幅4.92%，波动率适中"
+            },
+            {
+              "dimension": "第五层：相对强度",
+              "weight": "10%",
+              "score": 3,
+              "max_score": 10,
+              "finding": "从高位大幅下跌，跑输大盘，行业排名靠后"
+            },
+            {
+              "dimension": "第六层：关键位置",
+              "weight": "10%",
+              "score": 4,
+              "max_score": 10,
+              "finding": "远离MA20，但有MA5支撑，上方阻力明显"
+            },
+            {
+              "dimension": "第七层：催化剂",
+              "weight": "10%",
+              "score": 6,
+              "max_score": 10,
+              "finding": "业绩预增92%-135%正面催化，但趋势风险明显"
             }
           ]
         }
