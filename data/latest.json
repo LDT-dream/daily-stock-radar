@@ -1,5 +1,37 @@
 {
-  "update_time": "2026-07-02T20:33:30.610237",
+  "update_time": "2026-07-03T09:39:24.921500",
+  "jobs": [
+    {
+      "id": 1,
+      "name": "科技股每日分析",
+      "strategy": "dongting_tech",
+      "strategy_name": "买贵的好公司",
+      "schedule_time": "14:00",
+      "stock_count": 17,
+      "last_run_at": "2026-07-02T19:54:46.326668",
+      "last_run_status": "success"
+    },
+    {
+      "id": 2,
+      "name": "抄底股票监测",
+      "strategy": "dongting_bottom",
+      "strategy_name": "抄底便宜的公司",
+      "schedule_time": "14:00",
+      "stock_count": 10,
+      "last_run_at": "2026-07-02T20:09:47.607665",
+      "last_run_status": "success"
+    },
+    {
+      "id": 3,
+      "name": "趋势投资持仓监测",
+      "strategy": "trend_trading",
+      "strategy_name": "趋势投资",
+      "schedule_time": "14:00",
+      "stock_count": 18,
+      "last_run_at": "2026-07-02T20:33:29.712663",
+      "last_run_status": "success"
+    }
+  ],
   "stocks": [
     {
       "code": "600938",
