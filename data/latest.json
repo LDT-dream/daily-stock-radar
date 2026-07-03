@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-03T14:20:17.653264",
+  "update_time": "2026-07-03T20:45:41.806990",
   "jobs": [
     {
       "id": 1,
@@ -9,7 +9,8 @@
       "schedule_time": "14:00",
       "stock_count": 17,
       "last_run_at": "2026-07-03T14:18:51.444813",
-      "last_run_status": "success"
+      "last_run_status": "success",
+      "last_run_failure_details": []
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "schedule_time": "14:00",
       "stock_count": 10,
       "last_run_at": "2026-07-03T14:14:27.619432",
-      "last_run_status": "success"
+      "last_run_status": "success",
+      "last_run_failure_details": []
     },
     {
       "id": 3,
@@ -29,7 +31,8 @@
       "schedule_time": "14:00",
       "stock_count": 18,
       "last_run_at": "2026-07-03T14:20:16.744299",
-      "last_run_status": "success"
+      "last_run_status": "success",
+      "last_run_failure_details": []
     }
   ],
   "stocks": [
