@@ -641,8 +641,103 @@
             return html;
         }
 
+        function parseReportJson(content) {
+            if (!content) return null;
+            let text = String(content).trim();
+            const fenced = text.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+            if (fenced) text = fenced[1].trim();
+            const candidates = [text];
+            const first = text.indexOf('{');
+            const last = text.lastIndexOf('}');
+            if (first >= 0 && last > first) candidates.push(text.slice(first, last + 1));
+            for (const candidate of candidates) {
+                try {
+                    const parsed = JSON.parse(candidate);
+                    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) return parsed;
+                } catch (_) {}
+            }
+            return null;
+        }
+
+        function cleanReportValue(value) {
+            if (value == null || value === '') return '-';
+            if (Array.isArray(value)) return value.map(cleanReportValue).filter(v => v && v !== '-').join('；');
+            if (typeof value === 'object') return Object.entries(value).map(([k, v]) => `${k}: ${cleanReportValue(v)}`).join('；');
+            return String(value).replace(/[\u0000-\u001f]/g, ' ').trim();
+        }
+
+        function reportField(label, value) {
+            const text = cleanReportValue(value);
+            if (!text || text === '-') return '';
+            return `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(text)}</p>`;
+        }
+
+        function renderReportList(title, items) {
+            if (!Array.isArray(items) || !items.length) return '';
+            return `<h3>${escapeHtml(title)}</h3><ul>${items.map(item => `<li>${escapeHtml(cleanReportValue(item))}</li>`).join('')}</ul>`;
+        }
+
+        function renderLayerScores(layers) {
+            if (!Array.isArray(layers) || !layers.length) return '';
+            return `<h3>七层评分</h3><table><tr><th>维度</th><th>权重</th><th>评分</th><th>关键发现</th></tr>${layers.map(ls => `<tr><td>${escapeHtml(cleanReportValue(ls.dimension))}</td><td>${escapeHtml(cleanReportValue(ls.weight))}</td><td>${escapeHtml(cleanReportValue(ls.score))}/${escapeHtml(cleanReportValue(ls.max_score || 10))}</td><td>${escapeHtml(cleanReportValue(ls.finding))}</td></tr>`).join('')}</table>`;
+        }
+
+        function renderStructuredReport(data) {
+            const dashboard = data.dashboard || {};
+            const core = dashboard.core_conclusion || {};
+            const intelligence = dashboard.intelligence || {};
+            const battle = dashboard.battle_plan || {};
+            const sniper = battle.sniper_points || {};
+            const position = battle.position_strategy || {};
+            const phase = (dashboard.phase_decision && dashboard.phase_decision.phase_context) || {};
+            let html = `<h2>${escapeHtml(cleanReportValue(data.stock_name || data.name || data.stock_code || '分析报告'))}</h2>`;
+            html += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0 18px">';
+            html += `<div class="history-summary-card"><div class="val">${escapeHtml(cleanReportValue(data.sentiment_score))}</div><div class="lbl">综合评分</div></div>`;
+            html += `<div class="history-summary-card"><div class="val" style="font-size:18px">${escapeHtml(cleanReportValue(data.operation_advice))}</div><div class="lbl">操作建议</div></div>`;
+            html += `<div class="history-summary-card"><div class="val" style="font-size:18px">${escapeHtml(cleanReportValue(data.trend_prediction))}</div><div class="lbl">趋势判断</div></div>`;
+            html += `<div class="history-summary-card"><div class="val" style="font-size:18px">${escapeHtml(cleanReportValue(data.confidence_level))}</div><div class="lbl">置信度</div></div>`;
+            html += '</div>';
+            if (core.one_sentence || core.signal_type) {
+                html += `<h3>核心结论</h3><p><strong>${escapeHtml(cleanReportValue(core.signal_type || data.decision_type || ''))}</strong></p>`;
+                html += reportField('一句话', core.one_sentence);
+                html += reportField('时效性', core.time_sensitivity);
+                if (core.position_advice) {
+                    html += reportField('空仓', core.position_advice.no_position);
+                    html += reportField('持仓', core.position_advice.has_position);
+                }
+            }
+            html += '<h3>作战计划</h3>';
+            html += reportField('理想买点', sniper.ideal_buy);
+            html += reportField('次优买点', sniper.secondary_buy);
+            html += reportField('止损', sniper.stop_loss);
+            html += reportField('止盈', sniper.take_profit);
+            html += reportField('建议仓位', position.suggested_position);
+            html += reportField('入场计划', position.entry_plan);
+            html += reportField('风控', position.risk_control);
+            html += '<h3>情报与风险</h3>';
+            html += reportField('最新消息', intelligence.latest_news);
+            html += reportField('业绩展望', intelligence.earnings_outlook);
+            html += reportField('情绪总结', intelligence.sentiment_summary);
+            html += renderReportList('积极催化', intelligence.positive_catalysts);
+            html += renderReportList('风险提醒', intelligence.risk_alerts);
+            html += renderReportList('行动清单', battle.action_checklist);
+            if (phase.phase || phase.immediate_action || phase.watch_conditions) {
+                html += '<h3>阶段决策</h3>';
+                html += reportField('阶段', phase.phase);
+                html += reportField('动作窗口', phase.action_window);
+                html += reportField('立即动作', phase.immediate_action);
+                html += reportField('下次检查', phase.next_check_time);
+                html += reportField('依据', phase.confidence_reason);
+                html += renderReportList('观察条件', phase.watch_conditions);
+                html += renderReportList('数据限制', phase.data_limitations);
+            }
+            html += renderLayerScores(data.layer_scores || dashboard.layer_scores);
+            return html;
+        }
         function formatReport(content) {
             if (!content) return '<p>暂无报告内容</p>';
+            const parsed = parseReportJson(content);
+            if (parsed) return renderStructuredReport(parsed);
             const lines = content.split('\n'); let result = [], inTable = false, tableHtml = '';
             for (let line of lines) {
                 if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
