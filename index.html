@@ -17,6 +17,13 @@
         .tab:hover { border-color: #818cf8; color: #e2e8f0; }
         .tab.active { background: #4f46e5; color: white; border-color: #4f46e5; }
         .stats-bar { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; padding: 12px 20px; background: #1e293b; border-radius: 10px; border: 1px solid #334155; }
+        .job-status-bar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+        .job-chip { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #111827; border: 1px solid #334155; border-radius: 8px; font-size: 12px; color: #94a3b8; }
+        .job-chip .name { color: #e2e8f0; font-weight: 600; }
+        .job-chip .status { padding: 2px 7px; border-radius: 10px; font-size: 11px; }
+        .job-chip .status.success { color: #4ade80; background: #052e16; }
+        .job-chip .status.partial { color: #fbbf24; background: #422006; }
+        .job-chip .status.failed { color: #f87171; background: #450a0a; }
         .stat-item { text-align: center; }
         .stat-value { font-size: 20px; font-weight: 700; color: #818cf8; }
         .stat-label { font-size: 12px; color: #94a3b8; margin-top: 2px; }
@@ -175,6 +182,7 @@
         </div>
         <div class="tabs" id="strategyTabs"></div>
         <div class="stats-bar" id="statsBar"></div>
+        <div class="job-status-bar" id="jobStatusBar"></div>
         <div id="contentArea"><div class="loading">正在加载数据...</div></div>
     </div>
 
@@ -212,18 +220,26 @@
                 allData = await resp.json();
                 const t = new Date(allData.update_time);
                 document.getElementById('updateTime').textContent = `数据更新: ${t.toLocaleString('zh-CN')} (${timeAgo(allData.update_time)})`;
-                renderTabs(); renderStats(); renderContent();
+                renderTabs(); renderStats(); renderJobStatus(); renderContent();
             } catch (e) {
                 document.getElementById('contentArea').innerHTML = `<div class="error">加载失败: ${e.message}</div>`;
             }
         }
 
+        function getStrategyName(strategy) {
+            const names = {
+                dongting_tech: '\u4e70\u8d35\u7684\u597d\u516c\u53f8',
+                dongting_bottom: '\u6284\u5e95\u4fbf\u5b9c\u7684\u516c\u53f8',
+                trend_trading: '\u8d8b\u52bf\u6295\u8d44'
+            };
+            return names[strategy] || strategy;
+        }
         function renderTabs() {
             const strats = [...new Set(allData.stocks.map(s => s.strategy))];
             const tabs = document.getElementById('strategyTabs');
             tabs.innerHTML = `<div class="tab ${currentStrategy === 'all' ? 'active' : ''}" onclick="filterStrategy('all')">全部</div>`;
             strats.forEach(s => {
-                const name = s === 'dongting_tech' ? '买贵的好公司' : s === 'dongting_bottom' ? '抄底便宜的公司' : s;
+                const name = getStrategyName(s);
                 const cnt = allData.stocks.filter(st => st.strategy === s).length;
                 tabs.innerHTML += `<div class="tab ${currentStrategy === s ? 'active' : ''}" onclick="filterStrategy('${s}')">${name} (${cnt})</div>`;
             });
@@ -244,6 +260,18 @@
                 <div class="stat-item"><div class="stat-value" style="color:#f87171">${lo}</div><div class="stat-label">低分 <50</div></div>`;
         }
 
+        function renderJobStatus() {
+            const jobs = Array.isArray(allData.jobs) ? allData.jobs : [];
+            const bar = document.getElementById('jobStatusBar');
+            if (!bar || !jobs.length) { if (bar) bar.innerHTML = ''; return; }
+            bar.innerHTML = jobs.map(job => {
+                const status = job.last_run_status || 'unknown';
+                const statusText = status === 'success' ? '\u6210\u529f' : status === 'partial' ? '\u90e8\u5206\u6210\u529f' : status === 'failed' ? '\u5931\u8d25' : '\u672a\u8fd0\u884c';
+                const lastRun = job.last_run_at ? `${timeAgo(job.last_run_at)}\u8fd0\u884c` : '\u6682\u65e0\u8fd0\u884c\u8bb0\u5f55';
+                return `<div class="job-chip"><span class="name">${job.name || getStrategyName(job.strategy)}</span><span>${job.schedule_time || '--:--'}</span><span>${job.stock_count || 0}\u53ea</span><span class="status ${status}">${statusText}</span><span>${lastRun}</span></div>`;
+            }).join('');
+        }
+
         function filterStrategy(s) { currentStrategy = s; renderTabs(); renderStats(); renderContent(); }
 
         function renderContent() {
@@ -258,7 +286,7 @@
 
         function createStrategyGroup(strategy, stocks) {
             const g = document.createElement('div'); g.className = 'strategy-group';
-            const name = strategy === 'dongting_tech' ? '买贵的好公司' : strategy === 'dongting_bottom' ? '抄底便宜的公司' : strategy;
+            const name = getStrategyName(strategy);
             const avg = Math.round(stocks.reduce((s, x) => s + x.score, 0) / stocks.length);
             const hi = stocks.filter(s => s.score >= 70).length, mid = stocks.filter(s => s.score >= 50 && s.score < 70).length, lo = stocks.filter(s => s.score < 50).length;
             g.innerHTML = `<div class="strategy-group-header">
@@ -639,3 +667,4 @@
     </script>
 </body>
 </html>
+
